@@ -45,8 +45,8 @@ if ( ! function_exists( 'restaurant_wp_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'primary'     => esc_html__( 'Primary menu', 'restaurant-wp' ),
-				'mobile' => esc_html__( 'Mobile menu', 'restaurant-wp' ),
+				'primary' => esc_html__( 'Primary menu', 'restaurant-wp' ),
+				'mobile'  => esc_html__( 'Mobile menu', 'restaurant-wp' ),
 			)
 		);
 
@@ -119,6 +119,54 @@ function restaurant_wp_widgets_init() {
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
 			'after_title'   => '</h2>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Sidebar', 'restaurant-wp' ),
+			'id'            => 'sidebar-1',
+			'description'   => '',
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Menu right', 'restaurant-wp' ),
+			'id'            => 'menu-right',
+			'description'   => '',
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Main bottom', 'restaurant-wp' ),
+			'id'            => 'main-bottom',
+			'description'   => '',
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer', 'restaurant-wp' ),
+			'id'            => 'footer',
+			'description'   => '',
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
 		)
 	);
 }
