@@ -12,9 +12,14 @@
 ?>
 
 </div><!-- #content -->
-
+<div class="main-bottom">
+	<div class="container">
+		<?php get_template_part( 'template-parts/sidebar', 'main-bottom' ); ?>
+	</div>
+</div>
 <footer id="colophon" class="site-footer" role="contentinfo">
 	<div class="container">
+		<?php get_template_part( 'template-parts/sidebar', 'footer' ); ?>
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'restaurant-wp' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'restaurant-wp' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
