@@ -25,37 +25,37 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'restaurant-wp' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
+		<div class="container">
+			<div class="row">
+				<div class="navigation col-sm-12">
+					<div class="tm-table">
+						<div class="menu-mobile-effect navbar-toggle" data-effect="mobile-effect">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</div>
 
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-				<?php
-			endif; ?>
-		</div><!-- .site-branding -->
+						<div class="site-branding width-logo table-cell sm-logo">
+							<a href="http://demo.thimpress.com/resca/" title="Restaura Wor" rel="home" class="no-sticky-logo">
+								<img src="http://demo.thimpress.com/resca/wp-content/uploads/2015/07/logo2.png" alt="Restaurant &amp; Coffee WordPress Theme – Resca" width="50" height="50">
+							</a>
+							<a href="http://demo.thimpress.com/resca/" title="Restaurant ess Theme" rel="home" class="sticky-logo">
+								<img src="http://demo.thimpress.com/resca/wp-content/uploads/2015/07/logo1.png" alt="Restaurant &am" width="40" height="40">
+							</a>
+						</div>
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'restaurant-wp' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'primary',
-					'menu_id'        => 'primary-menu',
-					'menu_class'     => 'navbar',
-					'container'      => false,
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
+						<nav class="width-navigation table-cell table-right main-navigation">
+							<div class="inner-navigation">
+								<?php
+								restaurant_wp_primary_menu();
+								restaurant_wp_mobile_menu();
+								?>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

@@ -11,6 +11,7 @@
  * Adds custom classes to the array of body classes.
  *
  * @param array $classes Classes for the body element.
+ *
  * @return array
  */
 function restaurant_wp_body_classes( $classes ) {
@@ -26,4 +27,40 @@ function restaurant_wp_body_classes( $classes ) {
 
 	return $classes;
 }
+
 add_filter( 'body_class', 'restaurant_wp_body_classes' );
+
+function restaurant_wp_primary_menu() {
+	wp_nav_menu(
+		array(
+			'theme_location' => 'primary',
+			'menu_id'        => 'primary-menu',
+			'menu_class'     => 'navbar',
+			'container'      => false,
+		)
+	);
+}
+
+function restaurant_wp_mobile_menu() {
+	if ( ! has_nav_menu( 'mobile' ) && has_nav_menu( 'primary' ) ) {
+		wp_nav_menu(
+			array(
+				'theme_location' => 'primary',
+				'menu_id'        => 'mobile-menu',
+				'menu_class'     => 'navbar',
+				'container'      => false,
+			)
+		);
+
+		return;
+	}
+
+	wp_nav_menu(
+		array(
+			'theme_location' => 'mobile',
+			'menu_id'        => 'mobile-menu',
+			'menu_class'     => 'navbar',
+			'container'      => false,
+		)
+	);
+}
