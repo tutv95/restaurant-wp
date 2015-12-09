@@ -36,20 +36,23 @@
 						</div>
 
 						<div class="site-branding width-logo table-cell sm-logo">
-							<a href="http://demo.thimpress.com/resca/" title="Restaura Wor" rel="home" class="no-sticky-logo">
-								<img src="http://demo.thimpress.com/resca/wp-content/uploads/2015/07/logo2.png" alt="Restaurant &amp; Coffee WordPress Theme – Resca" width="50" height="50">
-							</a>
-							<a href="http://demo.thimpress.com/resca/" title="Restaurant ess Theme" rel="home" class="sticky-logo">
-								<img src="http://demo.thimpress.com/resca/wp-content/uploads/2015/07/logo1.png" alt="Restaurant &am" width="40" height="40">
-							</a>
+							<?php restaurant_wp_logo(); ?>
+							<?php restaurant_wp_sticky_logo(); ?>
 						</div>
 
 						<nav class="width-navigation table-cell table-right main-navigation">
 							<div class="inner-navigation">
 								<?php
 								restaurant_wp_primary_menu();
-								restaurant_wp_mobile_menu();
 								?>
+
+								<ul class="menu-right">
+									<?php
+									if ( is_active_sidebar( 'menu-right' ) ) {
+										dynamic_sidebar( 'menu-right' );
+									}
+									?>
+								</ul>
 							</div>
 						</nav>
 					</div>

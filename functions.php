@@ -170,17 +170,17 @@ add_action( 'widgets_init', 'restaurant_wp_widgets_init' );
  * Enqueue scripts and styles.
  */
 function restaurant_wp_scripts() {
-	wp_enqueue_style( 'restaurant-wp-style', get_stylesheet_uri() );
-
-	wp_enqueue_script( 'restaurant-wp-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20120206', true );
-
-	wp_enqueue_script( 'restaurant-wp-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_style( 'restaurant-wp-style', get_stylesheet_uri(), array(), RESWP_THEME_VERSION );
 
 	wp_enqueue_script( 'restaurant-bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array( 'jquery' ), '3.3.6', true );
+
+	wp_enqueue_script( 'restaurant-custom', get_template_directory_uri() . '/assets/js/custom.js', array( 'jquery', 'restaurant-bootstrap' ), RESWP_THEME_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	do_action( 'restaurant_wp_enqueue_scripts' );
 }
 
 add_action( 'wp_enqueue_scripts', 'restaurant_wp_scripts' );
