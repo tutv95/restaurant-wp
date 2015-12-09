@@ -7,6 +7,11 @@
  * @package Restaurant_WP
  */
 
+/**
+ * Variables
+ */
+require get_template_directory() . '/inc/variables.php';
+
 if ( ! function_exists( 'restaurant_wp_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -22,7 +27,7 @@ if ( ! function_exists( 'restaurant_wp_setup' ) ) :
 		 * If you're building a theme based on Restaurant WP, use a find and replace
 		 * to change 'restaurant-wp' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'restaurant-wp', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'restaurant-wp', RESWP_THEME_DIR . 'languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -183,29 +188,29 @@ add_action( 'wp_enqueue_scripts', 'restaurant_wp_scripts' );
 /**
  * Implement the Custom Header feature.
  */
-require get_template_directory() . '/inc/custom-header.php';
+require RESWP_THEME_DIR . 'inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
  */
-require get_template_directory() . '/inc/template-tags.php';
+require RESWP_THEME_DIR . 'inc/template-tags.php';
 
 /**
  * Custom functions that act independently of the theme templates.
  */
-require get_template_directory() . '/inc/extras.php';
+require RESWP_THEME_DIR . 'inc/extras.php';
 
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/inc/customizer.php';
+require RESWP_THEME_DIR . 'inc/customizer.php';
 
 /**
  * Load Jetpack compatibility file.
  */
-require get_template_directory() . '/inc/jetpack.php';
+require RESWP_THEME_DIR . 'inc/jetpack.php';
 
 /**
  * Custom functions
  */
-require get_template_directory() . '/inc/custom-functions.php';
+require RESWP_THEME_DIR . 'inc/custom-functions.php';
