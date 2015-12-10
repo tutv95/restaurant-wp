@@ -130,7 +130,7 @@ function restaurant_wp_widgets_init() {
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Menu right', 'restaurant-wp' ),
-			'id'            => 'menu-right',
+			'id'            => 'menu_right',
 			'description'   => '',
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
@@ -142,7 +142,7 @@ function restaurant_wp_widgets_init() {
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Main bottom', 'restaurant-wp' ),
-			'id'            => 'main-bottom',
+			'id'            => 'main_bottom',
 			'description'   => '',
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',

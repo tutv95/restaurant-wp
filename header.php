@@ -48,8 +48,8 @@
 
 								<ul class="menu-right">
 									<?php
-									if ( is_active_sidebar( 'menu-right' ) ) {
-										dynamic_sidebar( 'menu-right' );
+									if ( is_active_sidebar( 'menu_right' ) ) {
+										dynamic_sidebar( 'menu_right' );
 									}
 									?>
 								</ul>
