@@ -22,27 +22,19 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-# Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-    ## Posts and pages
-	## Asides
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
+
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Bootstrap
 --------------------------------------------------------------*/
 @import "bootstrap";
+
+/*--------------------------------------------------------------
+# Font Awesome
+--------------------------------------------------------------*/
+@import "awesome/font-awesome";
+
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
 /*--------------------------------------------------------------
