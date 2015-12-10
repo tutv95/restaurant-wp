@@ -23,6 +23,10 @@
 	</div>
 
 	<div class="content-inner">
+		<div class="entry-top">
+			<?php do_action( 'restaurant_wp_entry_top', 'full' ); ?>
+		</div>
+
 		<header class="entry-header">
 			<?php
 			if ( is_single() ) {

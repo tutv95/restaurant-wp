@@ -42,7 +42,9 @@ function restaurant_wp_sticky_logo() {
 	<?php
 }
 
-
+/**
+ * Post share
+ */
 function restaurant_wp_post_share() {
 	echo '<ul class="social-share">';
 	echo '<li><a target="_blank" class="facebook" href="https://www.facebook.com/sharer.php?s=100&amp;p[title]=' . get_the_title() . '&amp;p[url]=' . urlencode( get_permalink() ) . '&amp;p[images][0]=' . urlencode( wp_get_attachment_url( get_post_thumbnail_id() ) ) . '" title="' . __( 'Facebook', 'thim' ) . '"><i class="fa fa-facebook"></i></a></li>';
@@ -53,3 +55,16 @@ function restaurant_wp_post_share() {
 }
 
 add_action( 'restaurant_wp_post_share', 'restaurant_wp_post_share' );
+
+/**
+ * Entry top
+ *
+ * @param $size
+ */
+function restaurant_wp_entry_top( $size ) {
+	if ( has_post_thumbnail() ) {
+		echo '<a href="' . esc_url( get_the_permalink() ) . '" title="' . esc_attr( get_the_title() ) . '">' . get_the_post_thumbnail( get_the_ID(), $size ) . '</a>';
+	}
+}
+
+add_action( 'restaurant_wp_entry_top', 'restaurant_wp_entry_top' );
