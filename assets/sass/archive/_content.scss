@@ -29,7 +29,8 @@
 			border-bottom: 1px solid #eee;
 			padding-bottom: 50px;
 			margin-bottom: 55px;
-			padding-left: 80px;
+
+			@include calc('width', '100% - 80px');
 		}
 	}
 }
