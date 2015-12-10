@@ -1,0 +1,35 @@
+.site-main {
+	article {
+		position: relative;
+
+		.share-post {
+			width: 60px;
+			margin-right: 20px;
+			float: left;
+			margin-bottom: 30px;
+
+			.social-share {
+				margin: 10px 0 0 0;
+				border: 1px solid #eee;
+
+				li {
+					list-style: none;
+					display: block;
+					border-bottom: 1px solid #eee;
+					padding-top: 10px;
+					padding-bottom: 10px;
+					text-align: center;
+
+				}
+			}
+		}
+
+		.content-inner {
+			float: left;
+			border-bottom: 1px solid #eee;
+			padding-bottom: 50px;
+			margin-bottom: 55px;
+			padding-left: 80px;
+		}
+	}
+}
