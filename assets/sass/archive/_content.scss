@@ -1,10 +1,7 @@
 .site-main {
 	article {
 		position: relative;
-
-		&:before, &:after {
-			@include clearfix();
-		}
+		@include clearfix();
 
 		.share-post {
 			width: 60px;
