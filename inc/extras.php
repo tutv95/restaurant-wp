@@ -30,6 +30,9 @@ function restaurant_wp_body_classes( $classes ) {
 
 add_filter( 'body_class', 'restaurant_wp_body_classes' );
 
+/**
+ * Primary menu
+ */
 function restaurant_wp_primary_menu() {
 	wp_nav_menu(
 		array(
@@ -41,6 +44,9 @@ function restaurant_wp_primary_menu() {
 	);
 }
 
+/**
+ * Mobile menu
+ */
 function restaurant_wp_mobile_menu() {
 	if ( ! has_nav_menu( 'mobile' ) && has_nav_menu( 'primary' ) ) {
 		wp_nav_menu(
