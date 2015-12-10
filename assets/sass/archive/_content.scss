@@ -2,6 +2,10 @@
 	article {
 		position: relative;
 
+		&:before, &:after {
+			@include clearfix();
+		}
+
 		.share-post {
 			width: 60px;
 			margin-right: 20px;
@@ -29,16 +33,37 @@
 			.social-share {
 				margin: 10px 0 0 0;
 				border: 1px solid #eee;
+				background-color: #fff;
+				padding: 0;
+				text-align: center;
 
 				li {
 					list-style: none;
 					display: block;
 					border-bottom: 1px solid #eee;
-					padding-top: 10px;
-					padding-bottom: 10px;
-					text-align: center;
+					width: 100%;
+
+					a {
+						display: block;
+						padding-top: 10px;
+						padding-bottom: 10px;
+
+						&.facebook {
+							color: #4c67a2
+						}
+						&.twitter {
+							color: #00acee
+						}
+						&.googleplus {
+							color: #d77066
+						}
+						&.pinterest {
+							color: #d43b17
+						}
+					}
 
 				}
+
 			}
 		}
 
