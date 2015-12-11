@@ -1,5 +1,6 @@
 .site-main {
 	article {
+		width: 100%;
 		position: relative;
 		@include clearfix();
 
@@ -71,6 +72,22 @@
 			margin-bottom: 55px;
 
 			@include calc('width', '100% - 80px');
+
+			.entry-header {
+				.entry-title {
+					font-size: 24px;
+					line-height: 1.1em;
+
+					a {
+						color: #2a2a2a;
+
+						&:hover {
+							color: $primary-color;
+							text-decoration: none;
+						}
+					}
+				}
+			}
 		}
 	}
 }
