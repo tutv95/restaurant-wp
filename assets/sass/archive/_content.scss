@@ -74,6 +74,8 @@
 			@include calc('width', '100% - 80px');
 
 			.entry-header {
+				margin-bottom: 25px;
+
 				.entry-title {
 					font-size: 24px;
 					line-height: 1.1em;
@@ -85,6 +87,27 @@
 							color: $primary-color;
 							text-decoration: none;
 						}
+					}
+				}
+
+				.entry-meta {
+					a {
+						color: #2a2a2a;
+						font-weight: 700;
+
+						&:hover {
+							color: $primary-color;
+							text-decoration: none;
+						}
+					}
+
+					.posted-on {
+						.updated {
+							display: none;
+						}
+					}
+
+					.byline {
 					}
 				}
 			}
