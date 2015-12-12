@@ -4,6 +4,11 @@
  * User: Tu TV
  * Date: 10/12/2015
  * Time: 12:07 AM
+ *
+ * Variables for theme
+ *
+ * @package Restaurant_WP
+ *
  */
 
 define( 'RESWP_THEME_DIR', get_template_directory() . '/' );

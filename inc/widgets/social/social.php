@@ -4,6 +4,9 @@
  * User: Tu TV
  * Date: 10/12/2015
  * Time: 1:35 AM
+ *
+ *
+ * @package Restaurant_WP
  */
 
 /**
@@ -18,7 +21,7 @@ class Restaurant_WP_Social_Widget extends WP_Widget {
 		parent::__construct(
 			'foo_widget', // Base ID
 			__( 'Restaurant WP: Socials', 'restaurant-wp' ), // Name
-			array( 'description' => __( 'Restaurant WP: Socials', 'restaurant-wp' ), ) // Args
+			array( 'description' => __( 'Restaurant WP: Socials', 'restaurant-wp' ) ) // Args
 		);
 	}
 
@@ -72,10 +75,9 @@ class Restaurant_WP_Social_Widget extends WP_Widget {
 
 		return $instance;
 	}
+} // Class Restaurant_WP_Social_Widget
 
-} // class Restaurant_WP_Social_Widget
-
-// register Restaurant_WP_Social_Widget widget
+// Register Restaurant_WP_Social_Widget widget
 function register_foo_widget() {
 	register_widget( 'Restaurant_WP_Social_Widget' );
 }

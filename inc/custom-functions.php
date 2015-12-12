@@ -4,6 +4,10 @@
  * User: Tu TV
  * Date: 07/12/2015
  * Time: 7:38 PM
+ *
+ * Custom functions
+ *
+ * @package Restaurant_WP
  */
 
 /**
@@ -59,7 +63,7 @@ add_action( 'restaurant_wp_post_share', 'restaurant_wp_post_share' );
 /**
  * Entry top
  *
- * @param $size
+ * @param string $size Size image thumbnail
  */
 function restaurant_wp_entry_top( $size ) {
 	if ( has_post_thumbnail() ) {
@@ -68,3 +72,12 @@ function restaurant_wp_entry_top( $size ) {
 }
 
 add_action( 'restaurant_wp_entry_top', 'restaurant_wp_entry_top' );
+
+/**
+ * Enqueue web font
+ */
+function restaurant_wp_enqueue_web_font() {
+	wp_enqueue_style( 'Roboto-Google-Font', 'https://fonts.googleapis.com/css?family=Roboto:400,700,500,100,100italic,300,300italic,400italic,500italic,700italic,900,900italic' );
+}
+
+add_action( 'restaurant_wp_enqueue_scripts', 'restaurant_wp_enqueue_web_font' );

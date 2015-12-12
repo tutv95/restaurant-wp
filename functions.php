@@ -93,7 +93,7 @@ if ( ! function_exists( 'restaurant_wp_setup' ) ) :
 			)
 		);
 	}
-endif; // restaurant_wp_setup
+endif;
 add_action( 'after_setup_theme', 'restaurant_wp_setup' );
 
 /**
