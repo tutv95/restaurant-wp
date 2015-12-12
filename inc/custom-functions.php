@@ -63,7 +63,7 @@ add_action( 'restaurant_wp_post_share', 'restaurant_wp_post_share' );
 /**
  * Entry top
  *
- * @param string $size Size image thumbnail
+ * @param string $size Size image thumbnail.
  */
 function restaurant_wp_entry_top( $size ) {
 	if ( has_post_thumbnail() ) {

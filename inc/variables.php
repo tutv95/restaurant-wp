@@ -8,7 +8,6 @@
  * Variables for theme
  *
  * @package Restaurant_WP
- *
  */
 
 define( 'RESWP_THEME_DIR', get_template_directory() . '/' );
