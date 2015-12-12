@@ -24,17 +24,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 ----------------------------------------------------------------
 
 --------------------------------------------------------------*/
-
 /*--------------------------------------------------------------
 # Bootstrap
 --------------------------------------------------------------*/
 @import "bootstrap";
-
 /*--------------------------------------------------------------
 # Font Awesome
 --------------------------------------------------------------*/
 @import "awesome/font-awesome";
-
 @import "variables-site/variables-site";
 @import "mixins/mixins";
 /*--------------------------------------------------------------
@@ -49,9 +46,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Forms
 --------------------------------------------------------------*/
 @import "forms/forms";
-
 @import "header/header";
-
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -77,3 +72,4 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
+@import "widget/widget";

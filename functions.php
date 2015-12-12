@@ -122,8 +122,8 @@ function restaurant_wp_widgets_init() {
 			'description'   => '',
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h3 class="widget-title">',
-			'after_title'   => '</h3>',
+			'before_title'  => '<h3 class="widget-title"><span>',
+			'after_title'   => '</h3></span>',
 		)
 	);
 
@@ -134,8 +134,8 @@ function restaurant_wp_widgets_init() {
 			'description'   => '',
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h3 class="widget-title">',
-			'after_title'   => '</h3>',
+			'before_title'  => '<h3 class="widget-title"><span>',
+			'after_title'   => '</h3></span>',
 		)
 	);
 
@@ -146,8 +146,8 @@ function restaurant_wp_widgets_init() {
 			'description'   => '',
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h3 class="widget-title">',
-			'after_title'   => '</h3>',
+			'before_title'  => '<h3 class="widget-title"><span>',
+			'after_title'   => '</h3></span>',
 		)
 	);
 
@@ -158,8 +158,8 @@ function restaurant_wp_widgets_init() {
 			'description'   => '',
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h3 class="widget-title">',
-			'after_title'   => '</h3>',
+			'before_title'  => '<h3 class="widget-title"><span>',
+			'after_title'   => '</h3></span>',
 		)
 	);
 }
