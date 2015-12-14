@@ -127,7 +127,6 @@ class Restaurant_WP_Social_Widget extends WP_Widget {
 
 		return $instance;
 	}
-
 } // class Restaurant_WP_Social_Widget
 
 // register Restaurant_WP_Social_Widget widget
