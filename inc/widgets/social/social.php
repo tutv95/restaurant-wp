@@ -124,6 +124,7 @@ class Restaurant_WP_Social_Widget extends WP_Widget {
 		$instance['skype']       = ! empty( $new_instance['skype'] ) ? strip_tags( $new_instance['skype'] ) : '';
 		$instance['pinterest']   = ! empty( $new_instance['pinterest'] ) ? strip_tags( $new_instance['pinterest'] ) : '';
 		$instance['tripadvisor'] = ! empty( $new_instance['tripadvisor'] ) ? strip_tags( $new_instance['tripadvisor'] ) : '';
+
 		return $instance;
 	}
 
