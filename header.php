@@ -28,15 +28,14 @@
 	$theme_option_data = get_theme_mods();
 	//var_dump($theme_option_data['restaurant_wp_sticky_menu']);
 	$custom_header = '';
-	if( isset( $theme_option_data['restaurant_wp_sticky_menu'] ) && $theme_option_data['restaurant_wp_sticky_menu'] == 1 ) {
+	if ( isset( $theme_option_data['restaurant_wp_sticky_menu'] ) && $theme_option_data['restaurant_wp_sticky_menu'] == 1 ) {
 		$custom_header .= ' affix-top';
 	} else {
 		$custom_header .= ' no-affix-top';
 	}
-	if( isset( $theme_option_data['restaurant_wp_header_style']) && $theme_option_data['restaurant_wp_header_style'] != '' ) {
+	if ( isset( $theme_option_data['restaurant_wp_header_style'] ) && $theme_option_data['restaurant_wp_header_style'] != '' ) {
 		$custom_header .= ' header_overlay';
-	}
-	else {
+	} else {
 		$custom_header .= ' header_default';
 	}
 	?>

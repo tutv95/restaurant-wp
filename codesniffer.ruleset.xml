@@ -48,7 +48,7 @@
 	</rule>
 
 
-	<rule ref="Generic.Files.EndFileNewline"/>
+	<!--<rule ref="Generic.Files.EndFileNewline"/>-->
 
 	<!-- https://make.wordpress.org/core/handbook/coding-standards/php/#naming-conventions -->
 	<rule ref="Generic.Files.LowercasedFilename"/>
@@ -80,9 +80,9 @@
 		</properties>
 	</rule>
 
-	<rule ref="WordPress.Arrays.ArrayDeclaration">
-		<exclude name="WordPress.Arrays.ArrayDeclaration.SingleLineNotAllowed" />
-	</rule>
+	<!--<rule ref="WordPress.Arrays.ArrayDeclaration">-->
+		<!--<exclude name="WordPress.Arrays.ArrayDeclaration.SingleLineNotAllowed" />-->
+	<!--</rule>-->
 	<rule ref="WordPress.Arrays.ArrayKeySpacingRestrictions"/>
 	<rule ref="WordPress.Classes.ValidClassName"/>
 	<rule ref="WordPress.Files.FileName"/>

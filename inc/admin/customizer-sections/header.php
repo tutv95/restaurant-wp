@@ -15,7 +15,7 @@ function restaurant_wp_header_option( $wp_customize ) {
 		'header', // panel id
 		array(
 			'title'    => esc_html__( 'Header', 'restaurant-wp' ),
-			'priority' => 10
+			'priority' => 10,
 		)
 	);
 
@@ -26,7 +26,7 @@ function restaurant_wp_header_option( $wp_customize ) {
 			'title'       => esc_html__( 'Header layout', 'restaurant-wp' ),
 			'description' => esc_html__( '', 'restaurant-wp' ),
 			'priority'    => 10,
-			'panel'       => 'header'
+			'panel'       => 'header',
 		)
 	);
 	$wp_customize->add_setting(
@@ -45,8 +45,8 @@ function restaurant_wp_header_option( $wp_customize ) {
 			'type'        => 'select',
 			'choices'     => array(
 				'value1' => 'Default',
-				'value2' => 'Overlay'
-			)
+				'value2' => 'Overlay',
+			),
 		)
 	);
 	$wp_customize->add_setting(
@@ -74,7 +74,7 @@ function restaurant_wp_header_option( $wp_customize ) {
 		array(
 			'title'    => esc_html__( 'Main menu', 'restaurant-wp' ),
 			'priority' => 10,
-			'panel'    => 'header'
+			'panel'    => 'header',
 		)
 	);
 	$wp_customize->add_setting(
@@ -82,7 +82,7 @@ function restaurant_wp_header_option( $wp_customize ) {
 		array(
 			'default'           => '#fff',
 			'type'              => 'option',
-			'sanitize_callback' => 'sanitize_hex_color'
+			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
 	$wp_customize->add_control(
@@ -91,7 +91,7 @@ function restaurant_wp_header_option( $wp_customize ) {
 				'label'       => esc_html__( 'Background color', 'restaurant-wp' ),
 				'description' => esc_html__( 'Pick a background color for main menu', 'restaurant-wp' ),
 				'section'     => 'main_menu',
-				'settings'    => 'main_menu_background_color'
+				'settings'    => 'main_menu_background_color',
 			)
 		)
 	);
@@ -100,7 +100,7 @@ function restaurant_wp_header_option( $wp_customize ) {
 		array(
 			'default'           => '#fff',
 			'type'              => 'option',
-			'sanitize_callback' => 'sanitize_hex_color'
+			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
 	$wp_customize->add_control(
@@ -109,7 +109,7 @@ function restaurant_wp_header_option( $wp_customize ) {
 				'label'       => esc_html__( 'Text color', 'restaurant-wp' ),
 				'description' => esc_html__( 'Pick a text color for main menu', 'restaurant-wp' ),
 				'section'     => 'main_menu',
-				'settings'    => 'main_menu_text_color'
+				'settings'    => 'main_menu_text_color',
 			)
 		)
 	);
@@ -168,7 +168,7 @@ function restaurant_wp_header_option( $wp_customize ) {
 				'47px' => '47px',
 				'48px' => '48px',
 				'49px' => '49px',
-				'50px' => '50px'
+				'50px' => '50px',
 			)
 		)
 	);
@@ -195,10 +195,10 @@ function restaurant_wp_header_option( $wp_customize ) {
 				'600'    => '600',
 				'700'    => '700',
 				'800'    => '800',
-				'900'    => '900'
+				'900'    => '900',
 			),
 			'settings'    => 'main_menu_font_weight',
-			'section'     => 'main_menu'
+			'section'     => 'main_menu',
 		)
 	);
 
@@ -208,14 +208,14 @@ function restaurant_wp_header_option( $wp_customize ) {
 		array(
 			'title'    => esc_html__( 'Sub menu', 'restaurant-wp' ),
 			'priority' => 10,
-			'panel'    => 'header'
+			'panel'    => 'header',
 		)
 	);
 	$wp_customize->add_setting(
 		'sub_menu_background_color',
 		array(
 			'type'    => 'option',
-			'default' => '#fff'
+			'default' => '#fff',
 		)
 	);
 	$wp_customize->add_control(
@@ -224,7 +224,7 @@ function restaurant_wp_header_option( $wp_customize ) {
 				'label'       => esc_html__( 'Background color', 'restaurant-wp' ),
 				'description' => esc_html__( 'Pick a background color for sub menu', 'restaurant-wp' ),
 				'section'     => 'sub_menu',
-				'settings'    => 'sub_menu_background_color'
+				'settings'    => 'sub_menu_background_color',
 			)
 		)
 	);
@@ -232,7 +232,7 @@ function restaurant_wp_header_option( $wp_customize ) {
 		'sub_menu_text_color',
 		array(
 			'type'    => 'option',
-			'default' => '#fff'
+			'default' => '#fff',
 		)
 	);
 	$wp_customize->add_control(
@@ -241,7 +241,7 @@ function restaurant_wp_header_option( $wp_customize ) {
 				'label'       => esc_html__( 'Text color', 'restaurant-wp' ),
 				'description' => esc_html__( 'Pick a text color for sub menu', 'restaurant-wp' ),
 				'section'     => 'sub_menu',
-				'settings'    => 'sub_menu_text_color'
+				'settings'    => 'sub_menu_text_color',
 			)
 		)
 	);
@@ -249,7 +249,7 @@ function restaurant_wp_header_option( $wp_customize ) {
 		'sub_menu_text_color_hover',
 		array(
 			'type'    => 'option',
-			'default' => '#fff'
+			'default' => '#fff',
 		)
 	);
 	$wp_customize->add_control(
@@ -258,7 +258,7 @@ function restaurant_wp_header_option( $wp_customize ) {
 				'label'       => esc_html__( 'Text color hover', 'restaurant-wp' ),
 				'description' => esc_html__( 'Pick a text color hover for sub menu', 'restaurant-wp' ),
 				'section'     => 'sub_menu',
-				'settings'    => 'sub_menu_text_color_hover'
+				'settings'    => 'sub_menu_text_color_hover',
 			)
 		)
 	);
@@ -269,7 +269,7 @@ function restaurant_wp_header_option( $wp_customize ) {
 		array(
 			'title'    => 'Sticky menu',
 			'priority' => 10,
-			'panel'    => 'header'
+			'panel'    => 'header',
 		)
 	);
 	$wp_customize->add_setting(
@@ -285,7 +285,7 @@ function restaurant_wp_header_option( $wp_customize ) {
 			'description' => esc_html__( 'Check to enable a fixed header when scrolling, uncheck to disable.', 'restaurant-wp' ),
 			'section'     => 'sticky_menu',
 			'settings'    => 'restaurant_wp_sticky_menu',
-			'type'        => 'checkbox'
+			'type'        => 'checkbox',
 		)
 	);
 
@@ -294,14 +294,14 @@ function restaurant_wp_header_option( $wp_customize ) {
 		'mobile_menu',
 		array(
 			'title' => esc_html__( 'Mobile menu', 'restaurant-wp' ),
-			'panel' => 'header'
+			'panel' => 'header',
 		)
 	);
 	$wp_customize->add_setting(
 		'mobile_menu_background_color',
 		array(
 			'type'    => 'option',
-			'default' => '#fff'
+			'default' => '#fff',
 		)
 	);
 	$wp_customize->add_control(
@@ -310,7 +310,7 @@ function restaurant_wp_header_option( $wp_customize ) {
 				'label'       => esc_html__( 'background color ', 'restaurant-wp' ),
 				'description' => esc_html__( 'Pick a background color  for sub menu', 'restaurant-wp' ),
 				'section'     => 'mobile_menu',
-				'settings'    => 'mobile_menu_background_color'
+				'settings'    => 'mobile_menu_background_color',
 			)
 		)
 	);
@@ -318,7 +318,7 @@ function restaurant_wp_header_option( $wp_customize ) {
 		'mobile_menu_text_color',
 		array(
 			'type'    => 'option',
-			'default' => '#fff'
+			'default' => '#fff',
 		)
 	);
 	$wp_customize->add_control(
@@ -327,7 +327,7 @@ function restaurant_wp_header_option( $wp_customize ) {
 				'label'       => esc_html__( 'Text color ', 'restaurant-wp' ),
 				'description' => esc_html__( 'Pick a text color  for mobile menu', 'restaurant-wp' ),
 				'section'     => 'mobile_menu',
-				'settings'    => 'mobile_menu_text_color'
+				'settings'    => 'mobile_menu_text_color',
 			)
 		)
 	);
@@ -335,7 +335,7 @@ function restaurant_wp_header_option( $wp_customize ) {
 		'mobile_menu_text_color_hover',
 		array(
 			'type'    => 'option',
-			'default' => '#fff'
+			'default' => '#fff',
 		)
 	);
 	$wp_customize->add_control(
@@ -344,7 +344,7 @@ function restaurant_wp_header_option( $wp_customize ) {
 				'label'       => esc_html__( 'Text color hover', 'restaurant-wp' ),
 				'description' => esc_html__( 'Pick a text color hover for mobile menu', 'restaurant-wp' ),
 				'section'     => 'mobile_menu',
-				'settings'    => 'mobile_menu_text_color_hover'
+				'settings'    => 'mobile_menu_text_color_hover',
 			)
 		)
 	);
