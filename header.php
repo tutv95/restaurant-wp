@@ -51,8 +51,8 @@
 						</div>
 
 						<div class="site-branding width-logo table-cell sm-logo">
-							<?php restaurant_wp_logo(); ?>
-							<?php restaurant_wp_sticky_logo(); ?>
+							<?php do_action( 'restaurant_wp_logo' ); ?>
+							<?php do_action( 'restaurant_wp_sticky_logo' ); ?>
 						</div>
 
 						<nav class="width-navigation table-cell table-right main-navigation">

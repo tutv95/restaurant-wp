@@ -35,6 +35,8 @@ function restaurant_wp_logo() {
 	<?php
 }
 
+add_action( 'restaurant_wp_logo', 'restaurant_wp_logo' );
+
 /**
  * Sticky logo
  */
@@ -45,6 +47,8 @@ function restaurant_wp_sticky_logo() {
 	</a>
 	<?php
 }
+
+add_action( 'restaurant_wp_sticky_logo', 'restaurant_wp_sticky_logo' );
 
 /**
  * Post share
