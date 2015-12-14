@@ -22,14 +22,14 @@
 	<rule ref="Generic.PHP.LowerCaseConstant"/>
 
 	<!-- http://make.wordpress.org/core/handbook/coding-standards/php/#indentation -->
-	<arg name="tab-width" value="4"/>
-	<rule ref="Generic.WhiteSpace.DisallowSpaceIndent"/>
-	<rule ref="Generic.WhiteSpace.ScopeIndent">
-		<properties>
-			<property name="indent" value="4"/>
-			<property name="tabIndent" value="true"/>
-		</properties>
-	</rule>
+	<!--<arg name="tab-width" value="4"/>-->
+	<!--<rule ref="Generic.WhiteSpace.DisallowSpaceIndent"/>-->
+	<!--<rule ref="Generic.WhiteSpace.ScopeIndent">-->
+		<!--<properties>-->
+			<!--<property name="indent" value="4"/>-->
+			<!--<property name="tabIndent" value="true"/>-->
+		<!--</properties>-->
+	<!--</rule>-->
 
 	<!-- http://make.wordpress.org/core/handbook/coding-standards/php/#error-control-operator -->
 	<rule ref="Generic.PHP.NoSilencedErrors" />
@@ -90,6 +90,6 @@
 	<rule ref="WordPress.WhiteSpace.ControlStructureSpacing"/>
 	<rule ref="WordPress.WhiteSpace.OperatorSpacing"/>
 	<rule ref="WordPress.WhiteSpace.CastStructureSpacing"/>
-	<rule ref="WordPress.PHP.YodaConditions"/>
+	<!--<rule ref="WordPress.PHP.YodaConditions"/>-->
 
 </ruleset>
