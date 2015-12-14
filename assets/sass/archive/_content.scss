@@ -18,7 +18,7 @@
 				font-weight: 700;
 				padding: 10px 2px;
 				line-height: 22px;
-				background: $primary-color;
+				background: $restaurant_wp_body_primary_color;
 
 				.month {
 					font-style: normal;
@@ -84,7 +84,7 @@
 						color: #2a2a2a;
 
 						&:hover {
-							color: $primary-color;
+							color: $restaurant_wp_body_primary_color;
 							text-decoration: none;
 						}
 					}
@@ -96,7 +96,7 @@
 						font-weight: 700;
 
 						&:hover {
-							color: $primary-color;
+							color: $restaurant_wp_body_primary_color;
 							text-decoration: none;
 						}
 					}

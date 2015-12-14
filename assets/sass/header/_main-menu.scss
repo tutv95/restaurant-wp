@@ -1,8 +1,62 @@
 .tm-table {
-  display: table;
+	display: table;
 }
 
 .table-cell {
-  display: table-cell;
-  vertical-align: middle;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.navigation {
+	.tm-table {
+		width: 100%;
+	}
+	.width-navigation {
+		text-align: right;
+		ul {
+			li {
+				list-style: none;
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+		font-size: $restaurant_wp_font_size_main_menu;
+		.inner-navigation {
+			overflow: hidden;
+			a {
+				color: $restaurant_wp_main_menu_text_color;
+				&:hover {
+					color: $restaurant_wp_main_menu_text_hover_color;
+					text-decoration: none;
+				}
+			}
+			.navbar {
+				margin-bottom: 0;
+				border: none;
+				display: inline-block;
+				text-align: right;
+				min-height: inherit;
+				> li {
+					padding: 0 15px;
+					> a {
+						text-transform: uppercase;
+					}
+				}
+			}
+			.menu-right {
+				margin-bottom: 0;
+				display: inline-block;
+				padding-left: 15px;
+				.list-links {
+					padding-left: 0;
+					> li {
+						padding-left: 15px;
+						&:first-child {
+							padding-left: 0;
+						}
+					}
+				}
+			}
+		}
+	}
 }
