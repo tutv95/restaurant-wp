@@ -33,3 +33,5 @@ require_once RESWP_THEME_DIR . 'inc/admin/customizer-sections/header-mobile-menu
 // get data customize
 global $theme_options_data;
 $theme_options_data = get_theme_mods();
+
+var_dump( $theme_options_data );

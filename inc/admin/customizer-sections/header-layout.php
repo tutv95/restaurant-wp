@@ -56,8 +56,8 @@ $wp_customize->add_control(
 		$wp_customize, $prefix . 'header_background_color', array(
 			'label'       => esc_html__( 'Header background color', 'restaurant-wp' ),
 			'description' => esc_html__( 'Pick a background color for header', 'restaurant-wp' ),
-			'section'     => 'header_layout',
-			'settings'    => 'header_background_color',
+			'section'     => $prefix . 'header_layout',
+			'settings'    => $prefix . 'header_background_color',
 		)
 	)
 );
