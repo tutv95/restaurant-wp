@@ -24,9 +24,8 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'restaurant-wp' ); ?></a>
 	<?php
-	global $theme_option_data;
-	$theme_option_data = get_theme_mods();
-	//var_dump($theme_option_data['restaurant_wp_sticky_menu']);
+	$theme_option_data = restaurant_wp_get_theme_option_data();
+
 	$custom_header = '';
 	if ( isset( $theme_option_data['restaurant_wp_sticky_menu'] ) && $theme_option_data['restaurant_wp_sticky_menu'] == 1 ) {
 		$custom_header .= ' affix-top';

@@ -25,6 +25,15 @@ function restaurant_wp_rewrite_uri_stylesheet() {
 add_action( 'stylesheet_uri', 'restaurant_wp_rewrite_uri_stylesheet' );
 
 /**
+ * Get Theme Option Data
+ */
+function restaurant_wp_get_theme_option_data() {
+	$theme_options_data = get_theme_mods();
+
+	return $theme_options_data;
+}
+
+/**
  * Logo
  */
 function restaurant_wp_logo() {

@@ -29,9 +29,3 @@ require_once RESWP_THEME_DIR . 'inc/admin/customizer-sections/header-main-menu.p
 require_once RESWP_THEME_DIR . 'inc/admin/customizer-sections/header-sub-menu.php';
 require_once RESWP_THEME_DIR . 'inc/admin/customizer-sections/header-sticky-menu.php';
 require_once RESWP_THEME_DIR . 'inc/admin/customizer-sections/header-mobile-menu.php';
-
-// get data customize
-global $theme_options_data;
-$theme_options_data = get_theme_mods();
-
-var_dump( $theme_options_data );
