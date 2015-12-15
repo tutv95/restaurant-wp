@@ -16,6 +16,11 @@
 require RESWP_THEME_DIR . 'inc/widgets/widgets.php';
 
 /**
+ * Google fonts
+ */
+require RESWP_THEME_DIR . 'inc/google-fonts.php';
+
+/**
  * Rewrite uri stylesheet
  */
 function restaurant_wp_rewrite_uri_stylesheet() {
@@ -150,8 +155,17 @@ add_action( 'restaurant_wp_entry_top', 'restaurant_wp_entry_top' );
 /**
  * Enqueue web font
  */
-function restaurant_wp_enqueue_web_font() {
-	wp_enqueue_style( 'Roboto-Google-Font', 'https://fonts.googleapis.com/css?family=Roboto:400,700,500,100,100italic,300,300italic,400italic,500italic,700italic,900,900italic' );
+
+function restaurant_wp_google_font_body() {
+	$theme_option_data = restaurant_wp_get_theme_option_data();
+
+	if ( isset( $theme_option_data['restaurant_wp_font_body'] ) ) {
+		$key_font     = intval( $theme_option_data['restaurant_wp_font_body'] );
+		$google_fonts = restaurant_wp_get_list_google_fonts();
+
+		$font = $google_fonts[$key_font];
+		wp_enqueue_style( 'restaurant_wp_google_font_' . strtolower( str_replace( ' ', '_', $font ) ), '//fonts.googleapis.com/css?family=' . $font );
+	}
 }
 
-add_action( 'restaurant_wp_enqueue_scripts', 'restaurant_wp_enqueue_web_font' );
+add_action( 'restaurant_wp_enqueue_scripts', 'restaurant_wp_google_font_body' );

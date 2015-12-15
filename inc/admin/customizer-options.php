@@ -43,6 +43,7 @@ class Restaurant_WP_Customize__ {
 		// Header
 		require_once RESWP_THEME_DIR . 'inc/admin/customizer-sections/header.php';
 		require_once RESWP_THEME_DIR . 'inc/admin/customizer-sections/logo.php';
+		require_once RESWP_THEME_DIR . 'inc/admin/customizer-sections/typography.php';
 	}
 }
 

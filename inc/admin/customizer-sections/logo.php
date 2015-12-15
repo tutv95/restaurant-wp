@@ -45,3 +45,28 @@ $wp_customize->add_control(
 		)
 	)
 );
+
+/**
+ * Width logo
+ */
+$wp_customize->add_setting(
+	$prefix . 'width_logo',
+	array(
+		'default' => 150
+	)
+);
+
+
+$wp_customize->add_control(
+	$prefix . 'width_logo', array(
+		'type'        => 'number',
+		'section'     => 'title_tagline',
+		'label'       => esc_html__( 'Width Logo', 'restaurant-wp' ),
+		'description' => esc_html__( 'Unit is px.', 'restaurant-wp' ),
+		'input_attrs' => array(
+			'min'  => 0,
+			'max'  => 500,
+			'step' => 1,
+		),
+	)
+);

@@ -33,11 +33,34 @@ require_once RESWP_THEME_DIR . 'inc/admin/customizer-options.php';
  * Print Custom CSS by Customize
  */
 function restaurant_wp_customize_css() {
+	$theme_option_data = restaurant_wp_get_theme_option_data();
+
 	?>
 	<style>
-		.abc {
-			text-decoration: underline;
+		<?php if (isset($theme_option_data['restaurant_wp_width_logo'])):
+			$width_logo = intval($theme_option_data['restaurant_wp_width_logo']);
+		?>
+		.width-logo {
+			max-width: <?php echo $width_logo ?>px;
 		}
+
+		<?php endif; ?>
+
+		<?php
+		$theme_option_data = restaurant_wp_get_theme_option_data();
+		if ( isset( $theme_option_data['restaurant_wp_font_body'] ) ) {
+			$key_font     = intval( $theme_option_data['restaurant_wp_font_body'] );
+			$google_fonts = restaurant_wp_get_list_google_fonts();
+			$font = $google_fonts[$key_font];
+			?>
+		body {
+			font-family: <?php echo $font; ?> !important;
+		}
+
+		<?php } ?>
+
+		<?php do_action('restaurant_wp_style_head') ?>
+
 	</style>
 	<?php
 }
