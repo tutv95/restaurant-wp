@@ -34,6 +34,21 @@ function restaurant_wp_get_theme_option_data() {
 }
 
 /**
+ * Add class to body class (CSS)
+ *
+ * @param $classes
+ *
+ * @return array
+ */
+function restaurant_wp_add_class_to_body( $classes ) {
+	$classes[] = apply_filters( 'restaurant_wp_add_class_to_body', null );
+
+	return $classes;
+}
+
+add_filter( 'body_class', 'restaurant_wp_add_class_to_body' );
+
+/**
  * Logo
  */
 function restaurant_wp_logo() {

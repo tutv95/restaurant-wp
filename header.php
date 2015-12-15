@@ -26,6 +26,8 @@
 	<?php
 	$theme_option_data = restaurant_wp_get_theme_option_data();
 
+	var_dump( $theme_option_data );
+
 	$custom_header = '';
 	if ( isset( $theme_option_data['restaurant_wp_sticky_menu'] ) && $theme_option_data['restaurant_wp_sticky_menu'] == 1 ) {
 		$custom_header .= ' affix-top';

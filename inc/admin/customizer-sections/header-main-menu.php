@@ -25,7 +25,6 @@ $wp_customize->add_setting(
 	$prefix . 'main_menu_background_color',
 	array(
 		'default'           => '#fff',
-		'type'              => 'option',
 		'sanitize_callback' => 'sanitize_hex_color',
 	)
 );
@@ -45,7 +44,6 @@ $wp_customize->add_setting(
 	$prefix . 'main_menu_text_color',
 	array(
 		'default'           => '#fff',
-		'type'              => 'option',
 		'sanitize_callback' => 'sanitize_hex_color',
 	)
 );
@@ -55,8 +53,8 @@ $wp_customize->add_control(
 		$wp_customize, $prefix . 'main_menu_text_color', array(
 			'label'       => esc_html__( 'Text color', 'restaurant-wp' ),
 			'description' => esc_html__( 'Pick a text color for main menu', 'restaurant-wp' ),
-			'section'     => 'main_menu',
-			'settings'    => 'main_menu_text_color',
+			'section'     => $prefix . 'main_menu',
+			'settings'    => $prefix . 'main_menu_text_color',
 		)
 	)
 );
