@@ -67,11 +67,21 @@ add_filter( 'body_class', 'restaurant_wp_add_class_to_body' );
  * Logo
  */
 function restaurant_wp_logo() {
-	?>
-	<a href="<?php echo get_home_url(); ?>" title="Restaurnt" rel="home" class="no-sticky-logo">
-		<img src="http://demo.thimpress.com/resca/wp-content/uploads/2015/07/logo2.png" alt="Restaurant &amp; Coffee WordPress Theme – Resca" width="50" height="50">
-	</a>
-	<?php
+	$option_data = restaurant_wp_get_theme_option_data();
+	if ( isset( $option_data['restaurant_wp_header_logo'] ) && is_numeric( $option_data['restaurant_wp_header_logo'] ) ) {
+		$id_image = $option_data['restaurant_wp_header_logo'];
+		?>
+		<a href="<?php echo get_home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ) ?>" rel="home" class="no-sticky-logo">
+			<?php echo wp_get_attachment_image( $id_image, 'full' ); ?>
+		</a>
+		<?php
+	} else {
+		?>
+		<a href="<?php echo get_home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ) ?>" rel="home" class="no-sticky-logo">
+			<img src="<?php echo esc_url( RESWP_THEME_URL . 'assets/images/logo.png' ) ?>" />
+		</a>
+		<?php
+	}
 }
 
 add_action( 'restaurant_wp_logo', 'restaurant_wp_logo' );
@@ -80,11 +90,32 @@ add_action( 'restaurant_wp_logo', 'restaurant_wp_logo' );
  * Sticky logo
  */
 function restaurant_wp_sticky_logo() {
-	?>
-	<a href="<?php echo get_home_url(); ?>" title="Restaura Wor" rel="home" class="sticky-logo">
-		<img src="http://demo.thimpress.com/resca/wp-content/uploads/2015/07/logo2.png" alt="Restaurant &amp; Coffee WordPress Theme – Resca" width="50" height="50">
-	</a>
-	<?php
+	$option_data = restaurant_wp_get_theme_option_data();
+
+	if ( isset( $option_data['restaurant_wp_sticky_logo'] ) && is_numeric( $option_data['restaurant_wp_sticky_logo'] ) ) {
+		$id_image = $option_data['restaurant_wp_sticky_logo'];
+		?>
+		<a href="<?php echo get_home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ) ?>" rel="home" class="sticky-logo">
+			<?php echo wp_get_attachment_image( $id_image, 'full' ); ?>
+		</a>
+		<?php
+	} else {
+		$option_data = restaurant_wp_get_theme_option_data();
+		if ( isset( $option_data['restaurant_wp_header_logo'] ) && is_numeric( $option_data['restaurant_wp_header_logo'] ) ) {
+			$id_image = $option_data['restaurant_wp_header_logo'];
+			?>
+			<a href="<?php echo get_home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ) ?>" rel="home" class="sticky-logo">
+				<?php echo wp_get_attachment_image( $id_image, 'full' ); ?>
+			</a>
+			<?php
+		} else {
+			?>
+			<a href="<?php echo get_home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ) ?>" rel="home" class="sticky-logo">
+				<img src="<?php echo esc_url( RESWP_THEME_URL . 'assets/images/logo.png' ) ?>" />
+			</a>
+			<?php
+		}
+	}
 }
 
 add_action( 'restaurant_wp_sticky_logo', 'restaurant_wp_sticky_logo' );

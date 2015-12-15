@@ -20,7 +20,7 @@ $wp_customize->add_panel(
 	$prefix . 'panel_header',
 	array(
 		'title'    => esc_html__( 'Header', 'restaurant-wp' ),
-		'priority' => 10,
+		'priority' => 21,
 	)
 );
 

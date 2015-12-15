@@ -33,6 +33,7 @@ class Restaurant_WP_Customize__ {
 	public function deregister( $wp_customize ) {
 		$wp_customize->remove_section( 'colors' );
 		$wp_customize->remove_section( 'background_image' );
+		$wp_customize->remove_section( 'header_image' );
 	}
 
 	/**
@@ -43,6 +44,7 @@ class Restaurant_WP_Customize__ {
 	public function create_customize( $wp_customize ) {
 		// Header
 		require_once RESWP_THEME_DIR . 'inc/admin/customizer-sections/header.php';
+		require_once RESWP_THEME_DIR . 'inc/admin/customizer-sections/logo.php';
 	}
 }
 
