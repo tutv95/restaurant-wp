@@ -32,7 +32,6 @@ class Restaurant_WP_Customize__ {
 	public function deregister( $wp_customize ) {
 		$wp_customize->remove_section( 'colors' );
 		$wp_customize->remove_section( 'background_image' );
-		$wp_customize->remove_section( 'header_image' );
 	}
 
 	/**
