@@ -41,12 +41,27 @@ function restaurant_wp_get_theme_option_data() {
  * @return array
  */
 function restaurant_wp_add_class_to_body( $classes ) {
-	$classes[] = apply_filters( 'restaurant_wp_add_class_to_body', null );
+	$theme_option_data = restaurant_wp_get_theme_option_data();
+
+	// Header style
+	if ( isset( $theme_option_data['restaurant_wp_header_style'] ) && $theme_option_data['restaurant_wp_header_style'] == 'overlay' ) {
+		$classes[] = 'header_overlay';
+	} else {
+		$classes[] = 'header_default';
+	}
+
+	// Sticky menu
+	if ( isset( $theme_option_data['restaurant_wp_sticky_menu'] ) && $theme_option_data['restaurant_wp_sticky_menu'] ) {
+		$classes[] = 'sticky_menu';
+	} else {
+		$classes[] = 'no_sticky_menu';
+	}
 
 	return $classes;
 }
 
 add_filter( 'body_class', 'restaurant_wp_add_class_to_body' );
+
 
 /**
  * Logo

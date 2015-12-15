@@ -23,7 +23,7 @@ $wp_customize->add_section(
 $wp_customize->add_setting(
 	$prefix . 'header_style',
 	array(
-		'default' => 'value2',
+		'default' => 'overlay',
 	)
 );
 
@@ -36,8 +36,8 @@ $wp_customize->add_control(
 		'settings'    => $prefix . 'header_style',
 		'type'        => 'select',
 		'choices'     => array(
-			'value1' => 'Default',
-			'value2' => 'Overlay',
+			'default' => 'Default',
+			'overlay' => 'Overlay',
 		),
 	)
 );
