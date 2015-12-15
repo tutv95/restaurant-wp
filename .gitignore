@@ -7,3 +7,5 @@ npm-debug.log
 
 /vendor/
 composer.lock
+
+style.min.css
