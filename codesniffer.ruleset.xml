@@ -83,13 +83,13 @@
 	<!--<rule ref="WordPress.Arrays.ArrayDeclaration">-->
 		<!--<exclude name="WordPress.Arrays.ArrayDeclaration.SingleLineNotAllowed" />-->
 	<!--</rule>-->
-	<rule ref="WordPress.Arrays.ArrayKeySpacingRestrictions"/>
+	<!--<rule ref="WordPress.Arrays.ArrayKeySpacingRestrictions"/>-->
 	<rule ref="WordPress.Classes.ValidClassName"/>
 	<rule ref="WordPress.Files.FileName"/>
 	<rule ref="WordPress.NamingConventions.ValidFunctionName"/>
-	<rule ref="WordPress.WhiteSpace.ControlStructureSpacing"/>
-	<rule ref="WordPress.WhiteSpace.OperatorSpacing"/>
-	<rule ref="WordPress.WhiteSpace.CastStructureSpacing"/>
+	<!--<rule ref="WordPress.WhiteSpace.ControlStructureSpacing"/>-->
+	<!--<rule ref="WordPress.WhiteSpace.OperatorSpacing"/>-->
+	<!--<rule ref="WordPress.WhiteSpace.CastStructureSpacing"/>-->
 	<!--<rule ref="WordPress.PHP.YodaConditions"/>-->
 
 </ruleset>
