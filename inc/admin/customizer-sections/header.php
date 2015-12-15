@@ -25,7 +25,4 @@ $wp_customize->add_panel(
 );
 
 require_once RESWP_THEME_DIR . 'inc/admin/customizer-sections/header-layout.php';
-require_once RESWP_THEME_DIR . 'inc/admin/customizer-sections/header-main-menu.php';
-require_once RESWP_THEME_DIR . 'inc/admin/customizer-sections/header-sub-menu.php';
 require_once RESWP_THEME_DIR . 'inc/admin/customizer-sections/header-sticky-menu.php';
-require_once RESWP_THEME_DIR . 'inc/admin/customizer-sections/header-mobile-menu.php';

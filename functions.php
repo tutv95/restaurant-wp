@@ -12,11 +12,6 @@
  */
 require get_template_directory() . '/inc/variables.php';
 
-/**
- * Library compile sass to css
- */
-require RESWP_THEME_DIR . 'inc/libs/scss.inc.php';
-
 if ( ! function_exists( 'restaurant_wp_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
