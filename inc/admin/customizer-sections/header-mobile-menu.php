@@ -21,8 +21,9 @@ $wp_customize->add_section(
 $wp_customize->add_setting(
 	$prefix . 'mobile_menu_background_color',
 	array(
-		'type'    => 'option',
+//		'type'    => 'option',
 		'default' => '#fff',
+		'sanitize_callback' => 'sanitize_hex_color',
 	)
 );
 
@@ -40,8 +41,9 @@ $wp_customize->add_control(
 $wp_customize->add_setting(
 	$prefix . 'mobile_menu_text_color',
 	array(
-		'type'    => 'option',
+//		'type'    => 'option',
 		'default' => '#fff',
+		'sanitize_callback' => 'sanitize_hex_color',
 	)
 );
 
@@ -59,8 +61,9 @@ $wp_customize->add_control(
 $wp_customize->add_setting(
 	$prefix . 'mobile_menu_text_color_hover',
 	array(
-		'type'    => 'option',
+//		'type'    => 'option',
 		'default' => '#fff',
+		'sanitize_callback' => 'sanitize_hex_color',
 	)
 );
 
