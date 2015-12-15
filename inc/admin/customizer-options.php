@@ -58,7 +58,7 @@ class Restaurant_WP_Customize__ {
 		$scss->setFormatter( "scss_formatter_compressed" );
 
 		$css           = $scss->compile( '@import "style.scss"' );
-		$style_css_dir = RESWP_THEME_DIR . 'style.min.css';
+		$style_css_dir = RESWP_THEME_DIR . 'style.v1.min.css';
 
 		$this->file_put_contents__( $style_css_dir, $css );
 	}

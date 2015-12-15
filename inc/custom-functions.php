@@ -19,7 +19,7 @@ require RESWP_THEME_DIR . 'inc/widgets/widgets.php';
  * Rewrite uri stylesheet
  */
 function restaurant_wp_rewrite_uri_stylesheet() {
-	return get_stylesheet_directory_uri() . '/style.min.css?time=' . md5( time() );
+	return get_stylesheet_directory_uri() . '/style.v1.min.css?time=' . md5( time() );
 }
 
 add_action( 'stylesheet_uri', 'restaurant_wp_rewrite_uri_stylesheet' );
