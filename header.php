@@ -26,9 +26,7 @@
 	<?php
 	$theme_option_data = restaurant_wp_get_theme_option_data();
 
-	$a = get_option('restaurant_wp_main_menu_font_size');
-
-	var_dump( $a );
+//	var_dump( $theme_option_data );
 
 	$custom_header = '';
 	if ( isset( $theme_option_data['restaurant_wp_sticky_menu'] ) && $theme_option_data['restaurant_wp_sticky_menu'] == 1 ) {
