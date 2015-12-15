@@ -53,8 +53,19 @@ function restaurant_wp_customize_css() {
 			$google_fonts = restaurant_wp_get_list_google_fonts();
 			$font = $google_fonts[$key_font];
 			?>
+
 		body {
-			font-family: <?php echo $font; ?> !important;
+			font-family: <?php echo $font; ?> sans-serif !important;
+		}
+
+		<?php } ?>
+
+		<?php
+		$image = get_header_image();
+
+		if ( $image !== false ) { ?>
+		#masthead {
+			background-image: url('<?php echo $image; ?>');
 		}
 
 		<?php } ?>

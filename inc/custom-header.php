@@ -35,3 +35,12 @@ function restaurant_wp_custom_header_setup() {
 }
 
 add_action( 'after_setup_theme', 'restaurant_wp_custom_header_setup' );
+
+function restaurant_wp_header_image() {
+
+
+
+	return $css;
+}
+
+add_action( 'restaurant_wp_style_head', 'restaurant_wp_header_image' );
