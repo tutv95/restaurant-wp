@@ -37,14 +37,14 @@ function restaurant_wp_customize_css() {
 
 	?>
 	<style>
-		<?php if (isset($theme_option_data['restaurant_wp_width_logo'])):
+		<?php if ( isset($theme_option_data['restaurant_wp_width_logo']) ) {
 			$width_logo = intval($theme_option_data['restaurant_wp_width_logo']);
 		?>
 		.width-logo {
 			max-width: <?php echo $width_logo ?>px;
 		}
 
-		<?php endif; ?>
+		<?php } ?>
 
 		<?php
 		$theme_option_data = restaurant_wp_get_theme_option_data();
