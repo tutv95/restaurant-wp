@@ -15,7 +15,7 @@ gulp.task('sass', function () {
 	return gulp.src('assets/sass/style.scss')
 		.pipe(sass())
 		.pipe(minifyCss({compatibility: 'ie8'}))
-		.pipe(rename('style.min.css'))
+		.pipe(rename('style.v1.min.css'))
 		.pipe(gulp.dest(''))
 		.pipe(livereload());
 });
