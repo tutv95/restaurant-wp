@@ -9,5 +9,7 @@
             "email": "tutv95@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "leafo/scssphp": "0.0.12"
+    }
 }
