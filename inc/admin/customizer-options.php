@@ -44,6 +44,7 @@ class Restaurant_WP_Customize__ {
 		require_once RESWP_THEME_DIR . 'inc/admin/customizer-sections/header.php';
 		require_once RESWP_THEME_DIR . 'inc/admin/customizer-sections/logo.php';
 		require_once RESWP_THEME_DIR . 'inc/admin/customizer-sections/typography.php';
+		require_once RESWP_THEME_DIR . 'inc/admin/customizer-sections/display.php';
 	}
 }
 
