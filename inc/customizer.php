@@ -58,7 +58,7 @@ function restaurant_wp_customize_css() {
 			$font = $google_fonts[$key_font];
 		?>
 		body {
-			font-family: "<?php echo $font; ?>" sans-serif !important;
+			font-family: "<?php echo $font; ?>" !important;
 		}
 
 		<?php } ?>
