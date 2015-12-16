@@ -207,3 +207,16 @@ function restaurant_wp_content_main_top() {
 }
 
 add_action( 'restaurant_wp_content_main_top', 'restaurant_wp_content_main_top' );
+
+/**
+ * Back to top
+ */
+function restaurant_wp_back_to_top() {
+	$theme_option_data = restaurant_wp_get_theme_option_data();
+
+	if ( isset( $theme_option_data['restaurant_wp_display_back_to_top'] ) && $theme_option_data['restaurant_wp_display_back_to_top'] ) {
+		echo '<a href="#" id="back-to-top" style="display: block;" class=""><i class="fa fa-chevron-up"></i></a>';
+	}
+}
+
+add_action( 'restaurant_wp_back_to_top', 'restaurant_wp_back_to_top' );

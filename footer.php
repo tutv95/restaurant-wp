@@ -29,6 +29,8 @@
 </footer><!-- #colophon -->
 </div><!-- #page -->
 
+<?php do_action( 'restaurant_wp_back_to_top' ); ?>
+
 <?php wp_footer(); ?>
 
 </body>
