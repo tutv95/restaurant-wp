@@ -42,9 +42,14 @@
 	}
 
 	&.widget_categories, &.widget_archive {
+		> ul {
+			> li {
+				border-bottom: 1px solid #ddd;
+			}
+		}
+
 		ul {
 			li {
-				border-bottom: 1px solid #ddd;
 				margin-bottom: 10px;
 				padding-bottom: 10px;
 				text-transform: uppercase;
@@ -54,6 +59,37 @@
 
 				a {
 					color: inherit;
+				}
+			}
+		}
+	}
+
+	&.widget_calendar {
+		table {
+			caption {
+				text-align: center;
+				padding-bottom: 10px;
+			}
+
+			tfoot {
+				tr {
+					#next {
+						text-align: right;
+					}
+
+					#prev {
+						text-align: left;
+					}
+				}
+			}
+
+			tr {
+				td {
+					padding: 10px;
+				}
+
+				th {
+					text-align: center;
 				}
 			}
 		}
