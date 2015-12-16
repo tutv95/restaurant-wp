@@ -169,3 +169,22 @@ function restaurant_wp_google_font_body() {
 }
 
 add_action( 'restaurant_wp_enqueue_scripts', 'restaurant_wp_google_font_body' );
+
+/**
+ * Content top site main
+ */
+function restaurant_wp_content_main_top() {
+	if ( is_front_page() ) {
+		echo '<h1>Front page</h1>';
+	} else if ( is_author() ) {
+		echo '<h1>Author</h1>';
+	} else if ( is_search() ) {
+		echo '<h1>Search</h1>';
+	} else if ( is_archive() ) {
+		echo '<h1>Archive</h1>';
+	} else if ( is_singular() ) {
+		echo '<h1>Singular</h1>';
+	}
+}
+
+add_action( 'restaurant_wp_content_main_top', 'restaurant_wp_content_main_top' );
