@@ -8,11 +8,11 @@
  * @package Restaurant_WP
  */
 
-if ( ! is_active_sidebar( 'main-bottom' ) ) {
+if ( ! is_active_sidebar( 'main_bottom' ) ) {
 	return;
 }
 ?>
 
 <aside id="sidebar-main-bottom" class="widget-area" role="complementary">
-	<?php dynamic_sidebar( 'main-bottom' ); ?>
+	<?php dynamic_sidebar( 'main_bottom' ); ?>
 </aside><!-- #secondary -->
