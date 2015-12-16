@@ -12,11 +12,11 @@
 ?>
 
 </div><!-- #content -->
-<div class="main-bottom">
+<div id="main-bottom">
 	<div class="container">
 		<?php get_template_part( 'template-parts/sidebar', 'main-bottom' ); ?>
 	</div>
-</div>
+</div><!-- #main-bottom -->
 <footer id="colophon" class="site-footer" role="contentinfo">
 	<div class="container">
 		<?php get_template_part( 'template-parts/sidebar', 'footer' ); ?>

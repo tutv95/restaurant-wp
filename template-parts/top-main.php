@@ -12,9 +12,8 @@
 ?>
 
 <?php $image = get_header_image(); ?>
-<div class="main-top">
+<div id="main-top">
 	<?php if ( $image != false ) {
 		echo '<img src="' . $image . '" />';
 	} ?>
-</div>
-<!-- #main-top -->
+</div><!-- #main-top -->
