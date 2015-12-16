@@ -59,5 +59,5 @@
 			</div>
 		</div>
 	</header><!-- #masthead -->
-
+	<?php get_template_part( 'template-parts/top-main' ); ?>
 	<div id="content" class="site-content">
