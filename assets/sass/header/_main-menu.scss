@@ -251,6 +251,11 @@ a:active {
 	transition: transform .5s;
 }
 
+#wrapper-container {
+	@include transition(transfrom 400ms ease);
+	overflow: auto;
+}
+
 @media (max-width: 767px) {
 	.admin-bar {
 		.mobile-menu-container {
@@ -316,10 +321,11 @@ a:active {
 				.list-links {
 					padding-left: 20px;
 					li {
+						padding-top: 20px;
 						display: inline-block;
-						padding-right: 15px;
 						a {
 							color: #d8d8d8;
+							padding: 10px 10px;
 						}
 					}
 				}
