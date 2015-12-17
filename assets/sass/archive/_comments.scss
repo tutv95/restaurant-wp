@@ -1,4 +1,14 @@
 .comments-area {
+	margin-left: 80px;
+
+	.comment-list {
+		list-style: none;
+		padding: 0;
+		.comment-body {
+
+		}
+	}
+
 	.comment-respond {
 		label {
 			max-width: 100%;
