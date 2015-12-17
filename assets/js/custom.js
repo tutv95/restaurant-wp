@@ -26,9 +26,13 @@ jQuery(document).ready(function ($) {
 
 	// affix header
 
-	$('.affix-top').affix({
-		offset: {
-			top: $('header').outerHeight(true)
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 0) {
+			$('.affix-top').affix({
+				offset: {
+					top: 0
+				}
+			});
 		}
 	});
 
