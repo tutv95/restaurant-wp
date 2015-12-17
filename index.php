@@ -15,7 +15,7 @@
 get_header(); ?>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-9">
+			<div class="<?php restaurant_wp_layout_column_first(); ?>">
 				<div id="primary" class="content-area">
 					<main id="main" class="site-main" role="main">
 
@@ -51,9 +51,11 @@ get_header(); ?>
 					</main><!-- #main -->
 				</div><!-- #primary -->
 			</div>
-			<div class="col-md-3">
-				<?php get_sidebar(); ?>
-			</div>
+			<?php if ( restaurant_wp_get_theme_layout() != 'full' ): ?>
+				<div class="<?php restaurant_wp_layout_column_second(); ?>">
+					<?php get_sidebar(); ?>
+				</div>
+			<?php endif; ?>
 		</div>
 	</div>
 <?php

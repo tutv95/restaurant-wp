@@ -365,3 +365,28 @@ function restaurant_wp_get_theme_layout() {
 
 	return $layout;
 }
+
+/**
+ * Class layout column first
+ */
+function restaurant_wp_layout_column_first() {
+	if ( restaurant_wp_get_theme_layout() == 'right' ) {
+		echo 'col-md-9';
+	} elseif ( restaurant_wp_get_theme_layout() == 'left' ) {
+		echo 'col-md-9 col-md-push-3';
+	} else {
+		echo 'col-md-12';
+	}
+}
+
+
+/**
+ * Class layout column second
+ */
+function restaurant_wp_layout_column_second() {
+	if ( restaurant_wp_get_theme_layout() == 'right' ) {
+		echo 'col-md-3';
+	} elseif ( restaurant_wp_get_theme_layout() == 'left' ) {
+		echo 'col-md-3 col-md-pull-9';
+	}
+}
