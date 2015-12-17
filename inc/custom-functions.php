@@ -62,6 +62,15 @@ function restaurant_wp_add_class_to_body( $classes ) {
 		$classes[] = 'no_sticky_menu';
 	}
 
+	// Them layout
+	if ( restaurant_wp_get_theme_layout() == 'full' ) {
+		$classes[] = 'layout-full-width';
+	} elseif ( restaurant_wp_get_theme_layout() == 'left' ) {
+		$classes[] = 'layout-sidebar-left';
+	} else {
+		$classes[] = 'layout-sidebar-right';
+	}
+
 	return $classes;
 }
 
