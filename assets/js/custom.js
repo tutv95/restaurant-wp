@@ -25,15 +25,12 @@ jQuery(document).ready(function ($) {
 	});
 
 	// affix header
-	$(document).ready(function () {
-		$('.affix-top').affix({
-			offset: {
-				top: 0
-			}
-		});
+
+	$('.affix-top').affix({
+		offset: {
+			top: $('header').outerHeight(true)
+		}
 	});
-
-
 
 	$('#masthead .navbar > .menu-item-has-children, .navbar > li ul li').hover(
 		function () {
