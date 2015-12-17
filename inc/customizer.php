@@ -44,7 +44,7 @@ function restaurant_wp_customize_css() {
 			$width_logo = intval($theme_option_data['restaurant_wp_width_logo']);
 		?>
 		.width-logo {
-			max-width: <?php echo $width_logo ?>px;
+			width: <?php echo $width_logo ?>px;
 		}
 
 		<?php } ?>
