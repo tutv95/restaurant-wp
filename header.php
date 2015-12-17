@@ -25,13 +25,13 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'restaurant-wp' ); ?></a>
 	<?php
 	$option_data = restaurant_wp_get_theme_option_data();
-	$header = '';
-	if( isset( $option_data['restaurant_wp_sticky_menu'] ) && $option_data['restaurant_wp_sticky_menu'] == 0 ) {
+	$header      = '';
+	if ( isset( $option_data['restaurant_wp_sticky_menu'] ) && $option_data['restaurant_wp_sticky_menu'] == 0 ) {
 		$header .= ' no-affix-top';
 	} else {
 		$header .= ' affix-top';
 	}
-	if( isset( $option_data['restaurant_wp_header_style'] ) && $option_data['restaurant_wp_header_style'] == 'default' ) {
+	if ( isset( $option_data['restaurant_wp_header_style'] ) && $option_data['restaurant_wp_header_style'] == 'default' ) {
 		$header .= ' header-default';
 	} else {
 		$header .= ' header-overlay';
