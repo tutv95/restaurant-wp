@@ -24,15 +24,10 @@ jQuery(document).ready(function ($) {
 		return false;
 	});
 
-	// affix header
-
-	$(window).scroll(function () {
-		if ($(this).scrollTop() > 0) {
-			$('.affix-top').affix({
-				offset: {
-					top: 0
-				}
-			});
+	// Affix header
+	$('.header_overlay .affix-top').affix({
+		offset: {
+			top: 1
 		}
 	});
 
