@@ -142,7 +142,7 @@ function restaurant_wp_post_share() {
 	}
 
 	if ( isset( $theme_option_data['restaurant_wp_sharing_google'] ) && $theme_option_data['restaurant_wp_sharing_google'] ) {
-		$list_share .= '<li><a target="_blank" class="googleplus" href="https://plus.google.com/share?url=' . urlencode( get_permalink() ) . '&amp;title=' . esc_attr( get_the_title() ) . '" title="' . __( 'Google Plus', 'thim' ) . '" onclick=\'window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;\'><i class="fa fa-google"></i></a></li>';
+		$list_share .= '<li><a target="_blank" class="googleplus" href="https://plus.google.com/share?url=' . urlencode( get_permalink() ) . '&amp;title=' . esc_attr( get_the_title() ) . '" title="' . __( 'Google Plus', 'restaurant-wp' ) . '" onclick=\'window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;\'><i class="fa fa-google"></i></a></li>';
 	}
 
 	if ( isset( $theme_option_data['restaurant_wp_sharing_pinterest'] ) && $theme_option_data['restaurant_wp_sharing_pinterest'] ) {
@@ -193,16 +193,39 @@ add_action( 'restaurant_wp_enqueue_scripts', 'restaurant_wp_google_font_body' );
  * Content top site main
  */
 function restaurant_wp_content_main_top() {
-	if ( is_front_page() ) {
-		echo '<h1>Front page</h1>';
-	} else if ( is_author() ) {
-		echo '<h1>Author</h1>';
-	} else if ( is_search() ) {
-		echo '<h1>Search</h1>';
-	} else if ( is_archive() ) {
-		echo '<h1>Archive</h1>';
-	} else if ( is_singular() ) {
-		echo '<h1>Singular</h1>';
+	if ( is_front_page() ) {// Front page
+		echo '<h1 class="title">' . get_bloginfo( 'name' ) . '</h1>';
+		echo '<div class="description">' . get_bloginfo( 'description' ) . '</div>';
+	} elseif ( is_home() ) {// Post page
+		echo '<h1 class="title">' . esc_html__( 'Blog', 'restaurant-wp' ) . '</h1>';
+		echo '<div class="description">' . get_bloginfo( 'description' ) . '</div>';
+	} elseif ( is_page() ) {// Page
+		echo '<h1 class="title">' . get_the_title() . '</h1>';
+	} elseif ( is_single() ) {// Single
+		$post_id = get_the_ID();
+		if ( get_post_type( $post_id ) == 'post' ) {
+			$categories = get_the_category();
+		} else {
+			$categories = get_the_terms( $post_id, 'taxonomy' );
+		}
+
+		if ( ! empty( $categories ) ) {
+			echo '<h2 class="title">' . esc_html( $categories[0]->name ) . '</h2>';
+		}
+	} elseif ( is_author() ) {// Author
+		echo '<h1 class="title">' . esc_html__( 'Author', 'restaurant-wp' ) . '</h1>';
+		echo '<div class="description">' . get_the_author() . '</div>';
+	} elseif ( is_search() ) {// Search
+		echo '<h1 class="title">' . esc_html__( 'Search', 'restaurant-wp' ) . '</h1>';
+		echo '<div class="description">' . get_search_query() . '</div>';
+	} elseif ( is_tag() ) {// Tag
+		echo '<h1 class="title">' . esc_html__( 'Tag', 'restaurant-wp' ) . '</h1>';
+		echo '<div class="description">' . single_tag_title( '', false ) . '</div>';
+	} elseif ( is_category() ) {// Archive
+		echo '<h1 class="title">' . esc_html__( 'Category', 'restaurant-wp' ) . '</h1>';
+		echo '<div class="description">' . single_cat_title( '', false ) . '</div>';
+	} elseif ( is_404() ) {
+		echo '<h1 class="title">' . esc_html__( 'Page Not Found!', 'restaurant-wp' ) . '</h1>';
 	}
 }
 

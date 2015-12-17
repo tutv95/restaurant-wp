@@ -3,12 +3,41 @@
 	min-height: 300px;
 	position: relative;
 
-	.content {
-		position: absolute;
-		top: 50%;
-		left: 0;
-		color: #fff;
+	img {
 		width: 100%;
+	}
+
+	.container-content {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		height: 100%;
 		text-align: center;
+
+		&:before {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			height: 100%;
+		}
+
+		.content {
+			color: #fff;
+			vertical-align: middle;
+			position: relative;
+			display: inline-block;
+
+			.title {
+				font-weight: 500;
+				font-size: 50px;
+			}
+
+			.description {
+				padding-top: 10px;
+				font-size: 21px;
+			}
+		}
 	}
 }
