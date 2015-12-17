@@ -93,10 +93,26 @@ a:active {
 
 		&.header-default {
 			position: relative;
+			background-color: $restaurant_wp_bg_main_menu_color;
 		}
 
 		&.site-header {
+			&.no-affix-top {
+				.no-sticky-logo {
+					display: none;
+				}
+				.sticky-logo {
+					display: block;
+				}
+			}
+
 			&.affix-top {
+				background-color: transparent;
+				-webkit-transition: all ease-out .3s;
+				-moz-transition: all ease-out .3s;
+				-ms-transition: all ease-out .3s;
+				-o-transition: all ease-out .3s;
+				transition: all ease-out .3s;
 				.width-logo {
 					.no-sticky-logo {
 						display: block;

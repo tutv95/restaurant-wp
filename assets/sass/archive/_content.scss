@@ -97,6 +97,7 @@
 				}
 
 				.entry-meta {
+					font-size: 13px;
 					a {
 						color: #2a2a2a;
 						font-weight: 700;
@@ -115,6 +116,22 @@
 
 					.byline {
 					}
+				}
+			}
+
+			.entry-footer {
+				font-size: 13px;
+				a {
+					color: #2a2a2a;
+					font-weight: 700;
+					&:hover {
+						color: $restaurant_wp_body_primary_color;
+						text-decoration: none;
+					}
+				}
+
+				span {
+					padding-right: 10px;
 				}
 			}
 		}
