@@ -3,6 +3,10 @@
 	min-height: 300px;
 	position: relative;
 
+	img {
+		width: 100%;
+	}
+
 	.container-content {
 		position: absolute;
 		top: 0;
@@ -24,6 +28,16 @@
 			vertical-align: middle;
 			position: relative;
 			display: inline-block;
+
+			.title {
+				font-weight: 500;
+				font-size: 50px;
+			}
+
+			.description {
+				padding-top: 10px;
+				font-size: 21px;
+			}
 		}
 	}
 }
