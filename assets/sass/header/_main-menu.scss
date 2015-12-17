@@ -30,6 +30,7 @@ a:active {
 		.inner-navigation {
 			a {
 				color: $restaurant_wp_main_menu_text_color;
+				font-weight: $restaurant_wp_font_weight_main_menu;
 				&:hover {
 					color: $restaurant_wp_main_menu_text_hover_color;
 					text-decoration: none;
