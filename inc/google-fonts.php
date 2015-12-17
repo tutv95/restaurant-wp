@@ -13,7 +13,7 @@
 /**
  * Get google fonts
  * See more: https://github.com/gambitph/Titan-Framework-Embedding-Demo/blob/master/titan-framework/functions-googlefonts.php
- *
+ * @link: http://www.titanframework.net/
  * @return array
  */
 function restaurant_wp_google_fonts() {
