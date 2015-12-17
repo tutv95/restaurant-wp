@@ -3,12 +3,27 @@
 	min-height: 300px;
 	position: relative;
 
-	.content {
+	.container-content {
 		position: absolute;
-		top: 50%;
+		top: 0;
 		left: 0;
-		color: #fff;
-		width: 100%;
+		bottom: 0;
+		right: 0;
+		height: 100%;
 		text-align: center;
+
+		&:before {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			height: 100%;
+		}
+
+		.content {
+			color: #fff;
+			vertical-align: middle;
+			position: relative;
+			display: inline-block;
+		}
 	}
 }
