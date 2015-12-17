@@ -4,6 +4,8 @@
 
 	img {
 		width: 100%;
+		min-height: 250px;
+		overflow: hidden;
 	}
 
 	.container-content {
@@ -37,6 +39,15 @@
 				padding-top: 10px;
 				font-size: 21px;
 			}
+		}
+	}
+}
+
+@media (max-width: $screen-xs-max) {
+	#main-top {
+		img {
+			width: auto;
+			max-width: none;
 		}
 	}
 }
