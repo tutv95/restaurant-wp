@@ -203,9 +203,15 @@ function restaurant_wp_content_main_top() {
 		echo '<h1 class="title">' . get_the_title() . '</h1>';
 	} elseif ( is_single() ) {// Single
 		$post_id = get_the_ID();
+
 		if ( get_post_type( $post_id ) == 'post' ) {
 			$categories = get_the_category();
-		} else {
+		} elseif ( get_post_type( $post_id ) == 'attachment' ) {
+			echo '<h2 class="title">' . esc_html( 'Attachment' ) . '</h2>';
+			echo '<div class="description">' . get_the_title() . '</div>';
+
+			return;
+		} else {// Custom post type
 			$categories = get_the_terms( $post_id, 'taxonomy' );
 		}
 
@@ -226,6 +232,29 @@ function restaurant_wp_content_main_top() {
 		echo '<div class="description">' . single_cat_title( '', false ) . '</div>';
 	} elseif ( is_404() ) {
 		echo '<h1 class="title">' . esc_html__( 'Page Not Found!', 'restaurant-wp' ) . '</h1>';
+	} elseif ( is_date() ) {
+		//		var_dump( $GLOBALS['wp_locale']->get_month( $monthnum ) );
+		if ( is_year() ) {
+			echo '<h1 class="title">' . esc_html__( 'Year', 'restaurant-wp' ) . '</h1>';
+		} elseif ( is_month() ) {
+			echo '<h1 class="title">' . esc_html__( 'Month', 'restaurant-wp' ) . '</h1>';
+		} elseif ( is_day() ) {
+			echo '<h1 class="title">' . esc_html__( 'Day', 'restaurant-wp' ) . '</h1>';
+		}
+
+		$date  = '';
+		$day   = intval( get_query_var( 'day' ) );
+		$month = intval( get_query_var( 'monthnum' ) );
+		$year  = intval( get_query_var( 'year' ) );
+
+		if ( $day > 0 ) {
+			$date .= $day . ' ';
+		}
+		if ( $month > 0 ) {
+			$date .= $GLOBALS['wp_locale']->get_month( $month ) . ' ';
+		}
+		$date .= $year;
+		echo '<div class="description">' . $date . '</div>';
 	}
 }
 
@@ -260,7 +289,7 @@ if ( ! function_exists( 'restaurant_wp_comment' ) ) {
 		}
 		?>
 		<<?php echo esc_html( $tag )
-				. ' '; ?><?php comment_class( 'description_comment' ) ?> id="comment-<?php comment_ID() ?>">
+			. ' '; ?><?php comment_class( 'description_comment' ) ?> id="comment-<?php comment_ID() ?>">
 		<?php
 		if ( $args['avatar_size'] != 0 ) {
 			echo get_avatar( $comment, $args['avatar_size'] );
@@ -268,23 +297,23 @@ if ( ! function_exists( 'restaurant_wp_comment' ) ) {
 		?>
 		<div class="comment-content">
 			<div
-					class="author"><?php printf( '<span class="author-name">%s</span>', get_comment_author_link() ) ?></div>
+				class="author"><?php printf( '<span class="author-name">%s</span>', get_comment_author_link() ) ?></div>
 			<?php if ( $comment->comment_approved == '0' ) : ?>
 				<em class="comment-awaiting-moderation"><?php esc_html_e(
-							'Your comment is awaiting moderation.',
-							'garage'
+						'Your comment is awaiting moderation.',
+						'garage'
 					) ?></em>
 			<?php endif; ?>
 			<div class="comment-extra-info">
 				<div class="date"><?php printf( get_comment_date(), get_comment_time() ) ?></div>
 				<?php comment_reply_link(
-						array_merge(
-								$args, array(
-										'add_below' => $add_below,
-										'depth'     => $depth,
-										'max_depth' => $args['max_depth']
-								)
+					array_merge(
+						$args, array(
+							'add_below' => $add_below,
+							'depth'     => $depth,
+							'max_depth' => $args['max_depth']
 						)
+					)
 				) ?>
 				<?php edit_comment_link( esc_html__( 'Edit', 'garage' ), '', '' ); ?>
 			</div>
@@ -295,4 +324,21 @@ if ( ! function_exists( 'restaurant_wp_comment' ) ) {
 		</div>
 		<?php
 	}
+}
+
+/**
+ * Get theme layout
+ *
+ * @return string
+ */
+function restaurant_wp_get_theme_layout() {
+	$theme_options_data = restaurant_wp_get_theme_option_data();
+
+	$layout = 'right';
+
+	if ( isset( $theme_options_data['restaurant_wp_theme_layout'] ) ) {
+		$layout = $theme_options_data['restaurant_wp_theme_layout'];
+	}
+
+	return $layout;
 }

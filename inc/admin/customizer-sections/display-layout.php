@@ -39,9 +39,9 @@ $wp_customize->add_control(
 		'settings'    => $prefix . 'theme_layout',
 		'type'        => 'select',
 		'choices'     => array(
-			'right' => 'Sidebar right',
-			'left'  => 'Sidebar left',
-			'full'  => 'No sidebar',
+			'right' => 'Sidebar Right',
+			'left'  => 'Sidebar Left',
+			'full'  => 'No Sidebar',
 		),
 		'transport'   => 'refresh',
 	)
