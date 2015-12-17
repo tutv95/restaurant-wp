@@ -44,4 +44,6 @@ jQuery(document).ready(function ($) {
 			$(this).children('.sub-menu').stop(true, false).slideUp(250);
 		}
 	);
+
+	$('.comment-form-comment').insertBefore('.form-submit');
 });

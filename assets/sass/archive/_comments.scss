@@ -1,5 +1,60 @@
 .comments-area {
 	.comment-respond {
+		label {
+			max-width: 100%;
+			display: inline-block;
+			margin-bottom: 5px;
+			font-weight: 700;
+		}
 
+		textarea {
+			width: 100%;
+			border: 1px solid #ddd;
+			padding: 8px 15px;
+		}
+
+		input {
+			width: 100%;
+			border: 1px solid #ddd;
+			padding: 8px 15px;
+		}
+
+		input,
+		textarea {
+			&:focus {
+				outline: none;
+			}
+		}
+
+		.comment-notes {
+			margin-bottom: 20px;
+		}
+
+		.comment-form-author,
+		.comment-form-email,
+		.comment-form-url {
+			width: 50%;
+			display: block;
+			margin-bottom: 20px;
+		}
+
+		.form-submit {
+			.submit {
+				width: auto;
+				background-color: #2a2a2a;
+				float: right;
+				text-shadow: none;
+				box-shadow: none;
+				border: none;
+				color: #fff;
+				font-size: 13px;
+				text-transform: uppercase;
+				font-weight: 700;
+				border-radius: 2px;
+				&:hover {
+					background-color: $restaurant_wp_body_primary_color;
+				}
+			}
+		}
 	}
 }
