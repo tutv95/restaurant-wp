@@ -246,12 +246,26 @@ function restaurant_wp_content_main_top() {
 		$day   = intval( get_query_var( 'day' ) );
 		$month = intval( get_query_var( 'monthnum' ) );
 		$year  = intval( get_query_var( 'year' ) );
+		$m     = get_query_var( 'm' );
+
+		if ( ! empty( $m ) ) {
+			$year  = intval( substr( $m, 0, 4 ) );
+			$month = intval( substr( $m, 4, 2 ) );
+			$day   = substr( $m, 6, 2 );
+
+			if ( strlen( $day ) > 1 ) {
+				$day = intval( $day );
+			} else {
+				$day = 0;
+			}
+		}
 
 		if ( $day > 0 ) {
 			$date .= $day . ' ';
 		}
 		if ( $month > 0 ) {
-			$date .= $GLOBALS['wp_locale']->get_month( $month ) . ' ';
+			global $wp_locale;
+			$date .= $wp_locale->get_month( $month ) . ' ';
 		}
 		$date .= $year;
 		echo '<div class="description">' . $date . '</div>';
