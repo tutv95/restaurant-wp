@@ -38,22 +38,4 @@
 		});
 	});
 
-	// affix header
-	$(document).ready(function () {
-		$('.affix-top').affix({
-			offset: {
-				top: $('header').outerHeight(true)
-			}
-		});
-	});
-
-	$('#masthead .navbar > .menu-item-has-children, .navbar > li ul li').hover(
-		function () {
-			$(this).children('.sub-menu').stop(true, false).slideDown(250);
-		},
-		function () {
-			$(this).children('.sub-menu').stop(true, false).slideUp(250);
-		}
-	);
-
 })(jQuery);

@@ -23,7 +23,6 @@
 		}
 		font-size: $restaurant_wp_font_size_main_menu;
 		.inner-navigation {
-			overflow: hidden;
 			a {
 				color: $restaurant_wp_main_menu_text_color;
 				&:hover {
@@ -34,21 +33,27 @@
 			.navbar {
 				margin-bottom: 0;
 				border: none;
-				display: inline-block;
+				padding: 0;
 				text-align: right;
 				min-height: inherit;
 				> li {
-					padding: 0 15px;
 					float: none;
 					> a {
 						text-transform: uppercase;
+					}
+				}
+
+				li {
+					a {
+						padding: 10px 20px;
+						display: block;
 					}
 				}
 			}
 			.menu-right {
 				margin-bottom: 0;
 				display: inline-block;
-				padding-left: 15px;
+				padding-left: 20px;
 				border-left: 1px solid $restaurant_wp_main_menu_text_color;
 				.list-links {
 					padding-left: 0;
@@ -72,20 +77,17 @@
 		left: 0;
 		z-index: 999;
 		&.site-header {
-			&.affix-top {
-				//position: relative;
-			}
-
 			&.no-affix-top {
 				position: relative;
 			}
 
 			&.affix {
 				position: fixed;
-				top: 0;
+				top: auto;
 				width: 100%;
 				padding-top: 10px;
 				padding-bottom: 10px;
+				background-color: rgba(10, 10, 10, 0.85);
 				-webkit-transition: all ease-out .3s;
 				-moz-transition: all ease-out .3s;
 				-ms-transition: all ease-out .3s;
@@ -113,8 +115,6 @@
 					width: auto;
 					> li {
 						position: relative;
-						float: none;
-						display: inline-block;
 						.sub-menu {
 							min-width: 200px;
 							position: absolute;
@@ -124,11 +124,33 @@
 							z-index: 999;
 							padding: 0;
 							margin: 0;
-							background-color: red;
+							background-color: #fff;
+							box-shadow: 0 2px 3px rgba(0, 0, 0, .09);
+							-moz-box-shadow: 0 2px 3px rgba(0, 0, 0, .09);
+							-o-box-shadow: 0 2px 3px rgba(0, 0, 0, .09);
+							-ms-box-shadow: 0 2px 3px rgba(0, 0, 0, .09);
 							li {
 								width: 100%;
-								padding: 0 20px;
 								text-align: left;
+								&:after {
+									content: "";
+									position: absolute;
+									left: 20px;
+									right: 20px;
+									height: 1px;
+									background-color: #eee;
+								}
+								&:last-child {
+									&:after {
+										display: none;
+									}
+								}
+								a {
+									color: #3a3a3a;
+									&:hover {
+										color: $restaurant_wp_body_primary_color;
+									}
+								}
 							}
 						}
 					}
