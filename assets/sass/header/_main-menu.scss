@@ -44,6 +44,23 @@ a:active {
 				min-height: inherit;
 				> li {
 					float: none;
+
+					&.menu-item-has-children {
+						> a {
+							&:before {
+								content: "\f107";
+								font-family: "FontAwesome";
+								position: absolute;
+								right: 5px;
+							}
+
+							&:hover {
+								&:after {
+									color: $restaurant_wp_body_primary_color;
+								}
+							}
+						}
+					}
 					> a {
 						text-transform: uppercase;
 					}
@@ -210,6 +227,7 @@ a:active {
 								}
 								a {
 									color: #3a3a3a;
+									padding: 14px 20px;
 									&:hover {
 										color: $restaurant_wp_body_primary_color;
 									}
