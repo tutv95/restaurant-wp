@@ -243,3 +243,56 @@ function restaurant_wp_back_to_top() {
 }
 
 add_action( 'restaurant_wp_back_to_top', 'restaurant_wp_back_to_top' );
+
+/**
+ * List Comment
+ */
+if ( ! function_exists( 'restaurant_wp_comment' ) ) {
+	function restaurant_wp_comment( $comment, $args, $depth ) {
+		$GLOBALS['comment'] = $comment;
+		//extract( $args, EXTR_SKIP );
+		if ( 'div' == $args['style'] ) {
+			$tag       = 'div';
+			$add_below = 'comment';
+		} else {
+			$tag       = 'li';
+			$add_below = 'div-comment';
+		}
+		?>
+		<<?php echo esc_html( $tag )
+				. ' '; ?><?php comment_class( 'description_comment' ) ?> id="comment-<?php comment_ID() ?>">
+		<?php
+		if ( $args['avatar_size'] != 0 ) {
+			echo get_avatar( $comment, $args['avatar_size'] );
+		}
+		?>
+		<div class="comment-content">
+			<div
+					class="author"><?php printf( '<span class="author-name">%s</span>', get_comment_author_link() ) ?></div>
+			<?php if ( $comment->comment_approved == '0' ) : ?>
+				<em class="comment-awaiting-moderation"><?php esc_html_e(
+							'Your comment is awaiting moderation.',
+							'garage'
+					) ?></em>
+			<?php endif; ?>
+			<div class="comment-extra-info">
+				<div class="date"><?php printf( get_comment_date(), get_comment_time() ) ?></div>
+				<?php comment_reply_link(
+						array_merge(
+								$args, array(
+										'add_below' => $add_below,
+										'depth'     => $depth,
+										'max_depth' => $args['max_depth']
+								)
+						)
+				) ?>
+				<?php edit_comment_link( esc_html__( 'Edit', 'garage' ), '', '' ); ?>
+			</div>
+			<div class="message" itemprop="commentText">
+				<?php comment_text() ?>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<?php
+	}
+}
