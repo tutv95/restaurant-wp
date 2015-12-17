@@ -23,7 +23,21 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'restaurant-wp' ); ?></a>
-	<header id="masthead" class="site-header affix-top" role="banner">
+	<?php
+	$option_data = restaurant_wp_get_theme_option_data();
+	$header = '';
+	if( isset( $option_data['restaurant_wp_sticky_menu'] ) && $option_data['restaurant_wp_sticky_menu'] == 0 ) {
+		$header .= ' no-affix-top';
+	} else {
+		$header .= ' affix-top';
+	}
+	if( isset( $option_data['restaurant_wp_header_style'] ) && $option_data['restaurant_wp_header_style'] == 'default' ) {
+		$header .= ' header-default';
+	} else {
+		$header .= ' header-overlay';
+	}
+	?>
+	<header id="masthead" class="site-header<?php echo $header ?>" role="banner">
 		<div class="container">
 			<div class="row">
 				<div class="navigation col-sm-12">

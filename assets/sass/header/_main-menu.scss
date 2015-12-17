@@ -39,6 +39,7 @@
 				min-height: inherit;
 				> li {
 					padding: 0 15px;
+					float: none;
 					> a {
 						text-transform: uppercase;
 					}
@@ -48,6 +49,7 @@
 				margin-bottom: 0;
 				display: inline-block;
 				padding-left: 15px;
+				border-left: 1px solid $restaurant_wp_main_menu_text_color;
 				.list-links {
 					padding-left: 0;
 					> li {
@@ -55,6 +57,89 @@
 						&:first-child {
 							padding-left: 0;
 						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	#masthead {
+		position: absolute;
+		top: auto;
+		right: 0;
+		left: 0;
+		z-index: 999;
+		&.site-header {
+			&.affix-top {
+				//position: relative;
+			}
+
+			&.no-affix-top {
+				position: relative;
+			}
+
+			&.affix {
+				position: fixed;
+				top: 0;
+				width: 100%;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				-webkit-transition: all ease-out .3s;
+				-moz-transition: all ease-out .3s;
+				-ms-transition: all ease-out .3s;
+				-o-transition: all ease-out .3s;
+				transition: all ease-out .3s;
+			}
+		}
+	}
+	.site-header {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	.navigation {
+		.width-logo {
+			width: 200px;
+		}
+		.width-navigation {
+			.inner-navigation {
+				display: table;
+				float: right;
+				.navbar {
+					display: table-cell;
+					vertical-align: middle;
+					width: auto;
+					> li {
+						position: relative;
+						float: none;
+						display: inline-block;
+						.sub-menu {
+							min-width: 200px;
+							position: absolute;
+							top: auto;
+							left: 0;
+							display: none;
+							z-index: 999;
+							padding: 0;
+							margin: 0;
+							background-color: red;
+							li {
+								width: 100%;
+								padding: 0 20px;
+								text-align: left;
+							}
+						}
+					}
+				}
+
+				.menu-right {
+					display: table;
+					right: 0;
+					section {
+						display: table-cell;
+						vertical-align: middle;
 					}
 				}
 			}
