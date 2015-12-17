@@ -27,7 +27,8 @@
 		</div><!-- .site-info -->
 	</div>
 </footer><!-- #colophon -->
-</div><!-- #page -->
+</div><!-- content-pusher -->
+</div><!-- wrapper-container -->
 
 <?php do_action( 'restaurant_wp_back_to_top' ); ?>
 
