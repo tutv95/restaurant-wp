@@ -36,10 +36,11 @@ $google_fonts = restaurant_wp_get_list_google_fonts();
 $wp_customize->add_control(
 	$prefix . 'font_body',
 	array(
-		'label'    => esc_html__( 'Font body', 'restaurant-wp' ),
-		'section'  => $prefix . 'typography_font',
-		'settings' => $prefix . 'font_body',
-		'type'     => 'select',
-		'choices'  => $google_fonts,
+		'label'     => esc_html__( 'Font body', 'restaurant-wp' ),
+		'section'   => $prefix . 'typography_font',
+		'settings'  => $prefix . 'font_body',
+		'type'      => 'select',
+		'choices'   => $google_fonts,
+		'transport' => 'refresh',
 	)
 );
