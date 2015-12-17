@@ -4,12 +4,97 @@
 	.comment-list {
 		list-style: none;
 		padding: 0;
-		.comment-body {
+		margin: 0;
+		.avatar {
+			float: left;
+		}
+		.comment-content {
+			padding-left: 80px;
+			.author {
+				color: #858585;
+				float: left;
+				font-size: 14px;
+				padding: 5px 0;
 
+				.author-name {
+					&:before {
+						content: "\f007";
+						font-family: "FontAwesome";
+						padding-left: 15px;
+						padding-right: 5px;
+					}
+				}
+			}
+
+			.comment-extra-info {
+				background-color: #F6F9FA;
+				text-transform: uppercase;
+				text-align: right;
+				color: #666;
+				font-size: 14px;
+				padding: 5px 0;
+				a {
+					color: #666;
+					&:hover {
+						color: $restaurant_wp_body_primary_color;
+						text-decoration: none;
+					}
+				}
+				.date {
+					float: none;
+					display: inline-block;
+					margin-right: 15px;
+					&:before {
+						content: "\f073";
+						font-family: FontAwesome;
+						padding-left: 15px;
+						padding-right: 5px;
+					}
+				}
+
+				.comment-reply-link {
+					content: "\f073";
+					font-family: FontAwesome;
+					padding-left: 15px;
+					padding-right: 5px;
+				}
+
+				.comment-edit-link {
+					float: none;
+					display: inline-block;
+					margin-right: 15px;
+				}
+			}
+
+			.message {
+				padding-left: 15px;
+				padding-top: 15px;
+				float: left;
+				width: 100%;
+				p {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		.children {
+			border-top: 1px solid #dddddd;
+			padding-top: 25px;
+			margin-top: 20px;
+			padding-left: 0;
+			margin-left: 80px;
+			list-style: none;
 		}
 	}
 
 	.comment-respond {
+		.logged-in-as {
+			a {
+				&:hover {
+					color: $restaurant_wp_body_primary_color;
+				}
+			}
+		}
 		label {
 			max-width: 100%;
 			display: inline-block;
