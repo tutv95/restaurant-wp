@@ -77,6 +77,17 @@
 		left: 0;
 		z-index: 999;
 		&.site-header {
+			&.affix-top {
+				.width-logo {
+					.no-sticky-logo {
+						display: block;
+					}
+					.sticky-logo {
+						display: none;
+					}
+				}
+			}
+
 			&.no-affix-top {
 				position: relative;
 			}
@@ -93,9 +104,18 @@
 				-ms-transition: all ease-out .3s;
 				-o-transition: all ease-out .3s;
 				transition: all ease-out .3s;
+				.width-logo {
+					.no-sticky-logo {
+						display: none;
+					}
+					.sticky-logo {
+						display: block;
+					}
+				}
 			}
 		}
 	}
+
 	.site-header {
 		padding-top: 20px;
 		padding-bottom: 20px;
@@ -104,6 +124,18 @@
 	.navigation {
 		.width-logo {
 			width: 200px;
+			a {
+				&:hover {
+					text-decoration: none;
+				}
+				img {
+					-webkit-transition: all ease-out .3s;
+					-moz-transition: all ease-out .3s;
+					-o-transition: all ease-out .3s;
+					-ms-transition: all ease-out .3s;
+					transition: all ease-out .3s;
+				}
+			}
 		}
 		.width-navigation {
 			.inner-navigation {

@@ -33,6 +33,8 @@ jQuery(document).ready(function ($) {
 		});
 	});
 
+
+
 	$('#masthead .navbar > .menu-item-has-children, .navbar > li ul li').hover(
 		function () {
 			$(this).children('.sub-menu').stop(true, false).slideDown(250);
