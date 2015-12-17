@@ -8,6 +8,11 @@
 	vertical-align: middle;
 }
 
+a:focus,
+a:active {
+	text-decoration: none;
+}
+
 .navigation {
 	.tm-table {
 		width: 100%;
@@ -40,6 +45,12 @@
 					float: none;
 					> a {
 						text-transform: uppercase;
+					}
+				}
+
+				.current-menu-item {
+					a {
+						color: $restaurant_wp_main_menu_text_hover_color;
 					}
 				}
 
