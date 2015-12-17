@@ -3,6 +3,17 @@
 	padding-bottom: 80px;
 }
 
+.layout-sidebar-left {
+	.site-main {
+		article {
+			.share-post {
+				margin-left: 20px;
+				margin-right: 0;
+				float: right;
+			}
+		}
+	}
+}
 
 .site-main {
 	article {
