@@ -51,7 +51,6 @@ function restaurant_wp_customize_css() {
 
 		/* Font body */
 		<?php
-		$theme_option_data = restaurant_wp_get_theme_option_data();
 		if ( isset( $theme_option_data['restaurant_wp_font_body'] ) ) {
 			$key_font     = intval( $theme_option_data['restaurant_wp_font_body'] );
 			$google_fonts = restaurant_wp_get_list_google_fonts();
@@ -59,6 +58,17 @@ function restaurant_wp_customize_css() {
 		?>
 		body {
 			font-family: "<?php echo $font; ?>" !important;
+		}
+
+		<?php } ?>
+
+		/* Footer Background Image */
+		<?php
+		if ( isset( $theme_option_data['restaurant_wp_footer_background_image'] ) && is_numeric($theme_option_data['restaurant_wp_footer_background_image']) ) {
+			$image_id = $theme_option_data['restaurant_wp_footer_background_image'];
+		?>
+		.site-footer {
+			background-image: url('<?php echo wp_get_attachment_url( $image_id ); ?>');
 		}
 
 		<?php } ?>
