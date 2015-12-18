@@ -1,8 +1,18 @@
 // shortcode gallery
 
+.page-links {
+	a {
+		&:hover,
+		&:focus {
+			color: $restaurant_wp_body_primary_color;
+		}
+	}
+}
+
 p {
 	a {
-		&:hover {
+		&:hover,
+		&:focus {
 			color: $restaurant_wp_body_primary_color;
 		}
 	}
