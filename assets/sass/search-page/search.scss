@@ -1,4 +1,14 @@
 .search {
+	article {
+		padding-bottom: 50px;
+		margin-bottom: 30px;
+		border-bottom: 1px solid #eee;
+	}
+
+	.entry-header {
+		margin-bottom: 25px;
+	}
+
 	.page-header {
 		margin-top: 0;
 		.page-title {
@@ -27,6 +37,13 @@
 				text-decoration: none;
 			}
 		}
+
+		.posted-on {
+			.published:not(.updated) {
+				display: none;
+			}
+		}
+
 		.categories {
 			padding-left: 10px;
 			&:before {
