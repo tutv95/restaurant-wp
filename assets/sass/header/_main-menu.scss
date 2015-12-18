@@ -316,13 +316,35 @@ a:active {
 		}
 
 		.navbar-nav {
+			li {
+				.current_page_item {
+					> a {
+						color: $restaurant_wp_body_primary_color;
+					}
+				}
+			}
+
 			> li {
+				&.current_page_item {
+					> a {
+						color: $restaurant_wp_body_primary_color;
+					}
+				}
+
+				&.current_page_ancestor {
+					.icon-toggle {
+						color: $restaurant_wp_body_primary_color;
+					}
+				}
+
 				a {
 					color: #d8d8d8;
 					&:hover {
 						background-color: transparent;
-						color: #d8d8d8;
 						text-decoration: none;
+					}
+					&:focus {
+						background-color: transparent;
 					}
 				}
 
