@@ -45,6 +45,8 @@
 
 @media (max-width: $screen-xs-max) {
 	#main-top {
+		overflow: hidden;
+
 		img {
 			width: auto;
 			max-width: none;
