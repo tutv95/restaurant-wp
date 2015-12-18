@@ -317,7 +317,8 @@ a:active {
 
 		.navbar-nav {
 			li {
-				.current_page_item {
+				.current_page_item,
+				.current-menu-item {
 					> a {
 						color: $restaurant_wp_body_primary_color;
 					}
@@ -325,13 +326,15 @@ a:active {
 			}
 
 			> li {
-				&.current_page_item {
+				&.current_page_item,
+				&.current-menu-item {
 					> a {
 						color: $restaurant_wp_body_primary_color;
 					}
 				}
 
-				&.current_page_ancestor {
+				&.current_page_ancestor,
+				&.current-menu-ancestor {
 					.icon-toggle {
 						color: $restaurant_wp_body_primary_color;
 					}
