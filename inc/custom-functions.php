@@ -142,6 +142,10 @@ function restaurant_wp_post_share() {
 
 	$list_share = '';
 
+	if ( is_sticky() ) {
+		$list_share .= '<li><a href="' . get_the_permalink() . '" title="' . esc_html__( 'Sticky Post', 'restaurant-wp' ) . '"><i class="fa fa-bolt"></i></a></li>';
+	}
+
 	if ( isset( $theme_option_data['restaurant_wp_sharing_facebook'] ) && $theme_option_data['restaurant_wp_sharing_facebook'] ) {
 		$list_share .= '<li><a target="_blank" class="facebook" href="https://www.facebook.com/sharer.php?s=100&amp;p[title]=' . get_the_title() . '&amp;p[url]=' . urlencode( get_permalink() ) . '&amp;p[images][0]=' . urlencode( wp_get_attachment_url( get_post_thumbnail_id() ) ) . '" title="' . __( 'Facebook', 'restaurant-wp' ) . '"><i class="fa fa-facebook"></i></a></li>';
 	}
