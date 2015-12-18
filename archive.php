@@ -46,7 +46,7 @@ get_header(); ?>
 					</main><!-- #main -->
 				</div><!-- #primary -->
 			</div>
-			<?php if ( restaurant_wp_get_theme_layout() != 'full' ): ?>
+			<?php if ( restaurant_wp_get_theme_layout() != 'full' ) : ?>
 				<div class="<?php restaurant_wp_layout_column_second(); ?>">
 					<?php get_sidebar(); ?>
 				</div>
