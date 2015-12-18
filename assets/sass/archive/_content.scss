@@ -120,12 +120,22 @@
 					}
 
 					.posted-on {
-						.updated {
+						.published:not(.updated) {
 							display: none;
 						}
 					}
 
-					.byline {
+					.categories, .comment-total, .byline {
+						padding-left: 10px;
+
+						&:before {
+							content: '\f111';
+							font-family: FontAwesome, serif;
+							font-size: 4px;
+							padding-right: 10px;
+							position: relative;
+							top: -2px;
+						}
 					}
 				}
 			}
@@ -141,8 +151,17 @@
 					}
 				}
 
-				span {
-					padding-right: 10px;
+				.comments-link, .edit-link {
+					padding-left: 10px;
+
+					&:before {
+						content: '\f111';
+						font-family: FontAwesome, serif;
+						font-size: 4px;
+						padding-right: 10px;
+						position: relative;
+						top: -2px;
+					}
 				}
 			}
 		}
