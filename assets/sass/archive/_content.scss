@@ -91,7 +91,9 @@
 			@include calc('width', '100% - 80px');
 
 			.entry-top {
-				margin-bottom: 25px;
+				* {
+					margin-bottom: 25px;
+				}
 			}
 
 			.entry-header {
@@ -104,7 +106,6 @@
 
 					a {
 						color: #2a2a2a;
-
 						&:hover {
 							color: $restaurant_wp_body_primary_color;
 							text-decoration: none;
