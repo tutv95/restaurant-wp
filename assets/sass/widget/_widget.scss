@@ -43,7 +43,7 @@
 	}
 
 	ul {
-		padding: 0;
+		padding-left: 20px;
 		li {
 			padding-top: 8px;
 			padding-bottom: 8px;
@@ -53,6 +53,8 @@
 
 	&.widget_categories, &.widget_archive {
 		> ul {
+			padding: 0;
+
 			> li {
 				border-bottom: 1px solid #ddd;
 				&:last-child {
@@ -149,6 +151,13 @@
 					font-size: 13px;
 				}
 			}
+		}
+	}
+
+	// Widget archive dropdown
+	&.widget_archive {
+		select {
+			@extend .form-control;
 		}
 	}
 }
