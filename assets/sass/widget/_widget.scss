@@ -173,4 +173,12 @@
 			@extend .form-control;
 		}
 	}
+
+	&.widget_recent_comments {
+		.recentcomments {
+			> a {
+				font-weight: 600;
+			}
+		}
+	}
 }
