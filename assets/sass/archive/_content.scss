@@ -90,16 +90,22 @@
 
 			@include calc('width', '100% - 80px');
 
+			.entry-top {
+				* {
+					margin-bottom: 25px;
+				}
+			}
+
 			.entry-header {
 				margin-bottom: 25px;
 
 				.entry-title {
 					font-size: 24px;
 					line-height: 1.1em;
+					margin-top: 0;
 
 					a {
 						color: #2a2a2a;
-
 						&:hover {
 							color: $restaurant_wp_body_primary_color;
 							text-decoration: none;
