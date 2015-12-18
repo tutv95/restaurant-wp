@@ -250,7 +250,7 @@ a:active {
 
 #wrapper-container {
 	@include transition(transfrom 400ms ease-in-out);
-	overflow: auto;
+	overflow: hidden;
 }
 
 @media (max-width: 767px) {
