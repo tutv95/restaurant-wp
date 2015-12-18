@@ -30,9 +30,10 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
 	new  WP_Customize_Media_Control(
 		$wp_customize, $prefix . 'footer_background_image', array(
-			'label'    => esc_html__( 'Footer Background Image', 'restaurant-wp' ),
-			'section'  => $prefix . 'display_footer',
-			'settings' => $prefix . 'footer_background_image',
+			'label'     => esc_html__( 'Footer Background Image', 'restaurant-wp' ),
+			'section'   => $prefix . 'display_footer',
+			'settings'  => $prefix . 'footer_background_image',
+			'transport' => 'refresh',
 		)
 	)
 );
