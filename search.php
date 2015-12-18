@@ -41,6 +41,9 @@ get_header(); ?>
 						endif; ?>
 
 					</main><!-- #main -->
+					<?php
+					restaurant_wp_paging_nav();
+					?>
 				</section><!-- #primary -->
 			</div>
 			<?php if ( restaurant_wp_get_theme_layout() != 'full' ) : ?>

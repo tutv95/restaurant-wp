@@ -1,0 +1,24 @@
+.loop-pagination {
+	list-style: none;
+	padding: 0;
+	display: block;
+	text-align: center;
+	li {
+		display: inline-block;
+		padding-right: 10px;
+		a {
+			padding: 5px 10px;
+			&:hover,
+			&:focus {
+				background-color: $restaurant_wp_body_primary_color;
+				color: #fff;
+				text-decoration: none;
+			}
+		}
+		.current {
+			color: #fff;
+			padding: 5px 10px;
+			background-color: $restaurant_wp_body_primary_color;
+		}
+	}
+}
