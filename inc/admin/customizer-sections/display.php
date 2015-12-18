@@ -25,5 +25,6 @@ $wp_customize->add_panel(
 );
 
 require_once RESWP_THEME_DIR . 'inc/admin/customizer-sections/display-layout.php';
+require_once RESWP_THEME_DIR . 'inc/admin/customizer-sections/display-footer.php';
 require_once RESWP_THEME_DIR . 'inc/admin/customizer-sections/display-sharing.php';
 require_once RESWP_THEME_DIR . 'inc/admin/customizer-sections/display-extension.php';
