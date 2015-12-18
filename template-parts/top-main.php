@@ -16,8 +16,8 @@
 	<?php if ( $image != false ) {
 		echo '<img src="' . $image . '" />';
 	} ?>
-	<div class="container-content container">
-		<div class="content">
+	<div class="container-content">
+		<div class="content container">
 			<?php do_action( 'restaurant_wp_content_main_top' ); ?>
 		</div>
 	</div>
