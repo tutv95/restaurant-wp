@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying posts.
+ * Template part for displaying single.
  *
  * @link    https://codex.wordpress.org/Template_Hierarchy
  *
@@ -45,7 +45,7 @@
 
 		<div class="entry-content">
 			<?php
-			the_excerpt();
+			the_content();
 
 			wp_link_pages(
 				array(
