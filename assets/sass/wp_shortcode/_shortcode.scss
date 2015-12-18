@@ -1,8 +1,23 @@
 // shortcode gallery
 
-a {
-	&:hover {
-		color: $restaurant_wp_body_primary_color;
+p {
+	a {
+		&:hover {
+			color: $restaurant_wp_body_primary_color;
+		}
+	}
+}
+
+.entry-content {
+	.wp-playlist {
+		.wp-playlist-caption {
+			color: #666;
+		}
+		.wp-playlist-playing {
+			.wp-playlist-caption {
+				color: $restaurant_wp_body_primary_color;
+			}
+		}
 	}
 }
 
