@@ -45,19 +45,25 @@ $wp_customize->add_control(
 $wp_customize->add_setting(
 	$prefix . 'header_background_color',
 	array(
-		'default'           => '#fff',
-		//'type'              => 'option',
-		'sanitize_callback' => 'sanitize_hex_color'
+		'default' => 'rgba(255,255,255,0)',
 	)
 );
 
 $wp_customize->add_control(
-	new WP_Customize_Color_Control(
+	new Customize_Alpha_Color_Control(
 		$wp_customize, $prefix . 'header_background_color', array(
-			'label'       => esc_html__( 'Header background color', 'restaurant-wp' ),
-			'description' => esc_html__( 'Pick a background color for header', 'restaurant-wp' ),
-			'section'     => $prefix . 'header_layout',
-			'settings'    => $prefix . 'header_background_color',
+			'label'        => esc_html__( 'Header background color', 'restaurant-wp' ),
+			'description'  => esc_html__( 'Pick a background color for header', 'restaurant-wp' ),
+			'section'      => $prefix . 'header_layout',
+			'settings'     => $prefix . 'header_background_color',
+			'show_opacity' => true, // Optional.
+			'palette'      => array(
+				'rgb(150, 50, 220)',
+				'rgba(50,50,50,0.8)',
+				'rgba( 255, 255, 255, 0.2 )',
+				'#00CC99' // Mix of color types = no problem
+			),
+			'transport'    => 'refresh',
 		)
 	)
 );

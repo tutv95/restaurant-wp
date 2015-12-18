@@ -40,6 +40,8 @@ class Restaurant_WP_Customize__ {
 	 * @param $wp_customize
 	 */
 	public function create_customize( $wp_customize ) {
+		require_once RESWP_THEME_DIR . 'inc/admin/libs/alpha-color-picker/alpha-color-picker.php';
+
 		// Header
 		require_once RESWP_THEME_DIR . 'inc/admin/customizer-sections/header.php';
 		require_once RESWP_THEME_DIR . 'inc/admin/customizer-sections/logo.php';

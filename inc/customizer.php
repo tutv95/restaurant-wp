@@ -73,6 +73,17 @@ function restaurant_wp_customize_css() {
 
 		<?php } ?>
 
+		/* Header Background Color */
+		<?php
+		if ( isset( $theme_option_data['restaurant_wp_header_background_color'] ) ) {
+			$header_background_color = $theme_option_data['restaurant_wp_header_background_color'];
+		?>
+		#masthead.affix-top {
+			background-color: <?php echo $header_background_color; ?> !important;
+		}
+
+		<?php } ?>
+
 		<?php do_action('restaurant_wp_style_head_bottom') ?>
 	</style>
 	<?php
