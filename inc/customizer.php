@@ -78,7 +78,7 @@ function restaurant_wp_customize_css() {
 		if ( isset( $theme_option_data['restaurant_wp_header_background_color'] ) ) {
 			$header_background_color = $theme_option_data['restaurant_wp_header_background_color'];
 		?>
-		#masthead.affix-top {
+		#masthead.affix-top, #masthead.no-affix-top {
 			background-color: <?php echo $header_background_color; ?> !important;
 		}
 

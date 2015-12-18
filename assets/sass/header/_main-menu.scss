@@ -47,6 +47,7 @@ a:active {
 
 					&.menu-item-has-children {
 						> a {
+							//padding-right: 40px;
 							&:before {
 								content: "\f107";
 								font-family: "FontAwesome";
