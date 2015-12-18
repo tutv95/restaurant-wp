@@ -45,7 +45,11 @@
 
 		<div class="entry-content">
 			<?php
-			the_excerpt();
+			if ( ! is_singular() ) {
+				the_excerpt();
+			} else {
+				the_content();
+			}
 
 			wp_link_pages(
 				array(
