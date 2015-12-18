@@ -157,6 +157,7 @@
 	// Widget archive dropdown
 	&.widget_archive {
 		select {
+			@include border-radius(0);
 			@extend .form-control;
 		}
 	}
