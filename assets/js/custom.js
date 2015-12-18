@@ -25,7 +25,7 @@ jQuery(document).ready(function ($) {
 	});
 
 	// Affix header
-	$('.header_overlay .affix-top').affix({
+	$('.sticky_menu .affix-top').affix({
 		offset: {
 			top: 1
 		}
