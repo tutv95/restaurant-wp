@@ -433,8 +433,8 @@ if ( ! function_exists( 'restaurant_wp_paging_nav' ) ) :
 				'current'   => $paged,
 				'mid_size'  => 2,
 				'add_args'  => array_map( 'urlencode', $query_args ),
-				'prev_text' => '<i class="fa fa-chevron-left"></i>',
-				'next_text' => '<i class="fa fa-chevron-right"></i>',
+				'prev_text' => '<i class="fa fa-angle-left"></i>',
+				'next_text' => '<i class="fa fa-angle-right"></i>',
 				'type'      => 'array'
 			)
 		);

@@ -8,6 +8,7 @@
 		padding-right: 10px;
 		a {
 			padding: 5px 10px;
+			@include border-radius(2px);
 			&:hover,
 			&:focus {
 				background-color: $restaurant_wp_body_primary_color;
@@ -19,6 +20,7 @@
 			color: #fff;
 			padding: 5px 10px;
 			background-color: $restaurant_wp_body_primary_color;
+			@include border-radius(2px);
 		}
 	}
 }

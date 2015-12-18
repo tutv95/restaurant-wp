@@ -9,15 +9,6 @@
 	}
 }
 
-p {
-	a {
-		&:hover,
-		&:focus {
-			color: $restaurant_wp_body_primary_color;
-		}
-	}
-}
-
 .entry-content {
 	.wp-playlist {
 		.wp-playlist-caption {

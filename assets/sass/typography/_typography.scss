@@ -6,7 +6,12 @@ body {
 }
 
 a {
-	color: $restaurant_wp_body_primary_color;
+	color: #333;
+
+	&:hover, &:active, &:focus {
+		color: $restaurant_wp_body_primary_color;
+		text-decoration: none;
+	}
 }
 
 img {
