@@ -166,13 +166,11 @@
 		}
 	}
 
-	// Widget archive dropdown
-	&.widget_archive {
-		select {
-			@include border-radius(0);
-			@extend .form-control;
-		}
+	select {
+		@include border-radius(0);
+		@extend .form-control;
 	}
+
 
 	&.widget_recent_comments {
 		.recentcomments {
