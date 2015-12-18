@@ -328,7 +328,7 @@ if ( ! function_exists( 'restaurant_wp_comment' ) ) {
 			<?php if ( $comment->comment_approved == '0' ) : ?>
 				<em class="comment-awaiting-moderation"><?php esc_html_e(
 						'Your comment is awaiting moderation.',
-						'garage'
+						'restaurant-wp'
 					) ?></em>
 			<?php endif; ?>
 			<div class="comment-extra-info">
@@ -342,7 +342,7 @@ if ( ! function_exists( 'restaurant_wp_comment' ) ) {
 						)
 					)
 				) ?>
-				<?php edit_comment_link( esc_html__( 'Edit', 'garage' ), '', '' ); ?>
+				<?php edit_comment_link( esc_html__( 'Edit', 'restaurant-wp' ), '', '' ); ?>
 			</div>
 			<div class="message" itemprop="commentText">
 				<?php comment_text() ?>
