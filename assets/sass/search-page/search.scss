@@ -1,0 +1,78 @@
+.search {
+	.page-header {
+		margin-top: 0;
+		.page-title {
+			margin-top: 0;
+		}
+	}
+	.entry-title {
+		a {
+			color: #2a2a2a;
+			font-weight: 500;
+			&:hover {
+				color: $restaurant_wp_body_primary_color;
+				text-decoration: none;
+			}
+		}
+	}
+
+	.entry-meta {
+		font-size: 13px;
+		margin-bottom: 10px;
+		a {
+			color: #2a2a2a;
+			font-weight: 700;
+			&:hover {
+				color: $restaurant_wp_body_primary_color;
+				text-decoration: none;
+			}
+		}
+		.categories {
+			padding-left: 10px;
+			&:before {
+				content: '\f111';
+				font-family: FontAwesome, serif;
+				font-size: 4px;
+				padding-right: 10px;
+				position: relative;
+				top: -2px;
+			}
+		}
+
+		.byline {
+			padding-left: 10px;
+			&:before {
+				content: '\f111';
+				font-family: FontAwesome, serif;
+				font-size: 4px;
+				padding-right: 10px;
+				position: relative;
+				top: -2px;
+			}
+		}
+	}
+
+	.entry-footer {
+		font-size: 13px;
+		a {
+			color: #2a2a2a;
+			font-weight: 700;
+			&:hover {
+				color: $restaurant_wp_body_primary_color;
+				text-decoration: none;
+			}
+		}
+
+		.edit-link {
+			padding-left: 10px;
+			&:before {
+				content: '\f111';
+				font-family: FontAwesome, serif;
+				font-size: 4px;
+				padding-right: 10px;
+				position: relative;
+				top: -2px;
+			}
+		}
+	}
+}
