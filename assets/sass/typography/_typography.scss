@@ -13,3 +13,16 @@ img {
 	max-width: 100%;
 	height: auto;
 }
+
+blockquote {
+	border-color: $restaurant_wp_body_primary_color;
+}
+
+table {
+	@extend .table;
+}
+
+code {
+	color: $restaurant_wp_body_primary_color;
+	background-color: #eee;
+}
