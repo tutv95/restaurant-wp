@@ -132,4 +132,20 @@
 			display: none;
 		}
 	}
+
+	&.widget_recent_entries {
+		ul {
+			li {
+				a {
+					color: #2a2a2a;
+				}
+
+				.post-date {
+					display: block;
+					font-style: italic;
+					font-size: 13px;
+				}
+			}
+		}
+	}
 }
