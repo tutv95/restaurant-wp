@@ -186,7 +186,7 @@ a:active {
 							min-width: 200px;
 							position: absolute;
 							top: auto;
-							left: 0;
+							right: 0;
 							display: none;
 							z-index: 999;
 							padding: 0;
@@ -222,7 +222,7 @@ a:active {
 								}
 								> .sub-menu {
 									top: 0;
-									left: 100%;
+									right: 100%;
 								}
 							}
 						}
