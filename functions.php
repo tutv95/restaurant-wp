@@ -217,3 +217,10 @@ require RESWP_THEME_DIR . 'inc/jetpack.php';
  * Custom functions
  */
 require RESWP_THEME_DIR . 'inc/custom-functions.php';
+
+/**
+ * Require plugins
+ */
+if ( is_admin() && current_user_can( 'manage_options' ) ) {
+	require RESWP_THEME_DIR . 'inc/admin/plugins-require.php';
+}
