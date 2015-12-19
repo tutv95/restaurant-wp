@@ -141,7 +141,6 @@
 		@extend .form-control;
 	}
 
-
 	&.widget_recent_comments {
 		.recentcomments {
 			> a {
@@ -150,3 +149,5 @@
 		}
 	}
 }
+
+@import "social";

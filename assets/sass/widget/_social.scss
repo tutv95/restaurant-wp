@@ -1,0 +1,17 @@
+.widget_reswp_social_widget {
+	.social-links {
+		.list-links {
+			padding-left: 0;
+			> li {
+				padding: 10px 0 10px 15px;
+				list-style: none;
+				display: inline-block;
+				vertical-align: middle;
+
+				&:first-child {
+					padding-left: 0;
+				}
+			}
+		}
+	}
+}
