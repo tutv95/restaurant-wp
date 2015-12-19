@@ -143,7 +143,7 @@ function restaurant_wp_post_share() {
 	$list_share = '';
 
 	if ( is_sticky() ) {
-		$list_share .= '<li><a href="' . get_the_permalink() . '" title="' . esc_html__( 'Sticky Post', 'restaurant-wp' ) . '"><i class="fa fa-bolt"></i></a></li>';
+		$list_share .= '<li><a class="sticky" href="' . get_the_permalink() . '" title="' . esc_html__( 'Sticky Post', 'restaurant-wp' ) . '"><i class="fa fa-bolt"></i></a></li>';
 	}
 
 	if ( isset( $theme_option_data['restaurant_wp_sharing_facebook'] ) && $theme_option_data['restaurant_wp_sharing_facebook'] ) {

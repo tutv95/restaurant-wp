@@ -63,6 +63,11 @@
 						padding-top: 10px;
 						padding-bottom: 10px;
 
+						&.sticky {
+							color: #fe5621;
+							font-size: 150%;
+						}
+
 						&.facebook {
 							color: #4c67a2
 						}

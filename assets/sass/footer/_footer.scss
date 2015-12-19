@@ -30,6 +30,7 @@
 		border-top: 1px solid rgba(170, 170, 170, 0.2);
 		padding: 30px 0;
 		a {
+			color: $restaurant_wp_body_primary_color;
 			&:hover {
 				text-decoration: none;
 				color: #aaa;
