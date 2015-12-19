@@ -78,8 +78,11 @@ if ( ! function_exists( 'restaurant_wp_setup' ) ) :
 				'aside',
 				'image',
 				'video',
+				'audio',
 				'quote',
 				'link',
+				'gallery',
+				'chat',
 			)
 		);
 

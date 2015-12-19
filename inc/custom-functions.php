@@ -143,7 +143,9 @@ function restaurant_wp_post_share() {
 	$list_share = '';
 
 	if ( is_sticky() ) {
-		$list_share .= '<li><a class="sticky" href="' . get_the_permalink() . '" title="' . esc_html__( 'Sticky Post', 'restaurant-wp' ) . '"><i class="fa fa-bolt"></i></a></li>';
+		$list_share .= '<li><a class="sticky" href="' . get_the_permalink() . '" title="' . esc_attr__( 'Sticky Post', 'restaurant-wp' ) . '"><i class="fa fa-bolt"></i></a></li>';
+	} else {
+		$list_share .= restaurant_wp_post_format_icon_font();
 	}
 
 	if ( isset( $theme_option_data['restaurant_wp_sharing_facebook'] ) && $theme_option_data['restaurant_wp_sharing_facebook'] ) {
@@ -453,3 +455,45 @@ if ( ! function_exists( 'restaurant_wp_paging_nav' ) ) :
 		endif;
 	}
 endif;
+
+/**
+ * Show icon post format
+ *
+ * @return string
+ */
+function restaurant_wp_post_format_icon_font() {
+	$post_format  = get_post_format();
+	$icon_font    = '';
+	$title_format = '';
+	if ( $post_format == 'aside' ) {
+		$icon_font    = 'fa-sticky-note-o';
+		$title_format = __( 'Aside', 'restaurant-wp' );
+	} elseif ( $post_format == 'image' ) {
+		$icon_font    = 'fa-picture-o';
+		$title_format = __( 'Image', 'restaurant-wp' );
+	} elseif ( $post_format == 'video' ) {
+		$icon_font    = 'fa-film';
+		$title_format = __( 'Video', 'restaurant-wp' );
+	} elseif ( $post_format == 'quote' ) {
+		$icon_font    = 'fa-quote-left';
+		$title_format = __( 'Quote', 'restaurant-wp' );
+	} elseif ( $post_format == 'link' ) {
+		$icon_font    = 'fa-link';
+		$title_format = __( 'Link', 'restaurant-wp' );
+	} elseif ( $post_format == 'gallery' ) {
+		$icon_font    = 'fa-picture-o';
+		$title_format = __( 'Galley', 'restaurant-wp' );
+	} elseif ( $post_format == 'audio' ) {
+		$icon_font    = 'fa-music';
+		$title_format = __( 'Audio', 'restaurant-wp' );
+	} elseif ( $post_format == 'chat' ) {
+		$icon_font    = 'fa-commenting-o';
+		$title_format = __( 'Chat', 'restaurant-wp' );
+	}
+
+	if ( $icon_font == '' ) {
+		return '';
+	}
+
+	return '<li><a class="post-format" href="' . get_the_permalink() . '" title="' . esc_attr( $title_format ) . '"><i class="fa ' . $icon_font . '"></i></a></li>';
+}
