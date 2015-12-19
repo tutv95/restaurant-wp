@@ -187,3 +187,17 @@
 		}
 	}
 }
+
+@media screen and (max-width: $screen-xs) {
+	.site-main {
+		article {
+			.share-post {
+				display: none;
+			}
+
+			.content-inner {
+				width: 100%;
+			}
+		}
+	}
+}
