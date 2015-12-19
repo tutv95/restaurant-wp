@@ -52,9 +52,7 @@ function restaurant_wp_customize_css() {
 		/* Font body */
 		<?php
 		if ( isset( $theme_option_data['restaurant_wp_font_body'] ) ) {
-			$key_font     = intval( $theme_option_data['restaurant_wp_font_body'] );
-			$google_fonts = restaurant_wp_get_list_google_fonts();
-			$font = $google_fonts[$key_font];
+			$font = $theme_option_data['restaurant_wp_font_body'];
 		?>
 		body {
 			font-family: "<?php echo $font; ?>" !important;

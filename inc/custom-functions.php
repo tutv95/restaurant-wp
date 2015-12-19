@@ -194,10 +194,7 @@ function restaurant_wp_google_font_body() {
 	$theme_option_data = restaurant_wp_get_theme_option_data();
 
 	if ( isset( $theme_option_data['restaurant_wp_font_body'] ) ) {
-		$key_font     = intval( $theme_option_data['restaurant_wp_font_body'] );
-		$google_fonts = restaurant_wp_get_list_google_fonts();
-
-		$font = $google_fonts[$key_font];
+		$font =  $theme_option_data['restaurant_wp_font_body'];
 		wp_enqueue_style( 'restaurant_wp_google_font_' . strtolower( str_replace( ' ', '_', $font ) ), '//fonts.googleapis.com/css?family=' . $font );
 	}
 }
