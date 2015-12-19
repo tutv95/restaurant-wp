@@ -2,8 +2,14 @@
 	.comments-area {
 		margin-left: 80px;
 	}
-}
 
+	&.layout-sidebar-left {
+		.comments-area {
+			margin-left: 0;
+			margin-right: 80px;
+		}
+	}
+}
 
 .comments-area {
 	.comment-list {
