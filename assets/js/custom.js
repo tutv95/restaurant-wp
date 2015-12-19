@@ -65,4 +65,14 @@ jQuery(document).ready(function ($) {
 		}
 	});
 
+	//var height_header = $('#masthead').outerHeight();
+	//
+	//$("body.header_default").on('affix.bs.affix', function () {
+	//	$('#main-top').css('padding-top', height_header);
+	//});
+	//
+	//$("body.header_default").on('affix-top.bs.affix', function () {
+	//	$('#main-top').css('padding-top', 0);
+	//});
+
 });

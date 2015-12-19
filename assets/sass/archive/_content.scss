@@ -163,14 +163,14 @@
 					}
 				}
 
-				.edit-link {
-					padding-left: 10px;
+				.tags-links, .comments-link {
+					padding-right: 10px;
 
-					&:before {
+					&:after {
 						content: '\f111';
 						font-family: FontAwesome, serif;
 						font-size: 4px;
-						padding-right: 10px;
+						padding-left: 10px;
 						position: relative;
 						top: -2px;
 					}
