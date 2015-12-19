@@ -155,7 +155,7 @@ a:active {
 	}
 }
 
-@media (min-width: 768px) {
+@media (min-width: $screen-sm-min) {
 	.site-header {
 		padding-top: 20px;
 		padding-bottom: 20px;
@@ -255,7 +255,7 @@ a:active {
 	overflow: hidden;
 }
 
-@media (max-width: 767px) {
+@media (max-width: $screen-xs-max) {
 	.admin-bar {
 		.mobile-menu-container {
 			padding-top: 46px;

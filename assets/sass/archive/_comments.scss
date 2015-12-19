@@ -12,6 +12,9 @@
 }
 
 .comments-area {
+	overflow: hidden;
+	margin-bottom: 40px;
+
 	.comment-list {
 		list-style: none;
 		padding: 0;
@@ -167,5 +170,18 @@
 				}
 			}
 		}
+	}
+}
+
+@media (max-width: $screen-xs-max) {
+	.comments-area {
+		.comment-list {
+			.comment {
+				.children {
+					margin-left: 20px;
+				}
+			}
+		}
+
 	}
 }
