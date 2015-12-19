@@ -117,36 +117,6 @@
 		}
 	}
 
-	&.widget_search {
-		label {
-			width: 100%;
-			font-weight: normal;
-			position: relative;
-			&:after {
-				content: "\f002";
-				font-family: "FontAwesome";
-				position: absolute;
-				top: 6px;
-				left: 10px;
-			}
-
-			input[type=search] {
-				border: 1px solid #d2d2d2;
-				border-radius: 2px;
-				width: 100%;
-				padding: 5px 30px;
-				&:focus,
-				&:active {
-					border: 1px solid #eee;
-					outline: none;
-				}
-			}
-		}
-		input[type=submit] {
-			display: none;
-		}
-	}
-
 	&.widget_recent_entries {
 		ul {
 			li {
