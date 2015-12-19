@@ -40,6 +40,7 @@ function restaurant_wp_primary_menu() {
 			'menu_id'        => 'primary-menu',
 			'menu_class'     => 'navbar',
 			'container'      => false,
+			'fallback_cb'    => false,
 		)
 	);
 }
@@ -55,6 +56,7 @@ function restaurant_wp_mobile_menu() {
 				'menu_id'        => 'mobile-menu',
 				'menu_class'     => 'navbar',
 				'container'      => false,
+				'fallback_cb'    => false,
 			)
 		);
 
@@ -67,6 +69,7 @@ function restaurant_wp_mobile_menu() {
 			'menu_id'        => 'mobile-menu',
 			'menu_class'     => 'navbar',
 			'container'      => false,
+			'fallback_cb'    => false,
 		)
 	);
 }

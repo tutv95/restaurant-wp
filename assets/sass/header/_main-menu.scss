@@ -271,12 +271,18 @@ a:active {
 		}
 	}
 
+	.site-header {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
 	.width-navigation {
 		display: none;
 	}
 
 	.width-logo {
 		float: left;
+		margin-left: 20px;
 	}
 
 	.mobile-menu-container {
