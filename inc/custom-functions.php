@@ -71,6 +71,13 @@ function restaurant_wp_add_class_to_body( $classes ) {
 		$classes[] = 'layout-sidebar-right';
 	}
 
+	/**
+	 * Preloader
+	 */
+	if ( isset( $theme_option_data['restaurant_wp_display_preloader'] ) && $theme_option_data['restaurant_wp_display_preloader'] ) {
+		$classes[] = 'preloader-active';
+	}
+
 	return $classes;
 }
 
@@ -194,7 +201,7 @@ function restaurant_wp_google_font_body() {
 	$theme_option_data = restaurant_wp_get_theme_option_data();
 
 	if ( isset( $theme_option_data['restaurant_wp_font_body'] ) ) {
-		$font =  $theme_option_data['restaurant_wp_font_body'];
+		$font = $theme_option_data['restaurant_wp_font_body'];
 		wp_enqueue_style( 'restaurant_wp_google_font_' . strtolower( str_replace( ' ', '_', $font ) ), '//fonts.googleapis.com/css?family=' . $font );
 	}
 }
@@ -496,11 +503,15 @@ function restaurant_wp_post_format_icon_font() {
 }
 
 function restaurant_wp_preloader() {
-	?>
-	<div id="loader-wrapper">
-		<div id="loader"></div>
-	</div>
-	<?php
+	$theme_option_data = restaurant_wp_get_theme_option_data();
+
+	if ( isset( $theme_option_data['restaurant_wp_display_preloader'] ) && $theme_option_data['restaurant_wp_display_preloader'] ) {
+		?>
+		<div id="loader-wrapper">
+			<div id="loader"></div>
+		</div>
+		<?php
+	}
 }
 
 add_action( 'restaurant_wp_before', 'restaurant_wp_preloader' );

@@ -6,8 +6,8 @@ jQuery(document).ready(function ($) {
 	/**
 	 * Preloader
 	 */
-	$('.wrapper').fadeIn();
-	$('#loader-wrapper').fadeOut();
+	$('.preloader-active .wrapper').fadeIn();
+	$('.preloader-active #loader-wrapper').fadeOut();
 
 	/**
 	 * Back to top
