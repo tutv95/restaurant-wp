@@ -6,6 +6,7 @@
  */
 
 $theme_option_data = restaurant_wp_get_theme_option_data();
+
 ?>
 
 <style>
@@ -50,6 +51,51 @@ $theme_option_data = restaurant_wp_get_theme_option_data();
 	?>
 	#masthead.affix-top, #masthead.no-affix-top {
 		background-color: <?php echo $header_background_color; ?> !important;
+	}
+
+	<?php } ?>
+
+	/* Primary color */
+	<?php
+	if ( isset( $theme_option_data['restaurant_wp_primary_color'] ) ) {
+		$primary_color = $theme_option_data['restaurant_wp_primary_color'];
+	?>
+
+	/* Typography */
+	a:active, a:focus, a:hover {
+		color: <?php echo $primary_color; ?> !important;
+	}
+
+	/* Navigation */
+	.navigation .width-navigation .inner-navigation .navbar .current-menu-item a, .navigation .width-navigation .inner-navigation .navbar > li.menu-item-has-children > a:hover:after {
+		color: <?php echo $primary_color; ?> !important;
+	}
+
+	/* Share post */
+	.site-main article .share-post .date-meta {
+		background-color: <?php echo $primary_color; ?> !important;
+	}
+
+	/* Comment */
+	.comments-area .comment-respond .form-submit .submit:hover {
+		background-color: <?php echo $primary_color; ?> !important;
+	}
+
+	/* Footer */
+	.site-footer .site-info a {
+		color: <?php echo $primary_color; ?> !important;
+	}
+
+	/* Extension */
+	#back-to-top, #back-to-top:hover {
+		background-color: <?php echo $primary_color; ?> !important;
+		color: #fff !important;
+	}
+
+	/* Pagination */
+	.loop-pagination li .current, .loop-pagination li a:focus, .loop-pagination li a:hover {
+		background-color: <?php echo $primary_color; ?> !important;
+		color: #fff !important;
 	}
 
 	<?php } ?>
