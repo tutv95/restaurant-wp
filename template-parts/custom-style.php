@@ -62,8 +62,12 @@ $theme_option_data = restaurant_wp_get_theme_option_data();
 	?>
 
 	/* Typography */
-	a:active, a:focus, a:hover {
+	a:active, a:focus, a:hover, code {
 		color: <?php echo $primary_color; ?> !important;
+	}
+
+	blockquote {
+		border-color: <?php echo $primary_color; ?> !important;
 	}
 
 	/* Navigation */
