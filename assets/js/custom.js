@@ -6,8 +6,10 @@ jQuery(document).ready(function ($) {
 	/**
 	 * Preloader
 	 */
-	$('.preloader-active .wrapper').fadeIn();
-	$('.preloader-active #loader-wrapper').fadeOut();
+	$(window).load(function () {
+		$('.preloader-active .wrapper').fadeIn();
+		$('.preloader-active #loader-wrapper').fadeOut();
+	});
 
 	/**
 	 * Back to top
