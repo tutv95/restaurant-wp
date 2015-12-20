@@ -21,6 +21,9 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+<?php do_action( 'restaurant_wp_before' ); ?>
+
 <div id="wrapper-container" class="wrapper">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'restaurant-wp' ); ?></a>
 	<?php

@@ -494,3 +494,13 @@ function restaurant_wp_post_format_icon_font() {
 
 	return '<li><a class="post-format" href="' . get_the_permalink() . '" title="' . esc_attr( $title_format ) . '"><i class="fa ' . $icon_font . '"></i></a></li>';
 }
+
+function restaurant_wp_preloader() {
+	?>
+	<div id="loader-wrapper">
+		<div id="loader"></div>
+	</div>
+	<?php
+}
+
+add_action( 'restaurant_wp_before', 'restaurant_wp_preloader' );

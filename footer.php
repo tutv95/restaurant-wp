@@ -34,5 +34,6 @@
 
 <?php wp_footer(); ?>
 
+<?php do_action( 'restaurant_wp_after' ); ?>
 </body>
 </html>

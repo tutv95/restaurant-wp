@@ -4,6 +4,12 @@
 
 jQuery(document).ready(function ($) {
 	/**
+	 * Preloader
+	 */
+	$('.wrapper').fadeIn();
+	$('#loader-wrapper').fadeOut();
+
+	/**
 	 * Back to top
 	 */
 	var back_to_top = $("#back-to-top");
