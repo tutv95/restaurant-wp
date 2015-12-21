@@ -15,6 +15,12 @@ if ( ! isset( $instance['quick_menu'] ) ) {
 $menu_id = $instance['quick_menu'];
 $menu_style = $instance['menu_style'];
 $columns      = intval( $instance['columns'] );
+$class_columns = '';
+if ($columns == 1) {
+	$class_columns = 'menu_content_one_column';
+} else {
+	$class_columns = 'menu_content_two_column';
+}
 
 if ( get_post_type( $menu_id ) != 'erm_menu' ) {
 	return;
@@ -51,7 +57,7 @@ $menu_items = preg_split( '/,/', $menu_items );
 	<div class="menu-title" style="<?php echo esc_attr( $style_header ); ?>">
 		<?php echo '<' . $header_type . ' class="title">' . esc_html( $header_title ) . '</' . $header_type . '>'; ?>
 	</div>
-	<ul class="erm_menu_content layout-<?php echo esc_attr( $menu_style ); ?>">
+	<ul class="erm_menu_content layout-<?php echo esc_attr( $menu_style . ' ' . $class_columns ); ?>">
 <?php
 
 $args_query = array(
