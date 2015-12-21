@@ -53,6 +53,11 @@ function restaurant_wp_register_required_plugins() {
 			'slug'     => 'so-widgets-bundle',
 			'required' => false,
 		),
+		array(
+			'name'     => 'Quick Restaurant Menu',
+			'slug'     => 'quick-restaurant-menu',
+			'required' => false,
+		),
 	);
 
 	/*
