@@ -515,3 +515,18 @@ function restaurant_wp_preloader() {
 }
 
 add_action( 'restaurant_wp_before', 'restaurant_wp_preloader' );
+
+/**
+ * Add SiteOrigin Widgets
+ *
+ * @param $folders
+ *
+ * @return array
+ */
+function restaurant_wp_add_siteorigin_widgets( $folders ) {
+	$folders[] = RESWP_THEME_DIR . 'inc/siteorigin-widgets/';
+
+	return $folders;
+}
+
+add_filter( 'siteorigin_widgets_widget_folders', 'restaurant_wp_add_siteorigin_widgets' );
