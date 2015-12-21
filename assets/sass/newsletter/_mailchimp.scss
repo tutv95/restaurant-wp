@@ -17,7 +17,6 @@
 		display: table-cell;
 		vertical-align: middle;
 		text-align: right;
-		padding-left: 100px;
 		span {
 			background-color: $restaurant_wp_body_primary_color;
 		}
@@ -29,7 +28,7 @@
 	.mc4wp-form {
 		display: table-cell;
 		vertical-align: middle;
-		padding-left: 20px;
+		padding-left: 10px;
 	}
 
 	.mc4wp-form-fields {
@@ -40,12 +39,12 @@
 			}
 
 			input[type=email] {
-				padding: 5px 5px;
+				padding: 5px 10px;
 				width: 350px;
 				border-radius: 2px;
 				outline: none;
 				border: none;
-				background: #fff url("assets/images/bg-newletter.png") no-repeat 315px center;
+				background: #fff url("assets/images/bg-newletter.png") no-repeat right 10px center;
 
 				&:focus,
 				&:active {
@@ -55,7 +54,7 @@
 			}
 
 			input[type=submit] {
-				margin-left: 20px;
+				margin-left: 10px;
 				padding: 5px 20px;
 				border: none;
 				text-transform: uppercase;
@@ -91,6 +90,49 @@
 		.mc4wp-error {
 			color: #b94a48;
 			background-color: #f2dede;
+		}
+	}
+}
+
+@media only screen and (min-width: 481px) and (max-width: $screen-xs-max) {
+	#main-bottom {
+		.widget-title {
+			display: block;
+			text-align: center;
+		}
+
+		.mc4wp-form {
+			display: block;
+		}
+
+		.mc4wp-form-fields {
+			text-align: center;
+			p {
+				&:first-child {
+					width: 60%;
+					text-align: right;
+				}
+
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	#main-bottom {
+		.widget-title {
+			display: block;
+			text-align: center;
+		}
+
+		.mc4wp-form {
+			display: block;
+		}
+		.mc4wp-form-fields {
+			p {
+				float: none;
+				text-align: center;
+			}
 		}
 	}
 }
