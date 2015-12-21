@@ -13,12 +13,13 @@ if ( ! isset( $instance['quick_menu'] ) ) {
 }
 
 $menu_id = $instance['quick_menu'];
+$menu_style = $instance['menu_style'];
+$columns      = intval( $instance['columns'] );
 
 if ( get_post_type( $menu_id ) != 'erm_menu' ) {
 	return;
 }
 
-$columns      = intval( $instance['columns'] );
 $header_type  = $instance['header_type'];
 $header_color = $instance['header_color'];
 $header_title = get_the_title( $menu_id );
@@ -37,7 +38,6 @@ if ( $header_background_src != '' ) {
 }
 
 $style_header .= 'color: ' . $header_color . ';';
-
 $title_menu = get_the_title( $menu_id );
 
 // Menu items
@@ -51,7 +51,7 @@ $menu_items = preg_split( '/,/', $menu_items );
 	<div class="menu-title" style="<?php echo esc_attr( $style_header ); ?>">
 		<?php echo '<' . $header_type . ' class="title">' . esc_html( $header_title ) . '</' . $header_type . '>'; ?>
 	</div>
-	<ul class="erm_menu_content">
+	<ul class="erm_menu_content layout-<?php echo esc_attr( $menu_style ); ?>">
 <?php
 
 $args_query = array(
