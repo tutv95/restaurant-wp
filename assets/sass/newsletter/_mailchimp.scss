@@ -5,9 +5,14 @@
 	}
 }
 
-.widget_mc4wp_form_widget {
-	display: table;
-	width: 100%;
+#main-bottom {
+	.widget_text {
+		display: table;
+		width: 100%;
+	}
+}
+
+#main-bottom {
 	.widget-title {
 		display: table-cell;
 		vertical-align: middle;
@@ -40,7 +45,7 @@
 				border-radius: 2px;
 				outline: none;
 				border: none;
-				background-color: #fff url(../../images/bg-newletter.png) no-repeat 315px center;
+				background-color: #fff url("assets/images/bg-newletter.png") no-repeat 315px center;
 
 				&:focus,
 				&:active {
