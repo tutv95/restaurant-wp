@@ -47,7 +47,7 @@ if ( empty( $menu_items ) ) {
 }
 $menu_items = preg_split( '/,/', $menu_items );
 ?>
-	<div class="erm_menu">
+<div class="reswp_erm_menu">
 	<div class="menu-title" style="<?php echo esc_attr( $style_header ); ?>">
 		<?php echo '<' . $header_type . ' class="title">' . esc_html( $header_title ) . '</' . $header_type . '>'; ?>
 	</div>
