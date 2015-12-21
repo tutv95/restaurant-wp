@@ -58,6 +58,7 @@ $args_query = array(
 	'post_type' => 'erm_menu_item',
 	'post__in' => $menu_items,
 	'ignore_sticky_posts' => true,
+	'order' => 'ASC',
 );
 $menu_query = new WP_Query( $args_query );
 
@@ -86,7 +87,7 @@ if ( $menu_query->have_posts() ) {
 			$prices        = get_post_meta( $item_id, '_erm_prices', true );
 			?>
 				<li class="erm_product <?php echo ( $has_thumbnail ? 'with_image' : 'no_image' ); ?>">
-					<?php if ( $has_thumbnail ) :
+					<?php if ( $has_thumbnail ) {
 						$image_id   = get_post_thumbnail_id( $item_id );
 						$image_thumb  = wp_get_attachment_image_src( $image_id, 'thumbnail' )[0];
 						$image_full   = wp_get_attachment_image_src( $image_id, 'full' )[0];
@@ -99,7 +100,12 @@ if ( $menu_query->have_posts() ) {
 							<h3 class="erm_product_title"><?php echo esc_html( get_the_title() ); ?></h3>
 							<div class="erm_product_desc"><?php the_content(); ?></div>
 						</div>
-					<?php endif; ?>
+					<?php } else { ?>
+						<div class="item-left">
+							<h3 class="erm_product_title"><?php echo esc_html( get_the_title() ); ?></h3>
+							<div class="erm_product_desc"><?php the_content(); ?></div>
+						</div>
+					<?php } ?>
 					<?php if ( !empty( $prices ) ) : ?>
 						<div class="erm_product_price">
 							<ul>
