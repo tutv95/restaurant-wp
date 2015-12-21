@@ -20,9 +20,10 @@ class RESWP_Restaurant_Menu_Widget extends SiteOrigin_Widget {
 		$cate[0]       = esc_html__( 'Create Menu', 'restaurant-wp' );
 		if ( $lop_menu_args->have_posts() ) {
 			$cate = '';
-			while ( $lop_menu_args->have_posts() ): $lop_menu_args->the_post();
+			while ( $lop_menu_args->have_posts() ) {
+				$lop_menu_args->the_post();
 				$cate[get_the_ID()] = get_the_title( get_the_ID() );;
-			endwhile;
+			};
 		}
 		wp_reset_postdata();
 
