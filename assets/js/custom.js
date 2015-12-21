@@ -7,7 +7,7 @@ jQuery(document).ready(function ($) {
 	 * Preloader
 	 */
 	$(window).load(function () {
-		$('.preloader-active .wrapper').fadeIn();
+		$('.preloader-active .wrapper').animate({opacity: 1});
 		$('.preloader-active #loader-wrapper').fadeOut();
 	});
 
