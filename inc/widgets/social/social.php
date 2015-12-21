@@ -37,7 +37,7 @@ class Restaurant_WP_Social_Widget extends WP_Widget {
 			<ul class="list-links">
 				<?php
 				if ( $instance['facebook'] != '' ) {
-					echo '<li><a class="facebook followLink" href="' . $instance['facebook'] . '"><i class="fa fa-facebook"></i></a></a></li>';
+					echo '<li><a class="facebook followLink" href="' . $instance['facebook'] . '"><i class="fa fa-facebook"></i></a></li>';
 				}
 				if ( $instance['twitter'] != '' ) {
 					echo '<li><a class="twitter followLink" href="' . $instance['twitter'] . '"><i class="fa fa-twitter"></i></a></li>';

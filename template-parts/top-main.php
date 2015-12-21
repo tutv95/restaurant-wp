@@ -11,10 +11,12 @@
  */
 ?>
 
-<?php $image = get_header_image(); ?>
+<?php $image = get_header_image();
+
+?>
 <div id="main-top">
-	<?php if ( $image != false ) {
-		echo '<img src="' . $image . '" />';
+	<?php if ( get_header_image() != false ) {
+		echo '<img src="' . $image . '" alt="' . esc_attr__( 'Custom header image', 'restaurant-wp' ) . '"/>';
 	} ?>
 	<div class="container-content">
 		<div class="content container">
