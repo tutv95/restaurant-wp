@@ -1,0 +1,89 @@
+#main-bottom {
+	background-color: $restaurant_wp_body_primary_color;
+	.widget {
+		margin-top: 25px;
+	}
+}
+
+.widget_mc4wp_form_widget {
+	display: table;
+	width: 100%;
+	.widget-title {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: right;
+		padding-left: 100px;
+		span {
+			background-color: $restaurant_wp_body_primary_color;
+		}
+		&:before {
+			display: none;
+		}
+	}
+
+	.mc4wp-form {
+		display: table-cell;
+		vertical-align: middle;
+		padding-left: 20px;
+	}
+
+	.mc4wp-form-fields {
+		p {
+			float: left;
+			label {
+				display: none;
+			}
+
+			input[type=email] {
+				padding: 5px 5px;
+				width: 350px;
+				border-radius: 2px;
+				outline: none;
+				border: none;
+				&:focus,
+				&:active {
+					border: none;
+					outline: none;
+				}
+			}
+
+			input[type=submit] {
+				margin-left: 20px;
+				padding: 5px 20px;
+				border: none;
+				text-transform: uppercase;
+				border-radius: 2px;
+				background: #2a2a2a;
+				color: #fff;
+
+				&:focus,
+				&:active {
+					border: none;
+					outline: none;
+				}
+			}
+		}
+	}
+
+	.mc4wp-response {
+		clear: both;
+
+		.mc4wp-alert {
+			padding: 10px 20px;
+
+			p {
+				margin-bottom: 0;
+			}
+		}
+
+		.mc4wp-success {
+			color: #468847;
+			background-color: #dff0d8;
+		}
+
+		.mc4wp-error {
+			color: #b94a48;
+			background-color: #f2dede;
+		}
+	}
+}
