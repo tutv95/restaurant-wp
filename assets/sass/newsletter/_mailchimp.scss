@@ -142,6 +142,11 @@
 				&:first-child {
 					width: 100%;
 				}
+
+				input[type=email] {
+					width: 220px;
+				}
+
 				float: none;
 				text-align: center;
 			}
