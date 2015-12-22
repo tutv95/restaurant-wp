@@ -91,8 +91,13 @@ if ( $menu_query->have_posts() ) {
 		} else {
 			$has_thumbnail = has_post_thumbnail( $item_id );
 			$prices        = get_post_meta( $item_id, '_erm_prices', true );
+			if( isset( $prices[0]['name'] ) ) {
+				$class = ' erm_product_active';
+			} else {
+				$class = '';
+			}
 			?>
-				<li class="erm_product <?php echo ( $has_thumbnail ? 'with_image' : 'no_image' ); ?>">
+				<li class="erm_product <?php echo ( $has_thumbnail ? 'with_image' : 'no_image' ); ?><?php echo $class; ?>">
 					<?php if ( $has_thumbnail ) {
 						$image_id   = get_post_thumbnail_id( $item_id );
 						$image_thumb  = wp_get_attachment_image_src( $image_id, 'thumbnail' )[0];
@@ -103,12 +108,12 @@ if ( $menu_query->have_posts() ) {
 							<a target="_blank" href="<?php echo esc_url( $image_full ); ?>" class="image-popup" data-caption="<?php echo esc_attr( $post_image->post_excerpt ); ?>" data-desc="<?php echo esc_attr( $post_image->post_content ); ?>">
 								<img class="erm_product_image" src="<?php echo esc_url( $image_thumb ); ?>" alt="">
 							</a>
-							<h3 class="erm_product_title"><?php echo esc_html( get_the_title() ); ?></h3>
+							<h3 class="erm_product_title"><span><?php echo esc_html( get_the_title() ); ?></span></h3>
 							<div class="erm_product_desc"><?php the_content(); ?></div>
 						</div>
 					<?php } else { ?>
 						<div class="item-left">
-							<h3 class="erm_product_title"><?php echo esc_html( get_the_title() ); ?></h3>
+							<h3 class="erm_product_title"><span><?php echo esc_html( get_the_title() ); ?></span></h3>
 							<div class="erm_product_desc"><?php the_content(); ?></div>
 						</div>
 					<?php } ?>

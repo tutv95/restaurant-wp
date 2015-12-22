@@ -12,6 +12,11 @@
 	}
 }
 
+#sidebar-main-bottom {
+	display: table;
+	margin: 0 auto;
+}
+
 #main-bottom {
 	.widget-title {
 		display: table-cell;
@@ -109,7 +114,7 @@
 			text-align: center;
 			p {
 				&:first-child {
-					width: 60%;
+					width: 66%;
 					text-align: right;
 				}
 
@@ -130,6 +135,9 @@
 		}
 		.mc4wp-form-fields {
 			p {
+				&:first-child {
+					width: 100%;
+				}
 				float: none;
 				text-align: center;
 			}
