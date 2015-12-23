@@ -129,7 +129,7 @@ if ( $columns == 1 ) {
 												<div class="erm_product_desc"><?php the_content(); ?></div>
 											</div>
 										<?php } ?>
-										<?php if ( $class != '' ) : ?>
+										<?php if ( count( $prices ) > 0 ) : ?>
 											<div class="erm_product_price">
 												<ul>
 													<?php
