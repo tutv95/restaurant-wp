@@ -39,6 +39,8 @@
 	.mc4wp-form-fields {
 		p {
 			float: left;
+			margin: 0;
+
 			label {
 				display: none;
 			}
@@ -139,6 +141,8 @@
 		}
 		.mc4wp-form-fields {
 			p {
+				margin-bottom: 20px;
+
 				&:first-child {
 					width: 100%;
 				}
