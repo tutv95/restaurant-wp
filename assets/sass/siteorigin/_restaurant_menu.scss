@@ -155,7 +155,7 @@
 
 .menu_content_two_column {
 	display: inline-block;
-	position: relative;
+	width: 100%;
 	> li {
 		width: 50%;
 		float: left;
@@ -167,6 +167,10 @@
 		&:nth-child(2n+1) {
 			clear: both;
 			padding-right: 15px;
+		}
+
+		.erm_product_content {
+			position: relative;
 		}
 	}
 }
