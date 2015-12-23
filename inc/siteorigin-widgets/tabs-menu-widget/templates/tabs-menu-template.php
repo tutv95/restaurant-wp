@@ -14,25 +14,28 @@ $count_div = 1;
 <ul class="nav-tabs" role="tablist">
 	<?php
 	foreach ( $instance['tab'] as $tab ) {
-		$title = $sub_title = $active = '';
+		$title = $sub_title = $active = $icon = '';
 		if ( isset( $tab['title'] ) ) {
 			$title = $tab['title'];
 		}
 		if ( isset( $tab['sub_title'] ) ) {
 			$sub_title = $tab['sub_title'];
 		}
-		if ( isset( $tab['title'] ) ) {
+		if ( isset( $tab['image'] ) ) {
 			$image = wp_get_attachment_image_src( $tab['image'], 'full' );
 			$icon  = $image[0];
 		}
 		if ( $count_li == 1 ) {
 			$active = 'active';
 		}
+
 		?>
-		<li class="<?php echo $active; ?>" role="presentation" style="width: <?php echo $width . '%'; ?>">
+		<li class="<?php echo $active; ?>" style="width: <?php echo $width . '%'; ?>">
 			<a href="#reswp-widget-tab-<?php echo $title; ?>" data-toggle="tab">
 			<span class="box">
-				<img src="<?php echo $icon; ?>">
+				<?php if ( $icon != '' ): ?>
+					<img src="<?php echo $icon; ?>" />
+				<?php endif; ?>
 				<span><?php echo $title; ?><span class="sub-title"><?php echo $sub_title; ?></span></span>
 			</span>
 			</a>
@@ -57,7 +60,7 @@ $count_div = 1;
 			$columns = 'menu_content_two_column';
 		}
 		$menu_style = $instance['menu_style'];
-		$title = $tab['title'];
+		$title      = $tab['title'];
 		?>
 		<div role="tabpanel" id="reswp-widget-tab-<?php echo $title; ?>" class="tab-pane fadeIn<?php echo $content_active; ?>">
 			<div class="reswp_erm_menu">
