@@ -126,7 +126,7 @@ function restaurant_wp_widgets_init() {
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h3 class="widget-title"><span>',
-			'after_title'   => '</h3></span>',
+			'after_title'   => '</span></h3>',
 		)
 	);
 
@@ -138,7 +138,7 @@ function restaurant_wp_widgets_init() {
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h3 class="widget-title"><span>',
-			'after_title'   => '</h3></span>',
+			'after_title'   => '</span></h3>',
 		)
 	);
 
@@ -150,7 +150,7 @@ function restaurant_wp_widgets_init() {
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h3 class="widget-title"><span>',
-			'after_title'   => '</h3></span>',
+			'after_title'   => '</span></h3>',
 		)
 	);
 
@@ -162,7 +162,7 @@ function restaurant_wp_widgets_init() {
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h3 class="widget-title"><span>',
-			'after_title'   => '</h3></span>',
+			'after_title'   => '</span></h3>',
 		)
 	);
 }
