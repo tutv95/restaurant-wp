@@ -1,9 +1,25 @@
 .nav-tabs {
+	background-color: rgba(17,17,17, .8);
 	overflow: hidden;
 	border-bottom: none;
 	li {
 		text-align: center;
 		margin: auto;
+
+		&:hover {
+			&:after {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				margin-left: -4px;
+				width: 0;
+				height: 0;
+				border-left: 8px solid transparent;
+				border-right: 8px solid transparent;
+				border-bottom: 8px solid transparent;
+			}
+		}
 		a:focus {
 			outline: none;
 			outline-offset: 0;
@@ -64,6 +80,10 @@
 	.so-widget-reswp_restaurant_tabs_menu_widget {
 		.nav-tabs {
 			padding: 0;
+			li {
+				padding-top: 0;
+				padding-bottom: 0;
+			}
 		}
 	}
 }
