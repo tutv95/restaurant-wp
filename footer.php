@@ -17,7 +17,7 @@
 		<?php get_template_part( 'template-parts/sidebar', 'main-bottom' ); ?>
 	</div>
 </div><!-- #main-bottom -->
-<footer id="colophon" class="site-footer" role="contentinfo">
+<footer id="colophon" class="site-footer">
 	<div class="container">
 		<?php get_template_part( 'template-parts/sidebar', 'footer' ); ?>
 		<div class="site-info">
