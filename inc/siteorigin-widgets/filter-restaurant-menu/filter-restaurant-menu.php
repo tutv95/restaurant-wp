@@ -103,7 +103,8 @@ class RESWP_Restaurant_Filter_Menu_Widget extends SiteOrigin_Widget {
 		wp_enqueue_script( 'magnific-popup', RESWP_THEME_URL . 'inc/siteorigin-widgets/assets/js/jquery.magnific-popup.min.js', array( 'jquery' ), '', true );
 		wp_enqueue_script( 'erm-front', RESWP_THEME_URL . 'inc/siteorigin-widgets/assets/js/erm-front-scripts.js', array( 'jquery' ), '', true );
 
-		wp_enqueue_script( 'mixitup', RESWP_THEME_URL . 'inc/siteorigin-widgets/filter-restaurant-menu/js/jquery.mixitup.min.js', array( 'jquery' ), '2.1.11', true );
+		wp_enqueue_script( 'jquery-mixitup', RESWP_THEME_URL . 'inc/siteorigin-widgets/filter-restaurant-menu/js/jquery.mixitup.min.js', array( 'jquery' ), '2.1.11', true );
+		wp_enqueue_script( 'restaurant_wp_mixitup', RESWP_THEME_URL . 'inc/siteorigin-widgets/filter-restaurant-menu/js/restaurant_wp_mixitup.js', array( 'jquery-mixitup' ), RESWP_THEME_VERSION, true );
 	}
 }
 

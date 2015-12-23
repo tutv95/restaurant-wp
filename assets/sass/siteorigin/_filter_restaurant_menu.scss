@@ -1,0 +1,54 @@
+.filter_restaurant_menu {
+	.wrapper-filter-controls {
+		text-align: center;
+
+		.filter-controls {
+			display: inline-block;
+			border-bottom: 1px solid #ddd;
+			padding: 0 10px;
+		}
+
+		.filter {
+			display: inline-block;
+			border-bottom: 1px solid transparent;
+			margin: 0 8px -1px 8px;
+			padding: 5px 8px;
+			text-transform: uppercase;
+			cursor: pointer;
+			font-size: 13px;
+			font-weight: 700;
+			position: relative;
+
+			&:after {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 1px;
+				background-color: #333;
+				bottom: -1px;
+				left: 0;
+				opacity: 0;
+			}
+
+			&.active {
+				color: $restaurant_wp_body_primary_color;
+
+				&:after {
+					opacity: 1;
+				}
+			}
+
+
+		}
+	}
+
+	.wrapper-filter-restaurant-menu {
+		padding-top: 50px;
+		padding-bottom: 60px;
+
+		.mix {
+			display: none;
+			width: 100%;
+		}
+	}
+}
