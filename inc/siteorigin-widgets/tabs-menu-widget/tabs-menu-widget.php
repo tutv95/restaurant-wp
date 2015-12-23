@@ -33,40 +33,32 @@ class RESWP_Restaurant_Tabs_Menu_Widget extends SiteOrigin_Widget {
 				'label'     => esc_html__( 'Tab', 'restauran-wp' ),
 				'item_name' => esc_html__( 'Tab', 'restauran-wp' ),
 				'fields'    => array(
-					'title'        => array(
-						'type'    => 'text',
-						'label'   => esc_html__( 'Tab Title', 'restauran-wp' ),
-						'default' => esc_html__( 'Tab title', 'restauran-wp' )
+					'title'      => array(
+						'type'  => 'text',
+						'label' => esc_html__( 'Tab Title', 'restauran-wp' ),
 					),
-					'title_option' => array(
-						'type'   => 'section',
-						'label'  => esc_html__( 'Title Options', 'restaurant-wp' ),
-						'hide'   => true,
-						'fields' => array(
-							'sub_title' => array(
-								'type'    => 'text',
-								'label'   => esc_html__( 'Sub Title', 'restaurant-wp' ),
-								'default' => esc_html__( '', 'restaurant_wp' )
-							),
-							'image'     => array(
-								'type' => 'media',
-								'name' => esc_html__( 'Upload Icon', 'restaurant-wp' )
-							)
-						)
+					'sub_title'  => array(
+						'type'  => 'text',
+						'label' => esc_html__( 'Sub Title', 'restaurant-wp' ),
 					),
-					'quick_menu'   => array(
+					'image'      => array(
+						'type'  => 'media',
+						'label' => esc_html__( 'Icon Image', 'restaurant-wp' ),
+						'name'  => esc_html__( 'Upload Icon', 'restaurant-wp' )
+					),
+					'quick_menu' => array(
 						'type'    => 'select',
 						'label'   => esc_html__( 'Select Menu', 'restaurant-wp' ),
 						'options' => $cate
 					),
-					'columns'      => array(
-						'type'    => 'select',
-						'label'   => esc_html__( 'Columns', 'restaurant-wp' ),
-						'options' => array(
-							'1' => 1,
-							'2' => 2
-						)
-					)
+				)
+			),
+			'columns'    => array(
+				'type'    => 'select',
+				'label'   => esc_html__( 'Columns', 'restaurant-wp' ),
+				'options' => array(
+					'1' => 1,
+					'2' => 2
 				)
 			),
 			'menu_style' => array(
