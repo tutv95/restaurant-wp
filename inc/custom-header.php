@@ -39,7 +39,6 @@ add_action( 'after_setup_theme', 'restaurant_wp_custom_header_setup' );
 function restaurant_wp_header_image() {
 
 
-
 	return $css;
 }
 

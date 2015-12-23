@@ -13,6 +13,6 @@ if ( ! is_active_sidebar( 'main_bottom' ) ) {
 }
 ?>
 
-<aside id="sidebar-main-bottom" class="widget-area" role="complementary">
+<aside id="sidebar-main-bottom" class="widget-area">
 	<?php dynamic_sidebar( 'main_bottom' ); ?>
 </aside><!-- #secondary -->

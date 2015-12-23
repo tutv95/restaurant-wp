@@ -13,6 +13,6 @@ if ( ! is_active_sidebar( 'menu_right' ) ) {
 }
 ?>
 
-<aside id="sidebar-menu-right" class="widget-area" role="complementary">
+<aside id="sidebar-menu-right" class="widget-area">
 	<?php dynamic_sidebar( 'menu_right' ); ?>
 </aside><!-- #secondary -->

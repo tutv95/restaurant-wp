@@ -13,7 +13,7 @@ $count_div = 1;
 
 <ul class="nav-tabs" role="tablist">
 	<?php
-	foreach ( $instance['tab'] as $tab ) {
+	foreach ( $instance['tab'] as $index => $tab ) {
 		$title = $sub_title = $active = $icon = '';
 		if ( isset( $tab['title'] ) ) {
 			$title = $tab['title'];
@@ -22,8 +22,7 @@ $count_div = 1;
 			$sub_title = $tab['sub_title'];
 		}
 		if ( isset( $tab['image'] ) ) {
-			$image = wp_get_attachment_image_src( $tab['image'], 'full' );
-			$icon  = $image[0];
+			$icon = wp_get_attachment_image( $tab['image'], 'full' );
 		}
 		if ( $count_li == 1 ) {
 			$active = 'active';
@@ -32,11 +31,11 @@ $count_div = 1;
 		$id = $tab['quick_menu'];
 		?>
 		<li class="<?php echo $active; ?>" role="presentation" style="width: <?php echo $width . '%'; ?>">
-			<a href="#reswp-widget-tab-<?php echo esc_attr( $id ); ?>" data-toggle="tab">
+			<a href="#reswp-widget-tab-<?php echo esc_attr( $id . $index ); ?>" data-toggle="tab">
 			<span class="box">
-				<?php if ( $icon != '' ) : ?>
-					<img src="<?php echo $icon; ?>" />
-				<?php endif; ?>
+				<?php if ( $icon != '' ) {
+					echo $icon;
+				} ?>
 				<span><?php echo $title; ?><span class="sub-title"><?php echo $sub_title; ?></span></span>
 			</span>
 			</a>
@@ -64,7 +63,7 @@ $count_div = 1;
 		$title      = $tab['title'];
 		$menu_id    = $tab['quick_menu'];
 		?>
-		<div role="tabpanel" id="reswp-widget-tab-<?php echo esc_attr( $id ); ?>" class="tab-pane fadeIn<?php echo $content_active; ?>">
+		<div role="tabpanel" id="reswp-widget-tab-<?php echo esc_attr( $id . $i ); ?>" class="tab-pane fadeIn<?php echo $content_active; ?>">
 			<div class="reswp_erm_menu">
 				<ul class="erm_menu_content layout-<?php echo $menu_style . ' ' . $columns; ?> ">
 					<?php

@@ -45,7 +45,7 @@
 		<?php get_template_part( 'inc/header/mobile-menu' ); ?>
 	</nav>
 	<div class="content-pusher">
-		<header id="masthead" class="site-header<?php echo $header ?>" role="banner">
+		<header id="masthead" class="site-header<?php echo $header ?>">
 			<div class="container">
 				<div class="row">
 					<div class="navigation col-sm-12">
@@ -67,13 +67,13 @@
 									restaurant_wp_primary_menu();
 									?>
 
-									<ul class="menu-right">
+									<div class="menu-right">
 										<?php
 										if ( is_active_sidebar( 'menu_right' ) ) {
 											dynamic_sidebar( 'menu_right' );
 										}
 										?>
-									</ul>
+									</div>
 								</div>
 							</nav>
 						</div>

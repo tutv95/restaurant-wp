@@ -1,8 +1,8 @@
 <?php
 if ( ! is_active_sidebar( 'menu-right' ) ) {
-	echo '<ul class="menu-right">';
+	echo '<div class="menu-right">';
 	dynamic_sidebar( 'menu_right' );
-	echo '</ul>';
+	echo '</div>';
 }
 ?>
 <ul class="nav navbar-nav">

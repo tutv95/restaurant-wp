@@ -2,7 +2,7 @@
 /**
  * Jetpack Compatibility File.
  *
- * @link https://jetpack.me/
+ * @link    https://jetpack.me/
  *
  * @package Restaurant_WP
  */
@@ -15,11 +15,13 @@
  */
 function restaurant_wp_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
-	add_theme_support( 'infinite-scroll', array(
+	add_theme_support(
+		'infinite-scroll', array(
 		'container' => 'main',
 		'render'    => 'restaurant_wp_infinite_scroll_render',
 		'footer'    => 'page',
-	) );
+	)
+	);
 
 	// Add theme support for Responsive Videos.
 	add_theme_support( 'jetpack-responsive-videos' );
@@ -33,9 +35,9 @@ function restaurant_wp_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :
-		    get_template_part( 'template-parts/content', 'search' );
+			get_template_part( 'template-parts/content', 'search' );
 		else :
-		    get_template_part( 'template-parts/content', get_post_format() );
+			get_template_part( 'template-parts/content', get_post_format() );
 		endif;
 	}
 } // end function restaurant_wp_infinite_scroll_render
