@@ -34,7 +34,7 @@ $count_div = 1;
 		<li class="<?php echo $active; ?>" role="presentation" style="width: <?php echo $width . '%'; ?>">
 			<a href="#reswp-widget-tab-<?php echo esc_attr( $id ); ?>" data-toggle="tab">
 			<span class="box">
-				<?php if ( $icon != '' ): ?>
+				<?php if ( $icon != '' ) : ?>
 					<img src="<?php echo $icon; ?>" />
 				<?php endif; ?>
 				<span><?php echo $title; ?><span class="sub-title"><?php echo $sub_title; ?></span></span>
