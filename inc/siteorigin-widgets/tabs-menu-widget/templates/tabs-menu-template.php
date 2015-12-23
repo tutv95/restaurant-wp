@@ -14,14 +14,14 @@ $count_div = 1;
 <ul class="nav-tabs" role="tablist">
 	<?php
 	foreach ( $instance['tab'] as $tab ) {
-		$title = $sub_title = $active = '';
+		$title = $sub_title = $active = $icon = '';
 		if ( isset( $tab['title'] ) ) {
 			$title = $tab['title'];
 		}
 		if ( isset( $tab['sub_title'] ) ) {
 			$sub_title = $tab['sub_title'];
 		}
-		if ( isset( $tab['title'] ) ) {
+		if ( isset( $tab['image'] ) ) {
 			$image = wp_get_attachment_image_src( $tab['image'], 'full' );
 			$icon  = $image[0];
 		}
@@ -32,9 +32,11 @@ $count_div = 1;
 		$id = $tab['quick_menu'];
 		?>
 		<li class="<?php echo $active; ?>" role="presentation" style="width: <?php echo $width . '%'; ?>">
-			<a href="#reswp-widget-tab-<?php echo $id; ?>" data-toggle="tab">
+			<a href="#reswp-widget-tab-<?php echo esc_attr( $id ); ?>" data-toggle="tab">
 			<span class="box">
-				<img src="<?php echo $icon; ?>">
+				<?php if ( $icon != '' ): ?>
+					<img src="<?php echo $icon; ?>" />
+				<?php endif; ?>
 				<span><?php echo $title; ?><span class="sub-title"><?php echo $sub_title; ?></span></span>
 			</span>
 			</a>
@@ -59,10 +61,10 @@ $count_div = 1;
 			$columns = 'menu_content_two_column';
 		}
 		$menu_style = $instance['menu_style'];
-		$title = $tab['title'];
-		$menu_id = $tab['quick_menu'];
+		$title      = $tab['title'];
+		$menu_id    = $tab['quick_menu'];
 		?>
-		<div role="tabpanel" id="reswp-widget-tab-<?php echo $menu_id; ?>" class="tab-pane fadeIn<?php echo $content_active; ?>">
+		<div role="tabpanel" id="reswp-widget-tab-<?php echo esc_attr( $id ); ?>" class="tab-pane fadeIn<?php echo $content_active; ?>">
 			<div class="reswp_erm_menu">
 				<ul class="erm_menu_content layout-<?php echo $menu_style . ' ' . $columns; ?> ">
 					<?php
