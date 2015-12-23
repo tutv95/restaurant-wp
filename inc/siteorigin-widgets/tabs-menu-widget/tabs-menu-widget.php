@@ -1,16 +1,16 @@
 <?php
 
 /**
- * Widget Name: WPArena - Tabs Menu
- * Description: Widget for Tabs Menu
+ * Widget Name: WPArena - Restaurant Tabs Menu
+ * Description: Widget Tabs for Restaurant Menu
  * Author: WPArena
  * Author URI: wparena.com
  *
- * Class RESWP_Tabs_Menu_Widget
+ * Class RESWP_Restaurant_Tabs_Menu_Widget
  *
  * @package Restaurant_WP
  */
-class RESWP_Tabs_Menu_Widget extends SiteOrigin_Widget {
+class RESWP_Restaurant_Tabs_Menu_Widget extends SiteOrigin_Widget {
 	function __construct() {
 		$erm_menu_args  = array(
 			'post_type'      => 'erm_menu',
@@ -28,7 +28,7 @@ class RESWP_Tabs_Menu_Widget extends SiteOrigin_Widget {
 		wp_reset_postdata();
 
 		$form_options = array(
-			'tab'    => array(
+			'tab'        => array(
 				'type'      => 'repeater',
 				'label'     => esc_html__( 'Tab', 'restauran-wp' ),
 				'item_name' => esc_html__( 'Tab', 'restauran-wp' ),
@@ -54,9 +54,9 @@ class RESWP_Tabs_Menu_Widget extends SiteOrigin_Widget {
 							)
 						)
 					),
-					'quick_menu'         => array(
-						'type'   => 'select',
-						'label'  => esc_html__( 'Select Menu', 'restaurant-wp' ),
+					'quick_menu'   => array(
+						'type'    => 'select',
+						'label'   => esc_html__( 'Select Menu', 'restaurant-wp' ),
 						'options' => $cate
 					),
 					'columns'      => array(
@@ -72,16 +72,16 @@ class RESWP_Tabs_Menu_Widget extends SiteOrigin_Widget {
 			'menu_style' => array(
 				'type'    => 'select',
 				'label'   => esc_html__( 'Menu Style', 'restaurant-wp' ),
-				'options'  => array(
+				'options' => array(
 					'regular' => esc_html__( 'Regular', 'restaurant-wp' ),
-					'dotted' => esc_html__( 'Dotted', 'restaurant-wp' )
+					'dotted'  => esc_html__( 'Dotted', 'restaurant-wp' )
 				),
 				'default' => 'Regular'
 			)
 		);
 
 		parent::__construct(
-			'reswp_tabs_menu_widget',
+			'reswp_restaurant_tabs_menu_widget',
 			esc_html__( 'WPArena: Tab Menu', 'restaurant-wp' ),
 			array(
 				'description' => esc_html__( 'Widget for Tab Menu', 'restaurant-wp' )
@@ -91,6 +91,7 @@ class RESWP_Tabs_Menu_Widget extends SiteOrigin_Widget {
 			plugin_dir_path( __FILE__ )
 		);
 	}
+
 
 	function get_template_name( $instance ) {
 		return 'tabs-menu-template';
@@ -105,4 +106,4 @@ class RESWP_Tabs_Menu_Widget extends SiteOrigin_Widget {
 	}
 }
 
-siteorigin_widget_register( 'reswp-tabs-menu-widget', __FILE__, 'RESWP_Tabs_Menu_Widget' );
+siteorigin_widget_register( 'reswp_restaurant_tabs_menu_widget', __FILE__, 'RESWP_Restaurant_Tabs_Menu_Widget' );
