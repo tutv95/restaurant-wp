@@ -55,7 +55,7 @@ $menu_items = preg_split( '/,/', $menu_items );
 ?>
 <div class="reswp_erm_menu">
 	<div class="menu-title" style="<?php echo esc_attr( $style_header ); ?>">
-		<?php echo '<' . $header_type . ' class="title">' . esc_html( $header_title ) . '</' . $header_type . '>'; ?>
+		<<?php echo $header_type; ?> class="title"><?php echo esc_html( $header_title ) ?></<?php echo $header_type; ?>>
 	</div>
 	<ul class="erm_menu_content layout-<?php echo esc_attr( $menu_style . ' ' . $class_columns ); ?>">
 <?php
