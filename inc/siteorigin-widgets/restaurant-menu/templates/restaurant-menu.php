@@ -16,7 +16,7 @@ $menu_id = $instance['quick_menu'];
 $menu_style = $instance['menu_style'];
 $columns      = intval( $instance['columns'] );
 $class_columns = '';
-if ($columns == 1) {
+if ( $columns == 1 ) {
 	$class_columns = 'menu_content_one_column';
 } else {
 	$class_columns = 'menu_content_two_column';
@@ -128,11 +128,11 @@ if ( $menu_query->have_posts() ) {
 									?>
 									<li>
 										<?php if ($price['name'] == '') : ?>
-										<span class="name"><?php echo esc_html('Price'); ?></span>
+										<span class="name"><?php esc_html_e( 'Price', 'restaurant-wp' ); ?></span>
 										<?php else : ?>
-										<span class="name"><?php echo esc_html($price['name']); ?></span>
+										<span class="name"><?php echo esc_html( $price['name']); ?></span>
 										<?php endif; ?>
-										<span class="price"><?php echo esc_html($price['value']); ?></span>
+										<span class="price"><?php echo apply_filters( 'erm_filter_price', $price['value'] ); ?></span>
 									</li>
 									<?php
 								}
