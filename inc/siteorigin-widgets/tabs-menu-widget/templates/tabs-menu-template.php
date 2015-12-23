@@ -28,9 +28,11 @@ $count_div = 1;
 		if ( $count_li == 1 ) {
 			$active = 'active';
 		}
+
+		$id = $tab['quick_menu'];
 		?>
 		<li class="<?php echo $active; ?>" role="presentation" style="width: <?php echo $width . '%'; ?>">
-			<a href="#reswp-widget-tab-<?php echo $title; ?>" data-toggle="tab">
+			<a href="#reswp-widget-tab-<?php echo $id; ?>" data-toggle="tab">
 			<span class="box">
 				<img src="<?php echo $icon; ?>">
 				<span><?php echo $title; ?><span class="sub-title"><?php echo $sub_title; ?></span></span>
@@ -58,12 +60,12 @@ $count_div = 1;
 		}
 		$menu_style = $instance['menu_style'];
 		$title = $tab['title'];
+		$menu_id = $tab['quick_menu'];
 		?>
-		<div role="tabpanel" id="reswp-widget-tab-<?php echo $title; ?>" class="tab-pane fadeIn<?php echo $content_active; ?>">
+		<div role="tabpanel" id="reswp-widget-tab-<?php echo $menu_id; ?>" class="tab-pane fadeIn<?php echo $content_active; ?>">
 			<div class="reswp_erm_menu">
 				<ul class="erm_menu_content layout-<?php echo $menu_style . ' ' . $columns; ?> ">
 					<?php
-					$menu_id = $tab['quick_menu'];
 					if ( get_post_type( $menu_id ) != 'erm_menu' ) {
 						return;
 					}
