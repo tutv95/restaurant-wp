@@ -91,11 +91,13 @@ if ( $menu_query->have_posts() ) {
 		} else {
 			$has_thumbnail = has_post_thumbnail( $item_id );
 			$prices        = get_post_meta( $item_id, '_erm_prices', true );
-			if( $prices[0]['name'] != '' ) {
+
+			if( $prices != null && $prices[0]['name'] != '' ) {
 				$class = ' erm_product_active';
 			} else {
 				$class = '';
 			}
+
 			?>
 				<li class="erm_product <?php echo ( $has_thumbnail ? 'with_image' : 'no_image' ); ?><?php echo $class; ?>">
 					<div class="erm_product_content">
@@ -125,22 +127,11 @@ if ( $menu_query->have_posts() ) {
 								foreach ($prices as $price) {
 									?>
 									<li>
-										<span class="name"><?php echo esc_html($price['name']); ?></span>
-										<span class="price"><?php echo esc_html($price['value']); ?></span>
-									</li>
-									<?php
-								}
- 							?>
-							</ul>
-						</div>
-					<?php else : ?>
-						<div class="erm_product_price">
-							<ul>
-							<?php
-								foreach ($prices as $price) {
-									?>
-									<li>
+										<?php if ($price['name'] == '') : ?>
 										<span class="name"><?php echo esc_html('Price'); ?></span>
+										<?php else : ?>
+										<span class="name"><?php echo esc_html($price['name']); ?></span>
+										<?php endif; ?>
 										<span class="price"><?php echo esc_html($price['value']); ?></span>
 									</li>
 									<?php
