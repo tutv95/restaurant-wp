@@ -96,6 +96,15 @@ class RESWP_Restaurant_Filter_Menu_Widget extends SiteOrigin_Widget {
 	function get_style_name( $instance ) {
 		return '';
 	}
+
+	function enqueue_frontend_scripts( $instance ) {
+		parent::enqueue_frontend_scripts( $instance );
+		wp_enqueue_style( 'magnific-popup', RESWP_THEME_URL . 'inc/siteorigin-widgets/assets/css/magnific-popup.css' );
+		wp_enqueue_script( 'magnific-popup', RESWP_THEME_URL . 'inc/siteorigin-widgets/assets/js/jquery.magnific-popup.min.js', array( 'jquery' ), '', true );
+		wp_enqueue_script( 'erm-front', RESWP_THEME_URL . 'inc/siteorigin-widgets/assets/js/erm-front-scripts.js', array( 'jquery' ), '', true );
+
+		wp_enqueue_script( 'mixitup', RESWP_THEME_URL . 'inc/siteorigin-widgets/filter-restaurant-menu/js/jquery.mixitup.min.js', array( 'jquery' ), '2.1.11', true );
+	}
 }
 
 siteorigin_widget_register( 'reswp_restaurant_filter_menu_widget', __FILE__, 'RESWP_Restaurant_Filter_Menu_Widget' );
