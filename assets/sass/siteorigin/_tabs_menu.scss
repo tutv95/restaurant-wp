@@ -5,6 +5,7 @@
 	li {
 		text-align: center;
 		margin: auto;
+		position: relative;
 
 		&:hover {
 			&:after {
@@ -35,8 +36,17 @@
 				&:hover {
 					border: none;
 					border-radius: 0;
+					background-color: transparent;
+					outline: 0;
 					color: $restaurant_wp_body_primary_color;
 				}
+
+				&:focus {
+					border: none;
+					background-color: transparent;
+					color: $restaurant_wp_body_primary_color;
+				}
+
 			}
 
 			&:after {
