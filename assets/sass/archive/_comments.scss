@@ -183,6 +183,13 @@
 				}
 			}
 		}
+	}
 
+	.single {
+		&.layout-sidebar-left {
+			.comments-area {
+				margin-right: 0;
+			}
+		}
 	}
 }
