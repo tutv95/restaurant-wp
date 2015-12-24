@@ -11,6 +11,16 @@
 		flex: 1;
 		position: relative;
 
+		&:before {
+			content: "";
+			height: 50%;
+			position: absolute;
+			right: 0;
+			top: 25%;
+			width: 1px;
+			border: 1px #5d5d5c dashed;
+		}
+
 		&:hover {
 			&:after {
 				content: "";
