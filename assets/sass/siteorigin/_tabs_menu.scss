@@ -21,6 +21,12 @@
 			border: 1px #5d5d5c dashed;
 		}
 
+		&:last-child {
+			&:before {
+				display: none;
+			}
+		}
+
 		&:hover {
 			&:after {
 				content: "";
