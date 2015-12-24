@@ -156,19 +156,19 @@ function restaurant_wp_post_share() {
 	}
 
 	if ( isset( $theme_option_data['restaurant_wp_sharing_facebook'] ) && $theme_option_data['restaurant_wp_sharing_facebook'] ) {
-		$list_share .= '<li><a target="_blank" class="facebook" href="https://www.facebook.com/sharer.php?s=100&amp;p[title]=' . get_the_title() . '&amp;p[url]=' . urlencode( get_permalink() ) . '&amp;p[images][0]=' . urlencode( wp_get_attachment_url( get_post_thumbnail_id() ) ) . '" title="' . __( 'Facebook', 'restaurant-wp' ) . '"><i class="fa fa-facebook"></i></a></li>';
+		$list_share .= '<li><a target="_blank" class="facebook" href="https://www.facebook.com/sharer.php?s=100&amp;p[title]=' . get_the_title() . '&amp;p[url]=' . urlencode( get_permalink() ) . '&amp;p[images][0]=' . urlencode( wp_get_attachment_url( get_post_thumbnail_id() ) ) . '" title="' . esc_attr__( 'Facebook', 'restaurant-wp' ) . '"><i class="fa fa-facebook"></i></a></li>';
 	}
 
 	if ( isset( $theme_option_data['restaurant_wp_sharing_twitter'] ) && $theme_option_data['restaurant_wp_sharing_twitter'] ) {
-		$list_share .= '<li><a target="_blank" class="twitter" href="https://twitter.com/share?url=' . urlencode( get_permalink() ) . '&amp;text=' . esc_attr( get_the_title() ) . '" title="' . __( 'Twitter', 'restaurant-wp' ) . '"><i class="fa fa-twitter"></i></a></li>';
+		$list_share .= '<li><a target="_blank" class="twitter" href="https://twitter.com/share?url=' . urlencode( get_permalink() ) . '&amp;text=' . esc_attr( get_the_title() ) . '" title="' . esc_attr__( 'Twitter', 'restaurant-wp' ) . '"><i class="fa fa-twitter"></i></a></li>';
 	}
 
 	if ( isset( $theme_option_data['restaurant_wp_sharing_google'] ) && $theme_option_data['restaurant_wp_sharing_google'] ) {
-		$list_share .= '<li><a target="_blank" class="googleplus" href="https://plus.google.com/share?url=' . urlencode( get_permalink() ) . '&amp;title=' . esc_attr( get_the_title() ) . '" title="' . __( 'Google Plus', 'restaurant-wp' ) . '" onclick=\'window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;\'><i class="fa fa-google"></i></a></li>';
+		$list_share .= '<li><a target="_blank" class="googleplus" href="https://plus.google.com/share?url=' . urlencode( get_permalink() ) . '&amp;title=' . esc_attr( get_the_title() ) . '" title="' . esc_attr__( 'Google Plus', 'restaurant-wp' ) . '" onclick=\'window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;\'><i class="fa fa-google"></i></a></li>';
 	}
 
 	if ( isset( $theme_option_data['restaurant_wp_sharing_pinterest'] ) && $theme_option_data['restaurant_wp_sharing_pinterest'] ) {
-		$list_share .= '<li><a target="_blank" class="pinterest" href="http://pinterest.com/pin/create/button/?url=' . urlencode( get_permalink() ) . '&amp;description=' . get_the_excerpt() . '&media=' . urlencode( wp_get_attachment_url( get_post_thumbnail_id() ) ) . '" onclick="window.open(this.href); return false;" title="' . __( 'Pinterest', 'restaurant-wp' ) . '"><i class="fa fa-pinterest"></i></a></li>';
+		$list_share .= '<li><a target="_blank" class="pinterest" href="http://pinterest.com/pin/create/button/?url=' . urlencode( get_permalink() ) . '&amp;description=' . get_the_excerpt() . '&media=' . urlencode( wp_get_attachment_url( get_post_thumbnail_id() ) ) . '" onclick="window.open(this.href); return false;" title="' . esc_attr__( 'Pinterest', 'restaurant-wp' ) . '"><i class="fa fa-pinterest"></i></a></li>';
 	}
 
 	if ( $list_share != '' ) {
@@ -350,7 +350,7 @@ if ( ! function_exists( 'restaurant_wp_comment' ) ) {
 				) ?>
 				<?php edit_comment_link( esc_html__( 'Edit', 'restaurant-wp' ), '', '' ); ?>
 			</div>
-			<div class="message" itemprop="commentText">
+			<div class="message">
 				<?php comment_text() ?>
 			</div>
 			<div class="clear"></div>
@@ -471,28 +471,28 @@ function restaurant_wp_post_format_icon_font() {
 	$title_format = '';
 	if ( $post_format == 'aside' ) {
 		$icon_font    = 'fa-sticky-note-o';
-		$title_format = __( 'Aside', 'restaurant-wp' );
+		$title_format = esc_html__( 'Aside', 'restaurant-wp' );
 	} elseif ( $post_format == 'image' ) {
 		$icon_font    = 'fa-picture-o';
-		$title_format = __( 'Image', 'restaurant-wp' );
+		$title_format = esc_html__( 'Image', 'restaurant-wp' );
 	} elseif ( $post_format == 'video' ) {
 		$icon_font    = 'fa-film';
-		$title_format = __( 'Video', 'restaurant-wp' );
+		$title_format = esc_html__( 'Video', 'restaurant-wp' );
 	} elseif ( $post_format == 'quote' ) {
 		$icon_font    = 'fa-quote-left';
-		$title_format = __( 'Quote', 'restaurant-wp' );
+		$title_format = esc_html__( 'Quote', 'restaurant-wp' );
 	} elseif ( $post_format == 'link' ) {
 		$icon_font    = 'fa-link';
-		$title_format = __( 'Link', 'restaurant-wp' );
+		$title_format = esc_html__( 'Link', 'restaurant-wp' );
 	} elseif ( $post_format == 'gallery' ) {
 		$icon_font    = 'fa-picture-o';
-		$title_format = __( 'Galley', 'restaurant-wp' );
+		$title_format = esc_html__( 'Galley', 'restaurant-wp' );
 	} elseif ( $post_format == 'audio' ) {
 		$icon_font    = 'fa-music';
-		$title_format = __( 'Audio', 'restaurant-wp' );
+		$title_format = esc_html__( 'Audio', 'restaurant-wp' );
 	} elseif ( $post_format == 'chat' ) {
 		$icon_font    = 'fa-commenting-o';
-		$title_format = __( 'Chat', 'restaurant-wp' );
+		$title_format = esc_html__( 'Chat', 'restaurant-wp' );
 	}
 
 	if ( $icon_font == '' ) {

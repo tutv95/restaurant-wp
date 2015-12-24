@@ -18,7 +18,7 @@ class Restaurant_WP_Social_Widget extends WP_Widget {
 		parent::__construct(
 			'reswp_social_widget', // Base ID
 			__( 'Restaurant WP: Socials', 'restaurant-wp' ), // Name
-			array( 'description' => __( 'Restaurant WP: Socials', 'restaurant-wp' ), ) // Args
+			array( 'description' => esc_html__( 'Restaurant WP: Socials', 'restaurant-wp' ), ) // Args
 		);
 	}
 
