@@ -63,7 +63,7 @@ $count_div = 1;
 		$title      = $tab['title'];
 		$menu_id    = $tab['quick_menu'];
 		?>
-		<div role="tabpanel" id="reswp-widget-tab-<?php echo esc_attr( $id . $i ); ?>" class="tab-pane fadeIn<?php echo $content_active; ?>">
+		<div role="tabpanel" id="reswp-widget-tab-<?php echo esc_attr( $menu_id . $i ); ?>" class="tab-pane fadeIn<?php echo $content_active; ?>">
 			<div class="reswp_erm_menu">
 				<ul class="erm_menu_content layout-<?php echo $menu_style . ' ' . $columns; ?> ">
 					<?php
