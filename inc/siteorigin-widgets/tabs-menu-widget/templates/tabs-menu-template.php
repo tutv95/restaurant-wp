@@ -1,6 +1,6 @@
 <?php
 
-if ( ! isset( $instance['tab'] ) ) {
+if ( !isset( $instance['tab'] ) ) {
 	return;
 }
 

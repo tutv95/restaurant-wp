@@ -8,7 +8,7 @@
  * @package Restaurant_WP
  */
 
-if ( ! isset( $instance['quick_menu'] ) ) {
+if ( !isset( $instance['quick_menu'] ) ) {
 	return;
 }
 
