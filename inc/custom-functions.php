@@ -321,8 +321,7 @@ if ( ! function_exists( 'restaurant_wp_comment' ) ) {
 			$add_below = 'div-comment';
 		}
 		?>
-		<<?php echo esc_html( $tag )
-			. ' '; ?><?php comment_class( 'description_comment' ) ?> id="comment-<?php comment_ID() ?>">
+		<<?php echo esc_html( $tag ) . ' '; ?><?php comment_class( 'description_comment' ) ?> id="comment-<?php comment_ID() ?>">
 		<?php
 		if ( $args['avatar_size'] != 0 ) {
 			echo get_avatar( $comment, $args['avatar_size'] );
@@ -332,22 +331,15 @@ if ( ! function_exists( 'restaurant_wp_comment' ) ) {
 			<div
 				class="author"><?php printf( '<span class="author-name">%s</span>', get_comment_author_link() ) ?></div>
 			<?php if ( $comment->comment_approved == '0' ) : ?>
-				<em class="comment-awaiting-moderation"><?php esc_html_e(
-						'Your comment is awaiting moderation.',
-						'restaurant-wp'
-					) ?></em>
+				<em class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'restaurant-wp' ) ?></em>
 			<?php endif; ?>
 			<div class="comment-extra-info">
 				<div class="date"><?php printf( get_comment_date(), get_comment_time() ) ?></div>
-				<?php comment_reply_link(
-					array_merge(
-						$args, array(
+				<?php comment_reply_link( array_merge( $args, array(
 							'add_below' => $add_below,
 							'depth'     => $depth,
 							'max_depth' => $args['max_depth']
-						)
-					)
-				) ?>
+						) ) ) ?>
 				<?php edit_comment_link( esc_html__( 'Edit', 'restaurant-wp' ), '', '' ); ?>
 			</div>
 			<div class="message">
@@ -431,8 +423,7 @@ if ( ! function_exists( 'restaurant_wp_paging_nav' ) ) :
 		$format .= $GLOBALS['wp_rewrite']->using_permalinks() ? user_trailingslashit( 'page/%#%', 'paged' ) : '?paged=%#%';
 
 		// Set up paginated links.
-		$links = paginate_links(
-			array(
+		$links = paginate_links( array(
 				'base'      => $pagenum_link,
 				'format'    => $format,
 				'total'     => $GLOBALS['wp_query']->max_num_pages,
@@ -442,8 +433,7 @@ if ( ! function_exists( 'restaurant_wp_paging_nav' ) ) :
 				'prev_text' => '<i class="fa fa-angle-left"></i>',
 				'next_text' => '<i class="fa fa-angle-right"></i>',
 				'type'      => 'array'
-			)
-		);
+			) );
 
 		if ( $links ) :
 			?>
@@ -530,3 +520,13 @@ function restaurant_wp_add_siteorigin_widgets( $folders ) {
 }
 
 add_filter( 'siteorigin_widgets_widget_folders', 'restaurant_wp_add_siteorigin_widgets' );
+
+/**
+ * Custom ajax loader of contact form 7
+ */
+
+function my_wpcf7_ajax_loader() {
+	return RESWP_THEME_URL . '/assets/images/loading.gif';
+}
+
+add_filter( 'wpcf7_ajax_loader', 'my_wpcf7_ajax_loader' );

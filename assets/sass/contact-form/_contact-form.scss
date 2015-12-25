@@ -1,0 +1,82 @@
+.wpcf7 {
+	.row {
+		margin: 0;
+	}
+	input {
+		&:focus {
+			outline: none;
+		}
+		border-radius: 2px;
+		border: 1px solid #ddd;
+	}
+
+	textarea {
+		&:focus {
+			outline: none;
+		}
+		border-radius: 2px;
+		border: 1px solid #ddd;
+	}
+}
+
+.pad-right {
+	padding-left: 0;
+}
+
+.pad-left {
+	padding-right: 0;
+}
+
+.none-pad {
+	padding: 0;
+	.your-subject {
+		input {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+	}
+	.your-message {
+		textarea {
+			padding: 5px;
+			width: 100%;
+			margin-bottom: 20px;
+		}
+	}
+	input[type=submit] {
+		width: 100%;
+		text-transform: uppercase;
+		line-height: 30px;
+		background-color: $restaurant_wp_body_primary_color;
+		font-weight: normal;
+		border: none;
+		color: #333;
+		&:hover {
+			background-color: #333;
+			color: #fff;
+		}
+		&:focus,
+		&:active,
+		&:visited {
+			border: none;
+			outline: none;
+		}
+	}
+}
+
+.pad-right,
+.pad-left,
+.none-pad {
+	margin-bottom: 20px;
+	input {
+		padding: 5px;
+	}
+}
+
+div.wpcf7 img.ajax-loader {
+	margin-top: -60px;
+	margin-left: 50%;
+}
+
+div.wpcf7-response-output {
+	margin: 0;
+}
