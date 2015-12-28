@@ -10,9 +10,9 @@
  * @package Restaurant_WP
  */
 
-if ( get_page_template_slug() == 'template-parts/page-siteorigin.php' ) {
-	return;
-}
+//if ( get_page_template_slug() == 'template-parts/page-siteorigin.php' ) {
+//	return;
+//}
 
 /*
  * If the current post is protected by a password and
