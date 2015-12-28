@@ -73,10 +73,12 @@ jQuery(document).ready(function ($) {
 		}
 	});
 
-	var $picker = new Pikaday({
-		field  : document.getElementById('date-otreservations'),
-		format : 'MM/DD/YYYY',
-		minDate: moment().toDate()
-	});
+	if ($('#date-otreservations').length > 0) {
+		var $picker = new Pikaday({
+			field  : document.getElementById('date-otreservations'),
+			format : 'MM/DD/YYYY',
+			minDate: moment().toDate()
+		});
+	}
 
 });
