@@ -18,6 +18,15 @@
 		border-radius: 2px;
 		border: 1px solid #ddd;
 	}
+
+	select {
+		&:focus {
+			outline: none;
+		}
+		width: 100%;
+		border-radius: 2px;
+		border: 1px solid #ddd;
+	}
 }
 
 .pad-right {
@@ -71,6 +80,10 @@
 	input {
 		padding: 5px;
 	}
+
+	select {
+		padding: 5px;
+	}
 }
 
 div.wpcf7 img.ajax-loader {
@@ -89,4 +102,17 @@ div.wpcf7-response-output {
 	.pad-left {
 		padding-left: 0;
 	}
+}
+
+.contact-info-item {
+	.contact-text {
+		float: left;
+		width: 30%;
+		display: table;
+	}
+
+	.contact-value {
+		display: table;
+	}
+	padding-bottom: 10px;
 }
