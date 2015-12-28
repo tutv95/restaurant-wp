@@ -335,11 +335,15 @@ if ( ! function_exists( 'restaurant_wp_comment' ) ) {
 			<?php endif; ?>
 			<div class="comment-extra-info">
 				<div class="date"><?php printf( get_comment_date(), get_comment_time() ) ?></div>
-				<?php comment_reply_link( array_merge( $args, array(
+				<?php comment_reply_link(
+					array_merge(
+						$args, array(
 							'add_below' => $add_below,
 							'depth'     => $depth,
 							'max_depth' => $args['max_depth']
-						) ) ) ?>
+						)
+					)
+				) ?>
 				<?php edit_comment_link( esc_html__( 'Edit', 'restaurant-wp' ), '', '' ); ?>
 			</div>
 			<div class="message">
@@ -419,11 +423,14 @@ if ( ! function_exists( 'restaurant_wp_paging_nav' ) ) :
 		$pagenum_link = esc_url( remove_query_arg( array_keys( $query_args ), $pagenum_link ) );
 		$pagenum_link = trailingslashit( $pagenum_link ) . '%_%';
 
-		$format = $GLOBALS['wp_rewrite']->using_index_permalinks() && ! strpos( $pagenum_link, 'index.php' ) ? 'index.php/' : '';
-		$format .= $GLOBALS['wp_rewrite']->using_permalinks() ? user_trailingslashit( 'page/%#%', 'paged' ) : '?paged=%#%';
+		global $wp_rewrite;
+
+		$format = $wp_rewrite->using_index_permalinks() && ! strpos( $pagenum_link, 'index.php' ) ? 'index.php/' : '';
+		$format .= $wp_rewrite->using_permalinks() ? user_trailingslashit( 'page/%#%', 'paged' ) : '?paged=%#%';
 
 		// Set up paginated links.
-		$links = paginate_links( array(
+		$links = paginate_links(
+			array(
 				'base'      => $pagenum_link,
 				'format'    => $format,
 				'total'     => $GLOBALS['wp_query']->max_num_pages,
@@ -433,7 +440,8 @@ if ( ! function_exists( 'restaurant_wp_paging_nav' ) ) :
 				'prev_text' => '<i class="fa fa-angle-left"></i>',
 				'next_text' => '<i class="fa fa-angle-right"></i>',
 				'type'      => 'array'
-			) );
+			)
+		);
 
 		if ( $links ) :
 			?>
