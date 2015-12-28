@@ -30,8 +30,8 @@ $restaurant_ID = $instance['resID'];
 							// to the standart format
 							$time      = date( 'g:i a', $i );
 							$timeValue = date( 'g:ia', $i );
-							$default   = "7:00pm";
-							echo "<option value=\"$timeValue\" " . ( ( $timeValue == $default ) ? ' selected="selected" ' : "" ) . ">$time</option>" . PHP_EOL;
+							$default   = '7:00pm';
+							echo "<option value=\"$timeValue\" " . ( ( $timeValue == $default ) ? ' selected="selected" ' : '' ) . ">$time</option>" . PHP_EOL;
 						}
 
 						?>
@@ -71,7 +71,7 @@ $restaurant_ID = $instance['resID'];
 				<input type="hidden" name="RestaurantID" class="RestaurantID" value="<?php echo ent2ncr( $restaurant_ID ); ?>">
 				<input type="hidden" name="rid" class="rid" value="<?php echo ent2ncr( $restaurant_ID ); ?>">
 				<input type="hidden" name="GeoID" class="GeoID" value="15">
-				<input type="hidden" name="txtDateFormat" class="txtDateFormat" value="<?php echo ! empty( $date_format ) ? $date_format : "MM/DD/YYYY"; ?>">
+				<input type="hidden" name="txtDateFormat" class="txtDateFormat" value="<?php echo ! empty( $date_format ) ? $date_format : 'MM/DD/YYYY'; ?>">
 				<input type="hidden" name="RestaurantReferralID" class="RestaurantReferralID" value="<?php echo ent2ncr( $restaurant_ID ); ?>">
 
 			</div>
