@@ -69,16 +69,6 @@ if ( ! function_exists( 'restaurant_wp_entry_footer' ) ) :
 			comments_popup_link( esc_html__( 'Leave a comment', 'restaurant-wp' ), esc_html__( '1 Comment', 'restaurant-wp' ), esc_html__( '% Comments', 'restaurant-wp' ) );
 			echo '</span>';
 		}
-
-		edit_post_link(
-			sprintf(
-			/* translators: %s: Name of current post */
-				esc_html__( 'Edit %s', 'restaurant-wp' ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			),
-			'<span class="edit-link">',
-			'</span>'
-		);
 	}
 endif;
 
