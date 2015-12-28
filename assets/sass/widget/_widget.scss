@@ -1,153 +1,160 @@
-.widget {
-	overflow: hidden;
-	margin-bottom: 25px;
+.widget-area {
+	.widget {
+		overflow: hidden;
+		margin-bottom: 25px;
 
-	* {
-		max-width: 100% !important;
-	}
-
-	a {
-		color: #666;
-		&:hover {
-			color: $restaurant_wp_body_primary_color;
-			text-decoration: none;
+		* {
+			max-width: 100% !important;
 		}
-	}
 
-	.widget-title {
-		position: relative;
-		margin-bottom: 20px;
-		margin-top: 0;
-		font-weight: 700;
-		color: #333;
-		font-size: 16px;
-		text-align: center;
-		text-transform: uppercase;
-		span {
-			z-index: 9;
+		a {
+			color: #666;
+			&:hover {
+				color: $restaurant_wp_body_primary_color;
+				text-decoration: none;
+			}
+		}
+
+		.widget-title {
 			position: relative;
-			padding-left: 5px;
-			padding-right: 5px;
-			background-color: #fff;
+			margin-bottom: 20px;
+			margin-top: 0;
+			font-weight: 700;
+			color: #333;
+			font-size: 16px;
+			text-align: center;
+			text-transform: uppercase;
+			span {
+				z-index: 9;
+				position: relative;
+				padding-left: 5px;
+				padding-right: 5px;
+				background-color: #fff;
+			}
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				right: 0;
+				height: 1px;
+				top: 50%;
+				background: #ddd;
+				z-index: 1;
+			}
 		}
-		&:before {
-			content: "";
-			position: absolute;
-			left: 0;
-			right: 0;
-			height: 1px;
-			top: 50%;
-			background: #ddd;
-			z-index: 1;
-		}
-	}
 
-	> ul {
-		padding-left: 0 !important;
-	}
-
-	ul {
-		padding-left: 20px;
-		li {
-			padding-top: 8px;
-			padding-bottom: 8px;
-			list-style: none;
-		}
-	}
-
-	&.widget_categories, &.widget_archive {
 		> ul {
-			> li {
-				border-bottom: 1px solid #ddd;
-				&:last-child {
-					border-bottom: none;
-				}
-			}
+			padding-left: 0 !important;
 		}
 
 		ul {
+			padding-left: 20px;
 			li {
-				margin-bottom: 10px;
-				padding-bottom: 10px;
-				text-transform: uppercase;
-				font-size: 13px;
-				font-weight: 700;
+				padding-top: 8px;
+				padding-bottom: 8px;
+				list-style: none;
 			}
+		}
 
-			&.children {
+		&.widget_categories, &.widget_archive {
+			> ul {
 				> li {
-					margin-bottom: 0;
-				}
-			}
-		}
-	}
-
-	&.widget_calendar {
-		table {
-			caption {
-				text-align: center;
-				padding-bottom: 10px;
-			}
-
-			a {
-				font-weight: 600;
-			}
-
-			tfoot {
-				tr {
-					#next {
-						text-align: right;
-					}
-
-					#prev {
-						text-align: left;
+					border-bottom: 1px solid #ddd;
+					&:last-child {
+						border-bottom: none;
 					}
 				}
 			}
 
-			tr {
-				td {
-					padding: 10px;
-				}
-
-				th {
-					text-align: center;
-				}
-			}
-		}
-	}
-
-	&.widget_recent_entries {
-		ul {
-			li {
-				a {
-					color: #2a2a2a;
-					&:hover {
-						color: $restaurant_wp_body_primary_color;
-					}
-				}
-
-				.post-date {
-					display: block;
-					font-style: italic;
+			ul {
+				li {
+					margin-bottom: 10px;
+					padding-bottom: 10px;
+					text-transform: uppercase;
 					font-size: 13px;
+					font-weight: 700;
+				}
+
+				&.children {
+					> li {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+
+		&.widget_calendar {
+			table {
+				caption {
+					text-align: center;
+					padding-bottom: 10px;
+				}
+
+				a {
+					font-weight: 600;
+				}
+
+				tfoot {
+					tr {
+						#next {
+							text-align: right;
+						}
+
+						#prev {
+							text-align: left;
+						}
+					}
+				}
+
+				tr {
+					td {
+						padding: 10px;
+					}
+
+					th {
+						text-align: center;
+					}
+				}
+			}
+		}
+
+		&.widget_recent_entries {
+			ul {
+				li {
+					a {
+						color: #2a2a2a;
+						&:hover {
+							color: $restaurant_wp_body_primary_color;
+						}
+					}
+
+					.post-date {
+						display: block;
+						font-style: italic;
+						font-size: 13px;
+					}
+				}
+			}
+		}
+
+		select {
+			@include border-radius(0);
+			@extend .form-control;
+		}
+
+		&.widget_recent_comments {
+			.recentcomments {
+				> a {
+					font-weight: 600;
 				}
 			}
 		}
 	}
+}
 
-	select {
-		@include border-radius(0);
-		@extend .form-control;
-	}
-
-	&.widget_recent_comments {
-		.recentcomments {
-			> a {
-				font-weight: 600;
-			}
-		}
-	}
+.widget-title {
+	font-weight: 700;
+	text-transform: uppercase;
 }
 
 @import "social";
