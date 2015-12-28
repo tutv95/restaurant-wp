@@ -1,12 +1,14 @@
 #main-top {
-	background-color: #eee;
+	background: transparent;
 	position: relative;
 	overflow: hidden;
+	z-index: 8;
 
 	img {
 		width: 100%;
 		min-height: 250px;
 		overflow: hidden;
+		@include opacity(0);
 	}
 
 	.container-content {
@@ -17,6 +19,7 @@
 		right: 0;
 		height: 100%;
 		text-align: center;
+		z-index: 99999;
 
 		&:before {
 			content: "";

@@ -177,6 +177,8 @@ function restaurant_wp_scripts() {
 
 	wp_enqueue_script( 'restaurant-bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array( 'jquery' ), '3.3.6', true );
 
+	wp_enqueue_script( 'restaurant-parallax', get_template_directory_uri() . '/assets/js/parallax.min.js', array( 'jquery' ), '1.3.1', true );
+
 	wp_enqueue_script( 'restaurant-custom', get_template_directory_uri() . '/assets/js/custom.js', array( 'jquery', 'restaurant-bootstrap' ), RESWP_THEME_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

@@ -18,7 +18,7 @@ if ( get_page_template_slug() == 'template-parts/page-siteorigin.php' ) {
 
 $image = get_header_image();
 ?>
-<div id="main-top">
+<div id="main-top" data-parallax="scroll" data-image-src="<?php echo esc_url( $image ); ?>">
 	<?php if ( $image != false ) {
 		echo '<img src="' . $image . '" alt="' . esc_attr__( 'Custom header image', 'restaurant-wp' ) . '"/>';
 	} ?>
