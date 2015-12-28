@@ -1,5 +1,8 @@
 .widget-area {
 	.widget {
+		* {
+			max-width: 100% !important;
+		}
 
 		.widget-title {
 			position: relative;
@@ -34,10 +37,6 @@
 .widget {
 	overflow: hidden;
 	margin-bottom: 25px;
-
-	* {
-		max-width: 100% !important;
-	}
 
 	a {
 		color: #666;
