@@ -1,0 +1,43 @@
+.opentable-form {
+	.article_heading {
+		text-align: center;
+		padding-top: 60px;
+		padding-bottom: 50px;
+
+		.heading_secondary {
+			font-size: 34px;
+			color: $restaurant_wp_body_primary_color;
+			font-family: Pacifico, sans-serif;
+		}
+
+		.heading_primary {
+			font-size: 50px;
+			font-weight: 700;
+			margin: 0;
+		}
+	}
+
+	.otw-widget-form {
+		.otw-wrapper {
+			.otreservations-submit {
+				background-color: $restaurant_wp_body_primary_color;
+				font-weight: 600;
+
+				&:hover {
+					background-color: #2a2a2a;
+					color: #fff;
+				}
+			}
+		}
+	}
+
+	.otreservations-sub_title {
+		width: 100%;
+		text-align: right;
+		display: inline-block;
+		font-size: 12px;
+		color: #999;
+	}
+}
+
+@import "pikaday";
