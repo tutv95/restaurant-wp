@@ -1,5 +1,8 @@
 .widget-area {
 	.widget {
+		* {
+			max-width: 100% !important;
+		}
 
 		.widget-title {
 			position: relative;
@@ -35,43 +38,11 @@
 	overflow: hidden;
 	margin-bottom: 25px;
 
-	* {
-		max-width: 100% !important;
-	}
-
 	a {
 		color: #666;
 		&:hover {
 			color: $restaurant_wp_body_primary_color;
 			text-decoration: none;
-		}
-	}
-
-	.widget-title {
-		position: relative;
-		margin-bottom: 20px;
-		margin-top: 0;
-		font-weight: 700;
-		color: #333;
-		font-size: 16px;
-		text-align: center;
-		text-transform: uppercase;
-		span {
-			z-index: 9;
-			position: relative;
-			padding-left: 5px;
-			padding-right: 5px;
-			background-color: #fff;
-		}
-		&:before {
-			content: "";
-			position: absolute;
-			left: 0;
-			right: 0;
-			height: 1px;
-			top: 50%;
-			background: #ddd;
-			z-index: 1;
 		}
 	}
 

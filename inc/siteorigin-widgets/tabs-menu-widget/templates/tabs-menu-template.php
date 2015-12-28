@@ -1,6 +1,6 @@
 <?php
 
-if ( !isset( $instance['tab'] ) ) {
+if ( ! isset( $instance['tab'] ) ) {
 	return;
 }
 
@@ -153,7 +153,7 @@ $count_div = 1;
 															<?php else : ?>
 																<span class="name"><?php echo esc_html( $price['name'] ); ?></span>
 															<?php endif; ?>
-															<span class="price"><?php echo esc_html( $price['value'] ); ?></span>
+															<span class="price"><?php echo apply_filters( 'erm_filter_price', $price['value'] ); ?></span>
 														</li>
 														<?php
 													}
