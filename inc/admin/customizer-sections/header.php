@@ -16,13 +16,10 @@
 
 $prefix = 'restaurant_wp_';
 
-$wp_customize->add_panel(
-	$prefix . 'panel_header',
-	array(
-		'title'    => esc_html__( 'Header', 'restaurant-wp' ),
-		'priority' => 21,
-	)
-);
+$wp_customize->add_panel( $prefix . 'panel_header', array(
+	'title'    => esc_html__( 'Header', 'restaurant-wp' ),
+	'priority' => 21,
+) );
 
 require_once RESWP_THEME_DIR . 'inc/admin/customizer-sections/header-layout.php';
 require_once RESWP_THEME_DIR . 'inc/admin/customizer-sections/header-sticky-menu.php';

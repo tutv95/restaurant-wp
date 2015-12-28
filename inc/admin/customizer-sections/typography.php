@@ -12,13 +12,10 @@
 
 $prefix = 'restaurant_wp_';
 
-$wp_customize->add_panel(
-	$prefix . 'typography',
-	array(
-		'title'    => esc_html__( 'Typography', 'restaurant-wp' ),
-		'priority' => 40,
-	)
-);
+$wp_customize->add_panel( $prefix . 'typography', array(
+	'title'    => esc_html__( 'Typography', 'restaurant-wp' ),
+	'priority' => 40,
+) );
 
 require_once RESWP_THEME_DIR . 'inc/admin/customizer-sections/typography-font.php';
 require_once RESWP_THEME_DIR . 'inc/admin/customizer-sections/typography-color.php';

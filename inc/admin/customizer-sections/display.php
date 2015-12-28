@@ -16,13 +16,10 @@
 
 $prefix = 'restaurant_wp_';
 
-$wp_customize->add_panel(
-	$prefix . 'panel_display',
-	array(
-		'title'    => esc_html__( 'Display', 'restaurant-wp' ),
-		'priority' => 50,
-	)
-);
+$wp_customize->add_panel( $prefix . 'panel_display', array(
+	'title'    => esc_html__( 'Display', 'restaurant-wp' ),
+	'priority' => 50,
+) );
 
 require_once RESWP_THEME_DIR . 'inc/admin/customizer-sections/display-layout.php';
 require_once RESWP_THEME_DIR . 'inc/admin/customizer-sections/display-footer.php';

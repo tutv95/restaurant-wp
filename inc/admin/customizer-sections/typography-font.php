@@ -28,6 +28,7 @@ $wp_customize->add_setting(
 	$prefix . 'font_body',
 	array(
 		'default' => 'Roboto',
+		'sanitize_callback' => 'restaurant_wp_callback',
 	)
 );
 

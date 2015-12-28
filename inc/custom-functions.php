@@ -530,3 +530,7 @@ function my_wpcf7_ajax_loader() {
 }
 
 add_filter( 'wpcf7_ajax_loader', 'my_wpcf7_ajax_loader' );
+
+function restaurant_wp_callback( $callback ) {
+	return $callback;
+}
