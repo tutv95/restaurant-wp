@@ -3,16 +3,17 @@
 		text-align: center;
 		padding-top: 60px;
 		padding-bottom: 50px;
+		font-size: 50px;
 
 		.heading_secondary {
-			font-size: 34px;
 			color: $restaurant_wp_body_primary_color;
-			font-family: Pacifico, sans-serif;
+			font-family: 'Mr De Haviland', cursive;
+			font-size: 150%;
+			margin-bottom: -10px;
 		}
 
 		.heading_primary {
 			font-size: 50px;
-			font-weight: 700;
 			margin: 0;
 		}
 	}

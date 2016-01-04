@@ -77,7 +77,7 @@ class RESWP_Opentable_Form_Widget extends SiteOrigin_Widget {
 
 	function enqueue_frontend_scripts( $instance ) {
 		parent::enqueue_frontend_scripts( $instance );
-		wp_enqueue_style( 'Google-Pacifico-Font', '//fonts.googleapis.com/css?family=Pacifico' );
+		wp_enqueue_style( 'Google-MrDeHaviland-Font', '//fonts.googleapis.com/css?family=Mr+De+Haviland' );
 		wp_enqueue_script( 'ResWP-Moment', RESWP_THEME_URL . 'inc/siteorigin-widgets/open-table/js/moment.js', array( 'jquery' ), '2.10.6', true );
 		wp_enqueue_script( 'ResWP-Pikaday', RESWP_THEME_URL . 'inc/siteorigin-widgets/open-table/js/pikaday.js', array( 'ResWP-Moment' ), '1.4.0', true );
 	}
