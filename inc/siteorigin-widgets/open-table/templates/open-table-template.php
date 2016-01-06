@@ -9,10 +9,11 @@ $restaurant_ID = $instance['resID'];
 			echo '<div class="heading_secondary">' . $instance['sub_title'] . '</div>';
 		} ?>
 		<h2 class="heading_primary"><?php echo ent2ncr( $title ) ?></h2>
+		<?php if ( isset( $instance['description'] ) ) {
+			echo '<p class="description">' . $instance['description'] . '</p>';
+		} ?>
 	</div>
-	<?php if ( isset( $instance['description'] ) ) {
-		echo '<p class="description">' . $instance['description'] . '</p>';
-	} ?>
+
 	<?php if ( ! empty( $restaurant_ID ) && intval( $restaurant_ID ) ) : ?>
 		<form method="get" class="otw-widget-form" action="http://www.opentable.<?php echo ent2ncr( $country ); ?>/restaurant-search.aspx" target="_blank">
 			<div class="otw-wrapper row">
