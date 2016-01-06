@@ -1,19 +1,21 @@
 <?php
 
-if ( $instance['custom_font_heading']['custom_text_color'] <> '' ) {
+$css = '';
+
+if ( isset( $instance['custom_font_heading']['custom_text_color'] ) ) {
 	$css .= 'color:' . $instance['custom_font_heading']['custom_text_color'] . ';';
 }
-if ( $instance['custom_font_heading']['custom_font_size'] <> '' ) {
+if ( isset( $instance['custom_font_heading']['custom_font_size'] ) ) {
 	$css .= 'font-size:' . $instance['custom_font_heading']['custom_font_size'] . 'px;';
 }
-if ( $instance['custom_font_heading']['custom_font_weight'] <> '' ) {
+if ( isset( $instance['custom_font_heading']['custom_font_weight'] ) ) {
 	$css .= 'font-weight:' . $instance['custom_font_heading']['custom_font_weight'] . ';';
 }
 if ( $instance['custom_font_heading']['custom_font_style'] <> '' ) {
 	$css .= 'font-style:' . $instance['custom_font_heading']['custom_font_style'] . ';';
 }
 
-if ( $css ) {
+if ( $css != '' ) {
 	$css = ' style="' . $css . '"';
 }
 
