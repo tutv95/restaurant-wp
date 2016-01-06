@@ -11,7 +11,7 @@ if ( isset( $instance['custom_font_heading']['custom_font_size'] ) ) {
 if ( isset( $instance['custom_font_heading']['custom_font_weight'] ) ) {
 	$css .= 'font-weight:' . $instance['custom_font_heading']['custom_font_weight'] . ';';
 }
-if ( $instance['custom_font_heading']['custom_font_style'] <> '' ) {
+if ( isset( $instance['custom_font_heading']['custom_font_style'] ) ) {
 	$css .= 'font-style:' . $instance['custom_font_heading']['custom_font_style'] . ';';
 }
 
