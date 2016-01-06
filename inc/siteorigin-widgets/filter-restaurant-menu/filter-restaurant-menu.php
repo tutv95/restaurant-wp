@@ -30,12 +30,12 @@ class RESWP_Restaurant_Filter_Menu_Widget extends SiteOrigin_Widget {
 		$form_options = array(
 			'tab'        => array(
 				'type'      => 'repeater',
-				'label'     => esc_html__( 'Tab', 'restauran-wp' ),
-				'item_name' => esc_html__( 'Tab', 'restauran-wp' ),
+				'label'     => esc_html__( 'Tab', 'restaurant-wp' ),
+				'item_name' => esc_html__( 'Tab', 'restaurant-wp' ),
 				'fields'    => array(
 					'title'      => array(
 						'type'  => 'text',
-						'label' => esc_html__( 'Tab Title', 'restauran-wp' ),
+						'label' => esc_html__( 'Tab Title', 'restaurant-wp' ),
 					),
 					'sub_title'  => array(
 						'type'  => 'text',
