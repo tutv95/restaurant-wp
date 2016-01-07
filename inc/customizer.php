@@ -28,6 +28,7 @@ function restaurant_wp_customize_preview_js() {
 add_action( 'customize_preview_init', 'restaurant_wp_customize_preview_js' );
 
 require_once RESWP_THEME_DIR . 'inc/admin/customizer-options.php';
+require_once RESWP_THEME_DIR . 'inc/admin/customizer-default.php';
 
 /**
  * Print Custom CSS by Customize
