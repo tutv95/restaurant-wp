@@ -18,7 +18,7 @@ $wp_customize->add_section( $prefix . 'header_layout', array(
 ) );
 
 $wp_customize->add_setting( $prefix . 'header_style', array(
-	'default'           => 'overlay',
+	'default'           => 'default',
 	'sanitize_callback' => 'restaurant_wp_callback',
 ) );
 
@@ -35,7 +35,7 @@ $wp_customize->add_control( $prefix . 'header_display', array(
 ) );
 
 $wp_customize->add_setting( $prefix . 'header_background_color', array(
-	'default'           => 'rgba(255,255,255,0)',
+	'default'           => '#666',
 	'sanitize_callback' => 'restaurant_wp_callback',
 ) );
 
