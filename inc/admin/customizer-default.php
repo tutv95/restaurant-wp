@@ -20,7 +20,7 @@ function restaurant_wp_init_default_theme_mods() {
 		'header_style'            => 'default',
 		'header_background_color' => '#666',
 		'sticky_menu'             => true,
-		'primary_color'           => '#ffb606',
+		'primary_color'           => '#f27935',
 		'font_body'               => 'Roboto',
 	);
 

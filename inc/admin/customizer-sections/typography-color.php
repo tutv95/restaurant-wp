@@ -21,7 +21,7 @@ $wp_customize->add_section( $prefix . 'typography_color', array(
  * Primary color
  */
 $wp_customize->add_setting( $prefix . 'primary_color', array(
-	'default'           => '#ffb606',
+	'default'           => '#f27935',
 	'sanitize_callback' => 'sanitize_hex_color',
 ) );
 
