@@ -24,7 +24,7 @@ require RESWP_THEME_DIR . 'inc/google-fonts.php';
  * Rewrite uri stylesheet
  */
 function restaurant_wp_rewrite_uri_stylesheet() {
-	return get_stylesheet_directory_uri() . '/style.v1.min.css';
+	return get_stylesheet_directory_uri() . '/style.v1.css';
 }
 
 add_action( 'stylesheet_uri', 'restaurant_wp_rewrite_uri_stylesheet' );
