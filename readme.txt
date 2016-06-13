@@ -1,19 +1,22 @@
 === Restaurant WP ===
 
-Contributors: automattic
+Contributors: WordPressArena
 Tags: translation-ready, custom-background, theme-options, custom-menu, post-formats, threaded-comments
 
 Requires at least: 4.5
 Tested up to: 4.5.2
-Stable tag: 1.0.0
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A starter theme called Restaurant WP, or underscores.
+Restaurant WP is a modern and beautiful WordPress theme for any restaurant, cafe, bar, bistro, tavern, saloon, dinner with necessary features for a restaurant WordPress theme.
+Professional and beautiful design: Restaurant WP has a design same as premium themes, on the homepage blocks are arranged from top to bottom by every part with different purpose. Beside that, this free restaurant WordPress theme also supports parallax background header, brings awesome interface for your site.
 
 == Description ==
 
-Hi. I'm a starter theme called Restaurant WP, or underscores, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+Restaurant WP is a modern and beautiful WordPress theme for any restaurant, cafe, bar, bistro, tavern, saloon, dinner with necessary features for a restaurant WordPress theme.
+Professional and beautiful design: Restaurant WP has a design same as premium themes, on the homepage blocks are arranged from top to bottom by every part with different purpose. Beside that, this free restaurant WordPress theme also supports parallax background header, brings awesome interface for your site.
+
 
 == Installation ==
 	
