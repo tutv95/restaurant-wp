@@ -533,11 +533,11 @@ add_filter( 'siteorigin_widgets_widget_folders', 'restaurant_wp_add_siteorigin_w
  * Custom ajax loader of contact form 7
  */
 
-function my_wpcf7_ajax_loader() {
+function restaurant_wp_wpcf7_ajax_loader() {
 	return RESWP_THEME_URL . '/assets/images/loading.gif';
 }
 
-add_filter( 'wpcf7_ajax_loader', 'my_wpcf7_ajax_loader' );
+add_filter( 'wpcf7_ajax_loader', 'restaurant_wp_wpcf7_ajax_loader' );
 
 function restaurant_wp_callback( $callback ) {
 	return $callback;
