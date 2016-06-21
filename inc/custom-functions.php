@@ -142,45 +142,6 @@ function restaurant_wp_sticky_logo() {
 add_action( 'restaurant_wp_sticky_logo', 'restaurant_wp_sticky_logo' );
 
 /**
- * Post share
- */
-function restaurant_wp_post_share() {
-	$theme_option_data = restaurant_wp_get_theme_option_data();
-
-	$list_share = '';
-
-	if ( is_sticky() ) {
-		$list_share .= '<li><a class="sticky" href="' . get_the_permalink() . '" title="' . esc_attr__( 'Sticky Post', 'restaurant-wp' ) . '"><i class="fa fa-bolt"></i></a></li>';
-	} else {
-		$list_share .= restaurant_wp_post_format_icon_font();
-	}
-
-	if ( isset( $theme_option_data['restaurant_wp_sharing_facebook'] ) && $theme_option_data['restaurant_wp_sharing_facebook'] ) {
-		$list_share .= '<li><a target="_blank" class="facebook" href="https://www.facebook.com/sharer.php?s=100&amp;p[title]=' . get_the_title() . '&amp;p[url]=' . urlencode( get_permalink() ) . '&amp;p[images][0]=' . urlencode( wp_get_attachment_url( get_post_thumbnail_id() ) ) . '" title="' . esc_attr__( 'Facebook', 'restaurant-wp' ) . '"><i class="fa fa-facebook"></i></a></li>';
-	}
-
-	if ( isset( $theme_option_data['restaurant_wp_sharing_twitter'] ) && $theme_option_data['restaurant_wp_sharing_twitter'] ) {
-		$list_share .= '<li><a target="_blank" class="twitter" href="https://twitter.com/share?url=' . urlencode( get_permalink() ) . '&amp;text=' . esc_attr( get_the_title() ) . '" title="' . esc_attr__( 'Twitter', 'restaurant-wp' ) . '"><i class="fa fa-twitter"></i></a></li>';
-	}
-
-	if ( isset( $theme_option_data['restaurant_wp_sharing_google'] ) && $theme_option_data['restaurant_wp_sharing_google'] ) {
-		$list_share .= '<li><a target="_blank" class="googleplus" href="https://plus.google.com/share?url=' . urlencode( get_permalink() ) . '&amp;title=' . esc_attr( get_the_title() ) . '" title="' . esc_attr__( 'Google Plus', 'restaurant-wp' ) . '" onclick=\'window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;\'><i class="fa fa-google"></i></a></li>';
-	}
-
-	if ( isset( $theme_option_data['restaurant_wp_sharing_pinterest'] ) && $theme_option_data['restaurant_wp_sharing_pinterest'] ) {
-		$list_share .= '<li><a target="_blank" class="pinterest" href="http://pinterest.com/pin/create/button/?url=' . urlencode( get_permalink() ) . '&amp;description=' . get_the_excerpt() . '&media=' . urlencode( wp_get_attachment_url( get_post_thumbnail_id() ) ) . '" onclick="window.open(this.href); return false;" title="' . esc_attr__( 'Pinterest', 'restaurant-wp' ) . '"><i class="fa fa-pinterest"></i></a></li>';
-	}
-
-	if ( $list_share != '' ) {
-		echo '<ul class="social-share">';
-		echo $list_share;
-		echo '</ul>';
-	}
-}
-
-add_action( 'restaurant_wp_post_share', 'restaurant_wp_post_share' );
-
-/**
  * Entry top
  *
  * @param string $size Size image thumbnail.

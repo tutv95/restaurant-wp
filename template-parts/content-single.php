@@ -10,18 +10,6 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="share-post">
-		<div class="date-meta">
-			<span class="date">
-				<?php echo get_the_date( 'd' ) ?>
-			</span>
-			<span class="month">
-				<?php echo get_the_date( 'M' ) ?>
-			</span>
-		</div>
-		<?php do_action( 'restaurant_wp_post_share' ); ?>
-	</div>
-
 	<div class="content-inner">
 		<div class="entry-top">
 			<?php do_action( 'restaurant_wp_entry_top', 'full' ); ?>

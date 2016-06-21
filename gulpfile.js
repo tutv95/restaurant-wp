@@ -14,6 +14,7 @@ var minifyCss = require('gulp-minify-css');
 gulp.task('sass', function () {
 	return gulp.src('assets/sass/style.scss')
 		.pipe(sass())
+		.pipe(rename('style.v1.css'))
 		.pipe(gulp.dest(''))
 		.pipe(livereload());
 });
