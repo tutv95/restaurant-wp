@@ -12,4 +12,4 @@
 
 define( 'RESWP_THEME_DIR', get_template_directory() . '/' );
 define( 'RESWP_THEME_URL', get_template_directory_uri() . '/' );
-define( 'RESWP_THEME_VERSION', '1.0.0' );
+define( 'RESWP_THEME_VERSION', '1.0.3' );
